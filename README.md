@@ -68,6 +68,7 @@ npm install -D sass-loader sass
 
 #### git
 git init
+git remote add origin https://github.com/mykim-dev/Vue3Typescript.git
 git add .
 git commit -m 'first comiit'
-git remote add origin https://github.com/mykim-dev/Vue3Typescript.git
+git push
