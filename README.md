@@ -38,3 +38,36 @@ npm run dev
 ```sh
 npm run build
 ```
+
+**************************************************
+#### my.kim record
+
+#### vue3 - https://vuejs.org/guide/quick-start.html#creating-a-vue-application
+npm init vue@latest
+cd Vue3Typescript
+npm install
+npm run dev
+
+
+#### element plus - https://element-plus.org/en-US/guide/installation.html
+npm install element-plus --save
+
+
+#### fortawesome
+#### https://fontawesome.com/docs/web/use-with/vue/
+npm i --save @fortawesome/fontawesome-svg-core
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/free-brands-svg-icons
+
+npm i --save @fortawesome/vue-fontawesome@latest-3
+
+#### sass
+#### https://cli.vuejs.org/guide/css.html#pre-processors
+npm install -D sass-loader sass
+
+#### git
+git init
+git add .
+git commit -m 'first comiit'
+git remote add origin https://github.com/mykim-dev/Vue3Typescript.git
