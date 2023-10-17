@@ -43,32 +43,40 @@ npm run build
 #### my.kim record
 
 #### vue3 - https://vuejs.org/guide/quick-start.html#creating-a-vue-application
+```sh
 npm init vue@latest
 cd Vue3Typescript
 npm install
 npm run dev
-
+```
 
 #### element plus - https://element-plus.org/en-US/guide/installation.html
+```sh
 npm install element-plus --save
+```
 
 
 #### fortawesome
 #### https://fontawesome.com/docs/web/use-with/vue/
+```sh
 npm i --save @fortawesome/fontawesome-svg-core
 npm i --save @fortawesome/free-solid-svg-icons
 npm i --save @fortawesome/free-regular-svg-icons
 npm i --save @fortawesome/free-brands-svg-icons
-
 npm i --save @fortawesome/vue-fontawesome@latest-3
+```
 
 #### sass
 #### https://cli.vuejs.org/guide/css.html#pre-processors
+```sh
 npm install -D sass-loader sass
+```
 
 #### git
+```sh
 git init
 git remote add origin https://github.com/mykim-dev/Vue3Typescript.git
 git add .
 git commit -m 'first comiit'
 git push
+```
