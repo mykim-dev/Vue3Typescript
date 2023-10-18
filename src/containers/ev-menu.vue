@@ -15,29 +15,23 @@ const handleClose = (key: string, keyPath: string[]) => {
 
 <template>
   <div class="ev-menu">
-    <el-radio-group
-      v-if="menuMode === 'vertical'"
-      v-model="isCollapse"
-      style="margin-bottom: 20px"
-    >
+    <el-radio-group v-if="menuMode === 'vertical'" v-model="isCollapse" style="margin-bottom: 20px">
       <el-radio-button :label="false">expand</el-radio-button>
       <el-radio-button :label="true">collapse</el-radio-button>
     </el-radio-group>
-    <el-menu
-      :mode="menuMode"
-      :collapse="isCollapse"
-      default-active="2"
-      router="true"
-      @open="handleOpen"
-      @close="handleClose"
-    >
+    <el-menu :mode="menuMode" :collapse="isCollapse" default-active="2" router="true" @open="handleOpen"
+      @close="handleClose">
       <el-menu-item index="/">
-        <el-icon><HomeFilled /></el-icon>
+        <el-icon>
+          <HomeFilled />
+        </el-icon>
         <template #title>Home</template>
       </el-menu-item>
       <el-sub-menu index="2">
         <template #title>
-          <el-icon><Tools /></el-icon>
+          <el-icon>
+            <Tools />
+          </el-icon>
           <span>Setting</span>
         </template>
         <el-menu-item-group title="Setting">
@@ -46,7 +40,9 @@ const handleClose = (key: string, keyPath: string[]) => {
       </el-sub-menu>
       <el-sub-menu index="3">
         <template #title>
-          <el-icon><Grid /></el-icon>
+          <el-icon>
+            <Grid />
+          </el-icon>
           <span>Screen</span>
         </template>
         <el-menu-item-group title="Screen">
@@ -65,7 +61,9 @@ const handleClose = (key: string, keyPath: string[]) => {
       </el-sub-menu>
       <el-sub-menu index="4">
         <template #title>
-          <el-icon><Menu /></el-icon>
+          <el-icon>
+            <Menu />
+          </el-icon>
           <span>Component</span>
         </template>
         <el-menu-item-group title="Component">
@@ -78,11 +76,13 @@ const handleClose = (key: string, keyPath: string[]) => {
       </el-sub-menu>
       <el-sub-menu index="5">
         <template #title>
-          <el-icon><QuestionFilled /></el-icon>
-          <span>Test</span>
+          <el-icon>
+            <QuestionFilled />
+          </el-icon>
+          <span>Study</span>
         </template>
-        <el-menu-item-group title="Test">
-          <el-menu-item index="/Test">Test</el-menu-item>
+        <el-menu-item-group title="Study">
+          <el-menu-item index="/Bind">bind</el-menu-item>
         </el-menu-item-group>
       </el-sub-menu>
     </el-menu>
