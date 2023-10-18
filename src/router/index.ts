@@ -98,6 +98,11 @@ const router = createRouter({
       component: () => import('@/components/ToolbarList.vue')
     },
     {
+        path: '/Tabs',
+        name: 'Tabs',
+        component: () => import('@/components/Tabs.vue')
+      },
+    {
       path: '/Test',
       name: 'Test',
       component: () => import('@/test/Test.vue')

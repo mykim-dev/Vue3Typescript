@@ -3,7 +3,7 @@ export default {
     layout: 'horizontal',
     menuCollapse: false,
     menus: [
-        { name: 'Home', link: '/', icon: '' },
+        { name: 'Home', link: '/', icon: '', submenu: [] },
         {
             name: 'Screen',
             link: '/Default',
@@ -39,5 +39,58 @@ export default {
         },
         { name: 'Component', link: '/', icon: 'Setting', submenu: [] },
         { name: 'Control', link: '/', icon: 'Menu', submenu: [] },
+    ],
+    listData: [
+        {
+          date: '2016-05-08',
+          name: 'Tom',
+          amount: 8000,
+          fixed: 'Fixed',
+        },
+        {
+          date: '2016-05-07',
+          name: 'Tom',
+          amount: 7000,
+          fixed: 'Fixed',
+        },
+        {
+          date: '2016-05-06',
+          name: 'Tom',
+          amount: 6000,
+          fixed: 'Fixed',
+        },
+        {
+          date: '2016-05-05',
+          name: 'Tom',
+          amount: 5000,
+          fixed: 'Fixed',
+        },
+        {
+          date: '2016-05-04',
+          name: 'Tom',
+          amount: 4000,
+          fixed: 'Fixed',
+        },
+        {
+          date: '2016-05-03',
+          name: 'Tom',
+          amount: 3000,
+          fixed: 'Fixed',
+        },
+        {
+          date: '2016-05-02',
+          name: 'Tom',
+          amount: 2000,
+          fixed: 'Fixed',
+        },
+        {
+          date: '2016-05-01',
+          name: 'Tom',
+          amount: 1000,
+          fixed: 'Fixed',
+        },
+    ],
+    formData: [
+        { type: 'text', label: 'text', data: 'text1' },
     ]
 }

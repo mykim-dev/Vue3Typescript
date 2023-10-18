@@ -13,8 +13,8 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
 
 1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
+   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
+   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
 ## Customize configuration
@@ -39,10 +39,12 @@ npm run dev
 npm run build
 ```
 
-**************************************************
+---
+
 #### my.kim record
 
 #### vue3 - https://vuejs.org/guide/quick-start.html#creating-a-vue-application
+
 ```sh
 npm init vue@latest
 cd Vue3Typescript
@@ -51,13 +53,15 @@ npm run dev
 ```
 
 #### element plus - https://element-plus.org/en-US/guide/installation.html
+
 ```sh
 npm install element-plus --save
 ```
 
-
 #### fortawesome
+
 #### https://fontawesome.com/docs/web/use-with/vue/
+
 ```sh
 npm i --save @fortawesome/fontawesome-svg-core
 npm i --save @fortawesome/free-solid-svg-icons
@@ -67,16 +71,29 @@ npm i --save @fortawesome/vue-fontawesome@latest-3
 ```
 
 #### sass
+
 #### https://cli.vuejs.org/guide/css.html#pre-processors
+
 ```sh
 npm install -D sass-loader sass
 ```
 
 #### git
+
+#### 연결
+
 ```sh
 git init
 git remote add origin https://github.com/mykim-dev/Vue3Typescript.git
 git add .
 git commit -m 'first comiit'
 git push
+```
+
+#### clone
+
+```sh
+git clone https://github.com/mykim-dev/Vue3Typescript.git
+cd Vue3Typescript
+npm install
 ```

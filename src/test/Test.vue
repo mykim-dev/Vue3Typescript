@@ -1,11 +1,11 @@
 <script setup>
-import setting from '@/index'
+import defaultData from '@/defaultData'
 
-const Title = setting.title
+const Title = defaultData.title
 console.log(Title)
 </script>
 
 <template>
   <div class="ev-screen default">TEST</div>
   <div>{{ Title }}</div>
-</template>
+</template>@/defaultData

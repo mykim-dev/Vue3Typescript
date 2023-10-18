@@ -1,5 +1,6 @@
-<script setup>
-import setting from '@/index'
+<script lang="ts" setup>
+import defaultData from '@/defaultData'
+
 import EvBreadcrumb from '@/containers/ev-breadcrumb.vue'
 import EvBadge from '@/containers/ev-badge.vue'
 import EvSetting from '@/containers/ev-setting.vue'
@@ -7,10 +8,6 @@ import EvLanguage from '@/containers/ev-language.vue'
 import EvAvatar from '@/containers/ev-avatar.vue'
 
 import { Platform, Setting } from '@element-plus/icons-vue'
-
-function changeLayout() {
-  setting.layout = (setting.layout === 'vertical') ? 'horizontal' : 'vertical';
-}
 </script>
 
 <template>
@@ -19,7 +16,8 @@ function changeLayout() {
       <EvBreadcrumb />
     </div>
     <div class="ev-header__right">
-      <button @click="changeLayout">Layout</button>
+      {{ state }}
+      <button @click="fnToggleLayout">Layout</button>
       <EvBadge />
       <button>
         <el-icon :size="20"><Platform /></el-icon>
@@ -29,4 +27,4 @@ function changeLayout() {
       <EvAvatar />
     </div>
   </div>
-</template>
+</template>@/defaultData

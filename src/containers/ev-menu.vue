@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import setting from '@/index'
+import defaultData from '@/defaultData'
 import { HomeFilled, Grid, Menu, QuestionFilled } from '@element-plus/icons-vue'
 
-const menuMode = setting.layout === 'vertical' ? 'horizontal' : 'vertical'
+const menuMode = defaultData.layout === 'vertical' ? 'horizontal' : 'vertical'
 const isCollapse = ref(false)
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
@@ -73,6 +73,7 @@ const handleClose = (key: string, keyPath: string[]) => {
           <el-menu-item index="/List">List</el-menu-item>
           <el-menu-item index="/ToolbarForm">ToolbarForm</el-menu-item>
           <el-menu-item index="/ToolbarList">ToolbarList</el-menu-item>
+          <el-menu-item index="/Tabs">Tabs</el-menu-item>
         </el-menu-item-group>
       </el-sub-menu>
       <el-sub-menu index="5">
@@ -86,4 +87,4 @@ const handleClose = (key: string, keyPath: string[]) => {
       </el-sub-menu>
     </el-menu>
   </div>
-</template>
+</template>@/defaultData

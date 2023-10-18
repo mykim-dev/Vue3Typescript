@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import LoginLayout from '@/layouts/LoginLayout.vue';
-import BasicLayout from '@/layouts/BasicLayout.vue';
+import LoginLayout from '@/layouts/LoginLayout.vue'
+import BasicLayout from '@/layouts/BasicLayout.vue'
 </script>
 
 <template>

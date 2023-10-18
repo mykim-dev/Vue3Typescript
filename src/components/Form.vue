@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
+import defaultData from '@/defaultData'
 
 const activeNames = ref(['1'])
 const handleChange = (val: string[]) => {
@@ -24,6 +25,7 @@ const onSubmit = () => {
 </script>
 
 <template>
+  {{ defaultData.title }}
   <div class="ev-component">
     <div class="ev-form">
       <el-form :model="form">
