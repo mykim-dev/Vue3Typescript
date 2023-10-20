@@ -15,12 +15,22 @@ const handleClose = (key: string, keyPath: string[]) => {
 
 <template>
   <div class="ev-menu">
-    <el-radio-group v-if="menuMode === 'vertical'" v-model="isCollapse" style="margin-bottom: 20px">
+    <el-radio-group
+      v-if="menuMode === 'vertical'"
+      v-model="isCollapse"
+      style="margin-bottom: 20px"
+    >
       <el-radio-button :label="false">expand</el-radio-button>
       <el-radio-button :label="true">collapse</el-radio-button>
     </el-radio-group>
-    <el-menu :mode="menuMode" :collapse="isCollapse" default-active="2" router="true" @open="handleOpen"
-      @close="handleClose">
+    <el-menu
+      :mode="menuMode"
+      :collapse="isCollapse"
+      default-active="2"
+      router="true"
+      @open="handleOpen"
+      @close="handleClose"
+    >
       <el-menu-item index="/">
         <el-icon>
           <HomeFilled />
@@ -68,13 +78,24 @@ const handleClose = (key: string, keyPath: string[]) => {
         </template>
         <el-menu-item-group title="Component">
           <el-menu-item index="/Form">Form</el-menu-item>
-          <el-menu-item index="/List">List</el-menu-item>
           <el-menu-item index="/ToolbarForm">ToolbarForm</el-menu-item>
+          <el-menu-item index="/List">List</el-menu-item>
           <el-menu-item index="/ToolbarList">ToolbarList</el-menu-item>
           <el-menu-item index="/Tabs">Tabs</el-menu-item>
         </el-menu-item-group>
       </el-sub-menu>
       <el-sub-menu index="5">
+        <template #title>
+          <el-icon>
+            <QuestionFilled />
+          </el-icon>
+          <span>Sample</span>
+        </template>
+        <el-menu-item-group title="SampleForm">
+          <el-menu-item index="/SampleForm">SampleForm</el-menu-item>
+        </el-menu-item-group>
+      </el-sub-menu>
+      <el-sub-menu index="6">
         <template #title>
           <el-icon>
             <QuestionFilled />

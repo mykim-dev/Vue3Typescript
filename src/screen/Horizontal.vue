@@ -8,10 +8,10 @@ console.log(componentHeight)
 <template>
   <div class="ev-screen horizontal">
     <div class="ev-component" :class="{ 'is-full': isFull }">
-      <div class="ev-control">component_1</div>
+      <div class="ev-tmp">component_1</div>
     </div>
     <div class="ev-component" :class="{ 'is-full': isFull }">
-      <div class="ev-control">component_1</div>
+      <div class="ev-tmp">component_1</div>
     </div>
   </div>
 </template>

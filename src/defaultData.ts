@@ -4,6 +4,7 @@ export default {
     menuCollapse: false,
     menus: [
         { name: 'Home', link: '/', icon: '', submenu: [] },
+        { name: 'Setting', link: '/Setting', icon: 'Setting', submenu: [] },
         {
             name: 'Screen',
             link: '/Default',
@@ -37,8 +38,21 @@ export default {
                 { name: 'Dynamic', link: '/Dynamic', icon: 'Location', submenu: [] },
             ],
         },
-        { name: 'Component', link: '/', icon: 'Setting', submenu: [] },
+        { name: 'Component', link: '/', icon: 'Setting', submenu: [
+            { name: 'Form', link: '/Form', icon: '', submenu: [] },
+            { name: 'List', link: '/List', icon: '', submenu: [] },
+            { name: 'ToolbarForm', link: '/ToolbarForm', icon: '', submenu: [] },
+            { name: 'ToolbarList', link: '/ToolbarList', icon: '', submenu: [] },
+            { name: 'Tabs', link: '/Tabs', icon: '', submenu: [] },
+        ] },
         { name: 'Control', link: '/', icon: 'Menu', submenu: [] },
+    ],
+    tags: [
+        { name: 'Form', link: '/Form' },        
+        { name: 'ToolbarForm', link: '/ToolbarForm' },
+        { name: 'List', link: '/List' },
+        { name: 'ToolbarList', link: '/ToolbarList' },
+        { name: 'Tabs', link: '/Tabs' }
     ],
     listData: [
         {

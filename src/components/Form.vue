@@ -1,23 +1,19 @@
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
-import defaultData from '@/defaultData'
-
-const activeNames = ref(['1'])
-const handleChange = (val: string[]) => {
-  console.log(val)
-}
-
-// do not use same name with ref
-const form = reactive({
-  name: '',
-  region: '',
-  date1: '',
-  date2: '',
-  delivery: false,
-  type: [],
-  resource: '',
-  desc: '',
-})
+import evText from '@/controls/evText.vue'
+import evPassword from '@/controls/evPassword.vue'
+import evNumber from '@/controls/evNumber.vue'
+import evLookup from '@/controls/evLookup.vue'
+import evDatePicker from '@/controls/evDatePicker.vue'
+import evDateTimePicker from '@/controls/evDateTimePicker.vue'
+import evSelect from '@/controls/evSelect.vue'
+import evCheckbox from '@/controls/evCheckbox.vue'
+import evRadio from '@/controls/evRadio.vue'
+import evFileUpload from '@/controls/evFileUpload.vue'
+import evImageUpload from '@/controls/evImageUpload.vue'
+import evImageView from '@/controls/evImageView.vue'
+import evTextarea from '@/controls/evTextarea.vue'
+import evSwitch from '@/controls/evSwitch.vue'
+import evColorPicker from '@/controls/evColorPicker.vue'
 
 const onSubmit = () => {
   console.log('submit!')
@@ -25,67 +21,25 @@ const onSubmit = () => {
 </script>
 
 <template>
-  {{ defaultData.title }}
   <div class="ev-component">
     <div class="ev-form">
-      <el-form :model="form">
-        <el-form-item label="Activity name">
-          <el-input v-model="form.name" />
-        </el-form-item>
-        <el-form-item label="Activity zone">
-          <el-select
-            v-model="form.region"
-            placeholder="please select your zone"
-          >
-            <el-option label="Zone one" value="shanghai" />
-            <el-option label="Zone two" value="beijing" />
-          </el-select>
-        </el-form-item>
-        <el-form-item label="Activity time">
-          <el-col :span="11">
-            <el-date-picker
-              v-model="form.date1"
-              type="date"
-              placeholder="Pick a date"
-              style="width: 100%"
-            />
-          </el-col>
-          <el-col :span="2" class="text-center">
-            <span class="text-gray-500">-</span>
-          </el-col>
-          <el-col :span="11">
-            <el-time-picker
-              v-model="form.date2"
-              placeholder="Pick a time"
-              style="width: 100%"
-            />
-          </el-col>
-        </el-form-item>
-        <el-form-item label="Instant delivery">
-          <el-switch v-model="form.delivery" />
-        </el-form-item>
-        <el-form-item label="Activity type">
-          <el-checkbox-group v-model="form.type">
-            <el-checkbox label="Online activities" name="type" />
-            <el-checkbox label="Promotion activities" name="type" />
-            <el-checkbox label="Offline activities" name="type" />
-            <el-checkbox label="Simple brand exposure" name="type" />
-          </el-checkbox-group>
-        </el-form-item>
-        <el-form-item label="Resources">
-          <el-radio-group v-model="form.resource">
-            <el-radio label="Sponsor" />
-            <el-radio label="Venue" />
-          </el-radio-group>
-        </el-form-item>
-        <el-form-item label="Activity form">
-          <el-input v-model="form.desc" type="textarea" />
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary" @click="onSubmit">Create</el-button>
-          <el-button>Cancel</el-button>
-        </el-form-item>
-      </el-form>
+      <el-row class="type-grid">
+        <el-col :span="6"><evText /></el-col>
+        <el-col :span="6"><evPassword /></el-col>
+        <el-col :span="6"><evNumber /></el-col>
+        <el-col :span="6"><evLookup /></el-col>
+        <el-col :span="6"><evDatePicker /></el-col>
+        <el-col :span="6"><evDateTimePicker /></el-col>
+        <el-col :span="6"><evSelect /></el-col>
+        <el-col :span="12"><evCheckbox /></el-col>
+        <el-col :span="12"><evRadio /></el-col>
+        <el-col :span="24"><evTextarea /></el-col>
+        <el-col :span="8"><evFileUpload /></el-col>
+        <el-col :span="8"><evImageUpload /></el-col>
+        <el-col :span="8"><evImageView /></el-col>
+        <el-col :span="8"><evSwitch /></el-col>
+        <el-col :span="8"><evColorPicker /></el-col>
+      </el-row>
     </div>
   </div>
 </template>

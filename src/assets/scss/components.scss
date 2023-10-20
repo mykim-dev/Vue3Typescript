@@ -1,8 +1,87 @@
-// 버튼, 인풋박스, 컨테이너 등등.. 개별 컴포넌트에 대한 CSS
-.ev-component {
+.el-row.type-grid {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 15px 20px;
+  padding: 10px;
 
+  [class*='el-col-'] {
+    max-width: initial;
+  }
+
+  .el-col-1 {
+    grid-column: span 1;
+  }
+  .el-col-2 {
+    grid-column: span 2;
+  }
+  .el-col-3 {
+    grid-column: span 3;
+  }
+  .el-col-4 {
+    grid-column: span 4;
+  }
+  .el-col-5 {
+    grid-column: span 5;
+  }
+  .el-col-6 {
+    grid-column: span 6;
+  }
+  .el-col-7 {
+    grid-column: span 7;
+  }
+  .el-col-8 {
+    grid-column: span 8;
+  }
+  .el-col-9 {
+    grid-column: span 9;
+  }
+  .el-col-10 {
+    grid-column: span 10;
+  }
+  .el-col-11 {
+    grid-column: span 11;
+  }
+  .el-col-12 {
+    grid-column: span 12;
+  }
+  .el-col-13 {
+    grid-column: span 13;
+  }
+  .el-col-14 {
+    grid-column: span 14;
+  }
+  .el-col-15 {
+    grid-column: span 15;
+  }
+  .el-col-16 {
+    grid-column: span 16;
+  }
+  .el-col-17 {
+    grid-column: span 17;
+  }
+  .el-col-18 {
+    grid-column: span 18;
+  }
+  .el-col-19 {
+    grid-column: span 19;
+  }
+  .el-col-20 {
+    grid-column: span 20;
+  }
+  .el-col-21 {
+    grid-column: span 21;
+  }
+  .el-col-22 {
+    grid-column: span 22;
+  }
+  .el-col-23 {
+    grid-column: span 23;
+  }
+  .el-col-24 {
+    grid-column: span 24;
+  }
 }
 
-.ev-toolbar {
-  
+// 버튼, 인풋박스, 컨테이너 등등.. 개별 컴포넌트에 대한 CSS
+.ev-form {
 }

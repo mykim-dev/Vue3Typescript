@@ -1,10 +1,12 @@
 <script lang="ts" setup>
+import { defineProps, defineEmits, ref } from 'vue'
+
 import defaultData from '@/defaultData'
-import EvLogo from '@/containers/ev-logo.vue'
-import EvHeader from '@/containers/ev-header.vue'
-import EvMenu from '@/containers/ev-menu.vue'
-import EvTags from '@/containers/ev-tags.vue'
-import EvMain from '@/containers/ev-main.vue'
+import EvLogo from '@/containers/evLogo.vue'
+import EvHeader from '@/containers/evHeader.vue'
+import EvMenu from '@/containers/evMenu.vue'
+import EvTags from '@/containers/evTags.vue'
+import EvMain from '@/containers/evMain.vue'
 </script>
 
 <template>

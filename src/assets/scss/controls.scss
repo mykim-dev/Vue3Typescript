@@ -1,0 +1,35 @@
+.form-item {
+  &-label {
+    margin-bottom: 2px;
+  }
+
+  &-data {
+    .el-date-editor {
+      --el-date-editor-width: 100%;
+    }
+
+    .el-input__wrapper {
+      flex: 1;
+    }
+  }
+}
+
+.ev-text,
+.ev-password {
+  .el-input {
+    display: block;
+    width: 100%;
+  }
+}
+
+.ev-number {
+  .el-input-number {
+    width: 100%;
+  }
+}
+
+.ev-image-view {
+  .el-carousel__container {
+    background-color: var(--el-bg-color-page);
+  }
+}
