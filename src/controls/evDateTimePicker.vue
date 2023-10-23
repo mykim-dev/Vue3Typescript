@@ -31,16 +31,7 @@ const shortcuts = [
 </script>
 
 <template>
-  <div class="form-item ev-date-time-picker">
-    <div class="form-item-label">
-      <label>Date Time Picker</label>
-    </div>
-    <div class="form-item-data">
-      <el-date-picker
-        v-model="value1"
-        type="datetime"
-        placeholder="Select date and time"
-      />
-    </div>
+  <div class="ev-date-time-picker">
+    <el-date-picker v-model="value1" type="datetime" placeholder="Select date and time" />
   </div>
 </template>

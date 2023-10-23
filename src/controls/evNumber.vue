@@ -8,17 +8,7 @@ const handleChange = (value: number) => {
 </script>
 
 <template>
-  <div class="form-item ev-number">
-    <div class="form-item-label">
-      <label>Text</label>
-    </div>
-    <div class="form-item-data">
-      <el-input-number
-        v-model="num"
-        :min="1"
-        :max="10"
-        @change="handleChange"
-      />
-    </div>
+  <div class="ev-number">
+    <el-input-number v-model="num" :min="1" :max="10" @change="handleChange" />
   </div>
 </template>

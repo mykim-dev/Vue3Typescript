@@ -108,6 +108,11 @@ const router = createRouter({
       component: () => import('@/sample/SampleForm.vue')
     },
     {
+      path: '/SampleList',
+      name: 'SampleList',
+      component: () => import('@/sample/SampleList.vue')
+    },
+    {
       path: '/Bind',
       name: 'Bind',
       component: () => import('@/study/vBind.vue')

@@ -5,16 +5,11 @@ const input = ref('')
 </script>
 
 <template>
-  <div class="form-item ev-lookup">
-    <div class="form-item-label">
-      <label>Lookup</label>
-    </div>
-    <div class="form-item-data">
-      <el-input v-model="input" placeholder="Please input">
-        <template #append>
-          <el-button :icon="Search" />
-        </template>
-      </el-input>
-    </div>
+  <div class="ev-lookup">
+    <el-input v-model="input" placeholder="Please input" disabled>
+      <template #append>
+        <el-button :icon="Search" />
+      </template>
+    </el-input>
   </div>
 </template>

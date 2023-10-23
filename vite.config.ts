@@ -14,20 +14,10 @@ export default defineConfig({
     }
   },
   css: {
-    // loaderOptions: {
-    //   sass: {
-    //     sassOptions: {
-    //       prependData: `@import" @/scss/variables.scss";`,
-    //     }
-    //   }
-    // }
     preprocessorOptions: {
-      sass: {
-        additionalData: `@import " @/scss/_index.scss";`,
-      }
-    }
-  },  
-  link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/static/kakao/favicon.ico' }
-  ]
+      scss: {
+        additionalData: `@use "@/assets/scss/variables.scss" as *;`,
+      },
+    },
+  },
 })

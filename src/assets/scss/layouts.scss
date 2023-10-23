@@ -11,14 +11,15 @@
   grid-template-columns: 250px 1fr;
   grid-template-rows: 60px 60px 60px 1fr;
   transition: grid-template-columns 0.3s;
-  background-color: #dddddd;
+  background-color: var(--el-bg-color-page);
 
-  & > div {
+  &>div {
     border: 1px solid green;
   }
 
   &.horizontal {
     grid-template-rows: 60px 60px 1fr;
+
     .ev-menu {
       grid-column: initial;
       grid-row: span 2;
@@ -184,6 +185,7 @@
 
   &.dashboard2 {
     grid-template-columns: repeat(10, 1fr);
+
     & .ev-component {
       &:nth-child(n + 1):nth-child(-n + 5) {
         grid-column: auto / span 2;
@@ -225,8 +227,6 @@
   background-color: lightblue;
 }
 
-.ev-list {
-}
+.ev-list {}
 
-.ev-form {
-}
+.ev-form {}

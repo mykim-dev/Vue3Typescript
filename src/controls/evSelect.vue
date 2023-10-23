@@ -26,18 +26,9 @@ const options = [
 </script>
 
 <template>
-  <div class="form-item ev-select">
-    <div class="form-item-label">
-      <label>Select</label>
-    </div>
-    <div class="form-item-data">
-      <el-select v-model="value" placeholder="">
-        <el-option
-          v-for="option in options"
-          :label="option.label"
-          :value="option.value"
-        />
-      </el-select>
-    </div>
+  <div class="ev-select">
+    <el-select v-model="value" placeholder="">
+      <el-option v-for="option in options" :label="option.label" :value="option.value" />
+    </el-select>
   </div>
 </template>

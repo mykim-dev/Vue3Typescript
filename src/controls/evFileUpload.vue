@@ -25,8 +25,7 @@ const handlePreview: UploadProps['onPreview'] = (uploadFile) => {
 
 const handleExceed: UploadProps['onExceed'] = (files, uploadFiles) => {
   ElMessage.warning(
-    `The limit is 3, you selected ${files.length} files this time, add up to ${
-      files.length + uploadFiles.length
+    `The limit is 3, you selected ${files.length} files this time, add up to ${files.length + uploadFiles.length
     } totally`,
   )
 }
@@ -42,29 +41,16 @@ const beforeRemove: UploadProps['beforeRemove'] = (uploadFile, uploadFiles) => {
 </script>
 
 <template>
-  <div class="form-item ev-file-upload">
-    <div class="form-item-label">
-      <label>FileUpload</label>
-    </div>
-    <div class="form-item-data">
-      <el-upload
-        v-model:file-list="fileList"
-        class="upload-demo"
-        action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
-        multiple
-        :on-preview="handlePreview"
-        :on-remove="handleRemove"
-        :before-remove="beforeRemove"
-        :limit="3"
-        :on-exceed="handleExceed"
-      >
-        <el-button type="primary">Click to upload</el-button>
-        <template #tip>
-          <div class="el-upload__tip">
-            jpg/png files with a size less than 500KB.
-          </div>
-        </template>
-      </el-upload>
-    </div>
+  <div class="ev-file-upload">
+    <el-upload v-model:file-list="fileList" class="upload-demo"
+      action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15" multiple :on-preview="handlePreview"
+      :on-remove="handleRemove" :before-remove="beforeRemove" :limit="3" :on-exceed="handleExceed">
+      <el-button type="primary">Click to upload</el-button>
+      <template #tip>
+        <div class="el-upload__tip">
+          jpg/png files with a size less than 500KB.
+        </div>
+      </template>
+    </el-upload>
   </div>
 </template>

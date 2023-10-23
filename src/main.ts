@@ -6,13 +6,13 @@ import router from './router'
 
 import ElementPlus from 'element-plus'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+
 import 'element-plus/dist/index.css'
+import '@/assets/scss/index.scss'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHatWizard } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-import '@/assets/scss/_index.scss'
 
 const app = createApp(App)
 

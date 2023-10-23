@@ -1,35 +1,59 @@
 .form-item {
-  &-label {
-    margin-bottom: 2px;
-  }
-
-  &-data {
-    .el-date-editor {
-      --el-date-editor-width: 100%;
+    &-label {
+        margin-bottom: 4px;
     }
 
-    .el-input__wrapper {
-      flex: 1;
-    }
-  }
-}
+    &-data {
+        .el-date-editor {
+            --el-date-editor-width: 100%;
+        }
 
-.ev-text,
-.ev-password {
-  .el-input {
-    display: block;
-    width: 100%;
-  }
+        .el-input__wrapper {
+            flex: 1;
+        }
+    }
+
+    &.ev-blank {
+        .form-item-label {
+            margin: initial;
+        }
+    }
+
+    &.is-left {
+        display: flex;
+        align-items: center;
+
+        &.ev-textarea,
+        &.ev-file-upload,
+        &.ev-image-upload,
+        &.ev-image-view {
+            align-items: flex-start;
+        }
+
+        .form-item-label {
+            width: 100px;
+            padding-right: 10px;
+            margin-bottom: initial;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .form-item-data {
+            flex: 1;
+        }
+    }
 }
 
 .ev-number {
-  .el-input-number {
-    width: 100%;
-  }
+    .el-input-number {
+        width: 100%;
+    }
 }
 
 .ev-image-view {
-  .el-carousel__container {
-    background-color: var(--el-bg-color-page);
-  }
+    .el-carousel__container {
+        background-color: var(--el-bg-color-page);
+    }
 }

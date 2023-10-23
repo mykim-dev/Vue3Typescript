@@ -32,12 +32,7 @@ const disabledDate = (time: Date) => {
 </script>
 
 <template>
-  <div class="form-item ev-date-picker">
-    <div class="form-item-label">
-      <label>Date Picker</label>
-    </div>
-    <div class="form-item-data">
-      <el-date-picker v-model="value1" type="date" placeholder="Pick a day" />
-    </div>
+  <div class="ev-date-picker">
+    <el-date-picker v-model="value1" type="date" placeholder="Pick a day" />
   </div>
 </template>
