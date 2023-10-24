@@ -8,6 +8,8 @@ import defaultData from '@/defaultData'
     <el-tag
       v-for="tag in defaultData.tags"
       :key="tag.name"
+      Plain="Plain"
+      disable-transitions="true"
       closable
       class="ev-tags__item"
     >

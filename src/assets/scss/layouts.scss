@@ -1,9 +1,3 @@
-:root {
-  //   --el-menu-item-height: 40px;
-  --el-menu-icon-width: 20px;
-}
-
-// 웹페이지 전체를 구성하는 레이아웃에 대한 CSS
 .ev-layout {
   width: 100vw;
   height: 100vh;
@@ -13,8 +7,8 @@
   transition: grid-template-columns 0.3s;
   background-color: var(--el-bg-color-page);
 
-  &>div {
-    border: 1px solid green;
+  & > div {
+    border: 1px solid var(--el-border-color);
   }
 
   &.horizontal {
@@ -227,6 +221,8 @@
   background-color: lightblue;
 }
 
-.ev-list {}
+.ev-list {
+}
 
-.ev-form {}
+.ev-form {
+}

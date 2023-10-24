@@ -1,0 +1,26 @@
+// @forward 'element-plus/theme-chalk/src/mixins/config.scss' with (
+//   $namespace: 'qs'
+// );
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #5796ad,
+    ),
+  ),
+  $font-family: (
+    '': "notosans, 'sans-serif'",
+  ),
+  $common-component-size: (
+    'large': 35px,
+    'default': 27px,
+    'small': 20px,
+  )
+);
+
+// @forward 'element-plus/theme-chalk/src/dark/var.scss' with (
+//     $bg-color: (
+//         'page': #0a0a0a,
+//         'overlay': #1d1e1f,
+//     )
+// );

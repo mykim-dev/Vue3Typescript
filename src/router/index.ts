@@ -113,6 +113,11 @@ const router = createRouter({
       component: () => import('@/sample/SampleList.vue')
     },
     {
+        path: '/FloatGrid',
+        name: 'FloatGrid',
+        component: () => import('@/sample/FloatGrid.vue')
+      },    
+    {
       path: '/Bind',
       name: 'Bind',
       component: () => import('@/study/vBind.vue')

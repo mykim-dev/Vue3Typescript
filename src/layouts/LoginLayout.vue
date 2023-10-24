@@ -4,4 +4,4 @@ import defaultData from '@/defaultData'
 
 <template>
   <div class="ev-layout login">Login</div>
-</template>@/defaultData
+</template>

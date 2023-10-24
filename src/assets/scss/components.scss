@@ -109,3 +109,17 @@
     grid-column: span 24;
   }
 }
+
+.ev-toolbarlist {
+  .el-collapse-item {
+    &__header {
+      border-top: initial;
+      border-bottom: 1px solid var(--el-collapse-border-color);
+    }
+
+    &__wrap {
+      border-bottom: initial;
+      padding-top: 10px;
+    }
+  }
+}
