@@ -52,6 +52,10 @@
   }
 }
 
+.el-button {
+  height: var(--el-component-size);
+}
+
 .ev-image-view {
   .el-carousel__container {
     background-color: var(--el-bg-color-page);

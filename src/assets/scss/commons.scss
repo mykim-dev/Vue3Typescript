@@ -22,6 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
 }
 
 #app {
@@ -33,22 +34,23 @@ a {
   text-decoration: none;
 }
 
-// ::-webkit-scrollbar {
-//   width: 6px;
-//   height: 6px;
-// }
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: transparent;
+}
 
-// /* width */
-// ::-webkit-scrollbar-thumb {
-//   background: var(--color-scrollbar-default);
-//   border-radius: 4px;
-//   opacity: 0.3;
-// }
+/* width */
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+  //   opacity: 0.3;
+}
 
-// /* Handle */
-// ::-webkit-scrollbar-thumb:hover {
-//   background: var(--color-scrollbar-default);
-//   opacity: 0.5;
-// }
+/* Handle */
+::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
+  //   opacity: 0.5;
+}
 
 /* Handle on hover */

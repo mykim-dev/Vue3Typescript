@@ -36,9 +36,11 @@ const listData = [
       <el-collapse v-model="activeNames" @change="handleChange">
         <el-collapse-item title="Consistency" name="1">
           <template #title>
-            <h6>Toolbar_List</h6>
-            <div class="ev-form-button">
-              <el-button>FormButton</el-button>
+            <h4>Toolbar_List</h4>
+            <div class="button_wrap">
+              <div class="ev-form-button">
+                <el-button>FormButton</el-button>
+              </div>
             </div>
           </template>
           <div class="ev-list">

@@ -105,5 +105,9 @@ const handleClose = (key: string, keyPath: string[]) => {
         </el-menu-item-group>
       </el-sub-menu> -->
     </el-menu>
+    <div class="ev-menu__banner">
+      <img src="" alt="" />
+      배너
+    </div>
   </div>
 </template>@/defaultData

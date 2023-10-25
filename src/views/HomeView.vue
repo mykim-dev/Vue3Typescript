@@ -1,20 +1,22 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const activeNames = ref(['1'])
+const activeNames = ref(['1', '1', '1'])
+const disabledState = ref([true, false, false])
+const stripeState = ref([true, false, false])
+
 const handleChange = (val: string[]) => {
   console.log(val)
 }
 
 const todoTables = [
   {
-    title: '1차 할 일',
+    title:
+      '1차 할 일 - 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트',
     data: [
       {
-        subject: 'toolbar',
-      },
-      {
-        subject: '',
+        subject:
+          'toolbar - title, button_wrap  - 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트',
       },
       {
         subject:
@@ -65,14 +67,21 @@ const todoTables = [
 
 <template>
   <div class="ev-screen vertical">
-    <div class="ev-component" v-for="todoTable in todoTables">
+    <div class="ev-component" v-for="(todoTable, index) in todoTables">
       <div class="ev-toolbarlist">
-        <el-collapse v-model="activeNames" @change="handleChange">
-          <el-collapse-item :title="todoTable.title" name="1">
+        <el-collapse v-model="activeNames[index]" @change="handleChange">
+          <el-collapse-item
+            :title="todoTable.title"
+            name="1"
+            :disabled="disabledState[index]"
+          >
             <template #title>
-              <h4>{{ todoTable.title }}</h4>
-              <div class="ev-button-wrap">
-                <div class="ev-form-button">
+              <h6 class="ev-toolbar__title">{{ todoTable.title }}</h6>
+              <div class="ev-toolbar__button-wrap">
+                <div class="ev-button">
+                  <el-button>Button</el-button>
+                </div>
+                <div class="ev-form-button" v-for="i in 5">
                   <el-button>FormButton</el-button>
                 </div>
               </div>
@@ -84,7 +93,7 @@ const todoTables = [
                 style="width: 100%"
                 highlight-current-row
                 size="small"
-                stripe
+                :v-if="{ stripe: stripeState[i] }"
                 border
               >
                 <el-table-column
