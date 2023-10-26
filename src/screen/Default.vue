@@ -11,9 +11,11 @@ const isFull = true
 </script>
 
 <template>
-  <div class="ev-screen default">
-    <div class="ev-component" :class="{ 'is-full': isFull }">
-      <div class="ev-tmp">component_1</div>
+  <div class="ev-screen default" :class="{ 'is-full': isFull }">
+    <div class="ev-component">
+      <el-scrollbar class="ev-component-scrollbar">
+        <div class="ev-tmp">component_1</div>
+      </el-scrollbar>
     </div>
   </div>
 </template>

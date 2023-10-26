@@ -1,7 +1,7 @@
 <template>
-  <div class="ev-main">
-    <!-- <el-scrollbar> -->
-    <RouterView />
-    <!-- </el-scrollbar> -->
-  </div>
+  <main class="ev-main">
+    <el-scrollbar class="ev-main-scrollbar" always>
+      <RouterView />
+    </el-scrollbar>
+  </main>
 </template>

@@ -3,8 +3,11 @@ const isFull = true
 </script>
 
 <template>
-  <div class="ev-screen vertical">
-    <div class="ev-component" :class="{ 'is-full': isFull }">component_1</div>
-    <div class="ev-component" :class="{ 'is-full': isFull }">component_2</div>
+  <div class="ev-screen vertical" :class="{ 'is-full': isFull }">
+    <div class="ev-component" v-for="index in 2">
+      <el-scrollbar class="ev-component-scrollbar">
+        <div class="ev-tmp">component_{{ index }}</div>
+      </el-scrollbar>
+    </div>
   </div>
 </template>

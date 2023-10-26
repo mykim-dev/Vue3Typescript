@@ -110,6 +110,25 @@
   }
 }
 
+.ev-component {
+  padding: 20px;
+  grid-column: auto / span 24;
+  border-radius: var(--el-border-radius-base);
+  background-color: #ffffff;
+  box-shadow: var(--el-box-shadow-lighter);
+
+  &-scrollbar {
+    .el-scrollbar__view {
+      height: 100%;
+    }
+  }
+}
+
+.ev-tmp {
+  min-height: 1000px;
+  background-color: lightblue;
+}
+
 .ev-toolbarlist,
 .ev-toolbarform {
   .el-collapse-item {
@@ -151,22 +170,4 @@
       }
     }
   }
-}
-
-.ev-header__banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  height: 60px;
-  background-color: var(--el-fill-color);
-}
-
-.ev-menu__banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  height: 200px;
-  background-color: var(--el-fill-color);
 }

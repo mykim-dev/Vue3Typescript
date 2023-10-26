@@ -3,15 +3,9 @@ const isFull = true
 </script>
 
 <template>
-  <div class="ev-screen dashboard2">
-    <div class="ev-component" :class="{ 'is-full': isFull }">component_1</div>
-    <div class="ev-component" :class="{ 'is-full': isFull }">component_2</div>
-    <div class="ev-component" :class="{ 'is-full': isFull }">component_3</div>
-    <div class="ev-component" :class="{ 'is-full': isFull }">component_4</div>
-    <div class="ev-component" :class="{ 'is-full': isFull }">component_5</div>
-    <div class="ev-component" :class="{ 'is-full': isFull }">component_6</div>
-    <div class="ev-component" :class="{ 'is-full': isFull }">component_7</div>
-    <div class="ev-component" :class="{ 'is-full': isFull }">component_8</div>
-    <div class="ev-component" :class="{ 'is-full': isFull }">component_9</div>
+  <div class="ev-screen dashboard2" :class="{ 'is-full': isFull }">
+    <div class="ev-component" v-for="index in 9">
+      <el-scrollbar class="ev-component-scrollbar">component_{{ index }}</el-scrollbar>
+    </div>
   </div>
 </template>

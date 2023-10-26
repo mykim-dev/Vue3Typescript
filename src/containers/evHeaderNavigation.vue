@@ -20,8 +20,7 @@ import EvAvatar from '@/containers/evAvatar.vue'
     <li><EvAvatar /></li>
     <li>
       <div class="ev-header__banner">
-        <img src="" alt="" />
-        배너
+        <img src="@/assets/img/header-banner.png" alt="" />
       </div>
     </li>
   </ul>

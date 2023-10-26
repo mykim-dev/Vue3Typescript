@@ -1,9 +1,16 @@
 .ev-screen {
   width: 100%;
+  max-height: calc(100vh - (140px + var(--qs-layout-gap) * 3));
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   gap: 20px;
   grid-auto-flow: dense;
+
+  .ev-screen-scrollbar {
+    .el-scrollbar__view {
+      height: 100%;
+    }
+  }
 
   &.horizontal {
     & .ev-component {
@@ -110,7 +117,14 @@
     }
   }
 
-  &:has(.is-full) {
-    height: 100%;
+  &.is-full {
+    min-height: 100%;
+    max-height: calc(100vh - (140px + var(--qs-layout-gap) * 3));
+    justify-content: stretch;
+    align-content: stretch;
+
+    .ev-component {
+      max-height: calc(100vh - (140px + var(--qs-layout-gap) * 3));
+    }
   }
 }

@@ -1,22 +1,25 @@
 <script lang="ts" setup>
-import defaultData from '@/defaultData'
-
-const list = 12
 </script>
 
 <template>
   <div class="ev-screen horizontal">
     <div class="ev-component">
-      <el-row v-for="idx in list" class="type-block">
-        <el-col>
-          <div class="block-item">{{ idx }}</div>
-        </el-col>
-      </el-row>
+      <el-scrollbar class="ev-component-scrollbar">
+        <el-row v-for="idx in 12" class="type-block">
+          <el-col>
+            <div class="block-item">{{ idx }}</div>
+          </el-col>
+        </el-row>
+      </el-scrollbar>
     </div>
-    <el-row class="type-grid">
-      <el-col>
-        <div class="grid-item"></div>
-      </el-col>
-    </el-row>
+    <div class="ev-component">
+      <el-scrollbar class="ev-component-scrollbar">
+        <el-row class="type-grid">
+          <el-col>
+            <div class="grid-item"></div>
+          </el-col>
+        </el-row>
+      </el-scrollbar>
+    </div>
   </div>
 </template>

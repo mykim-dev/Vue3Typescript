@@ -19,8 +19,7 @@ const todoTables = [
           'toolbar - title, button_wrap  - 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트 긴 텍스트 테스트',
       },
       {
-        subject:
-          'action overlay 움직이는 아이콘 깨지는 현상 - svg animation 으로 수정',
+        subject: 'action overlay 움직이는 아이콘 깨지는 현상 - svg animation 으로 수정',
       },
     ],
   },
@@ -35,8 +34,7 @@ const todoTables = [
         subject: 'screen, conponent(form) - float, grid 배치 샘플',
       },
       {
-        subject:
-          'action overlay 움직이는 아이콘 깨지는 현상 - svg animation 으로 수정',
+        subject: 'action overlay 움직이는 아이콘 깨지는 현상 - svg animation 으로 수정',
       },
     ],
   },
@@ -51,8 +49,7 @@ const todoTables = [
         subject: '정리된 테마요소를 UI로 변경 할 수 있는지 확인 (setting)',
       },
       {
-        subject:
-          '설정(logo, banner, progressUI로 변경 할 수 있는지 확인 (setting)',
+        subject: '설정(logo, banner, progressUI로 변경 할 수 있는지 확인 (setting)',
       },
       {
         subject: 'form label 정렬 기능',
@@ -68,67 +65,60 @@ const todoTables = [
 <template>
   <div class="ev-screen vertical">
     <div class="ev-component" v-for="(todoTable, index) in todoTables">
-      <div class="ev-toolbarlist">
-        <el-collapse v-model="activeNames[index]" @change="handleChange">
-          <el-collapse-item
-            :title="todoTable.title"
-            name="1"
-            :disabled="disabledState[index]"
-          >
-            <template #title>
-              <h6 class="ev-toolbar__title">{{ todoTable.title }}</h6>
-              <div class="ev-toolbar__button-wrap">
-                <div class="ev-button">
-                  <el-button>Button</el-button>
+      <el-scrollbar class="ev-component-scrollbar">
+        <div class="ev-toolbarlist">
+          <el-collapse v-model="activeNames[index]" @change="handleChange">
+            <el-collapse-item :title="todoTable.title" name="1" :disabled="disabledState[index]">
+              <template #title>
+                <h6 class="ev-toolbar__title">{{ todoTable.title }}</h6>
+                <div class="ev-toolbar__button-wrap">
+                  <div class="ev-button">
+                    <el-button>Button</el-button>
+                  </div>
+                  <div class="ev-form-button" v-for="i in 5">
+                    <el-button>FormButton</el-button>
+                  </div>
                 </div>
-                <div class="ev-form-button" v-for="i in 5">
-                  <el-button>FormButton</el-button>
-                </div>
-              </div>
-            </template>
+              </template>
 
-            <div class="ev-list">
-              <el-table
-                :data="todoTable.data"
-                style="width: 100%"
-                highlight-current-row
-                size="small"
-                :v-if="{ stripe: stripeState[i] }"
-                border
-              >
-                <el-table-column
-                  type="selection"
-                  width="50"
-                  align="center"
-                  header-align="center"
-                />
-                <el-table-column
-                  fixed
-                  type="index"
-                  label="No"
-                  width="50"
-                  align="center"
-                  header-align="center"
-                />
-                <el-table-column
-                  prop="subject"
-                  label="Subject"
-                  sortable
-                  width=""
-                />
-                <el-table-column
-                  prop="date"
-                  label="Date"
-                  sortable
-                  width="150"
-                  align="center"
-                  header-align="center"
-                />
-              </el-table>
-            </div>
-          </el-collapse-item>
-        </el-collapse>
-      </div>
+              <div class="ev-list">
+                <el-table
+                  :data="todoTable.data"
+                  style="width: 100%"
+                  highlight-current-row
+                  size="small"
+                  :v-if="{ stripe: stripeState[i] }"
+                  border
+                >
+                  <el-table-column
+                    type="selection"
+                    width="50"
+                    align="center"
+                    header-align="center"
+                  />
+                  <el-table-column
+                    fixed
+                    type="index"
+                    label="No"
+                    width="50"
+                    align="center"
+                    header-align="center"
+                  />
+                  <el-table-column prop="subject" label="Subject" sortable width="" />
+                  <el-table-column
+                    prop="date"
+                    label="Date"
+                    sortable
+                    width="150"
+                    align="center"
+                    header-align="center"
+                  />
+                </el-table>
+              </div>
+            </el-collapse-item>
+          </el-collapse>
+        </div>
+      </el-scrollbar>
     </div>
   </div>
 </template>

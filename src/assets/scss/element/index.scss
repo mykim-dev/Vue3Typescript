@@ -5,7 +5,8 @@
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
   $colors: (
     'primary': (
-      'base': #5796ad,
+      //'base': #5796ad,
+      'base': #ffb800,
     ),
   ),
   $font-family: (
@@ -15,6 +16,9 @@
     'large': 35px,
     'default': 27px,
     'small': 20px,
+  ),
+  $border-radius: (
+    'base': 8px,
   )
 );
 
