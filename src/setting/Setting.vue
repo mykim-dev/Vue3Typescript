@@ -588,27 +588,30 @@ const formData = [
 
 <template>
   <div class="ev-screen horizontal is-full">
-    <div class="ev-component" v-for="formDataItem in formData">
-      <el-scrollbar class="ev-component-scrollbar">
-        <div class="ev-form">
-          <h3>{{ formDataItem.tableName }}</h3>
-          <el-row v-for="tableDataItem in formDataItem.tableData">
-            <!-- <el-col :span="tableDataItem.span"> -->
-            <el-col>
-              <span class="form-label">{{ tableDataItem.label }}</span>
-              <span class="form-data">{{ tableDataItem.data }}</span>
-            </el-col>
-          </el-row>
-        </div>
-      </el-scrollbar>
+    <div class="ev-screen-item" v-for="formDataItem in     formData    ">
+      <div class="ev-component">
+        <el-scrollbar class="ev-component-scrollbar">
+          <div class="ev-form">
+            <h3>{{ formDataItem.tableName }}</h3>
+            <el-row v-for="tableDataItem in     formDataItem.tableData    ">
+              <!-- <el-col :span="tableDataItem.span"> -->
+              <el-col>
+                <span class="form-label">{{ tableDataItem.label }}</span>
+                <span class="form-data">{{ tableDataItem.data }}</span>
+                <span class="form-color" :style="{ 'background-color': tableDataItem.data }"></span>
+              </el-col>
+            </el-row>
+          </div>
+        </el-scrollbar>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .ev-form {
-  h3 {
-  }
+  h3 {}
+
   .el-row {
     border: 1px solid var(--el-border-color);
     border-bottom: initial;
@@ -619,9 +622,28 @@ const formData = [
 
     [class*='el-col-'] {
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
       padding: 8px;
+
+      span {
+        flex: 2;
+
+        &:nth-of-type(1) {
+          flex: 12;
+        }
+
+        &:nth-of-type(2) {
+          flex: 10;
+          text-align: right;
+        }
+      }
     }
+  }
+
+  .form-color {
+    height: 14px;
+    border: 1px solid lightgray;
   }
 }
 </style>

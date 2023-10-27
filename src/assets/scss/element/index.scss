@@ -2,25 +2,18 @@
 //   $namespace: 'qs'
 // );
 
-@forward 'element-plus/theme-chalk/src/common/var.scss' with (
-  $colors: (
-    'primary': (
-      //'base': #5796ad,
+@forward 'element-plus/theme-chalk/src/common/var.scss' with ($colors: ('primary': ( //'base': #5796ad,
       'base': #ffb800,
     ),
   ),
-  $font-family: (
-    '': "notosans, 'sans-serif'",
+  $font-family: ('': "notosans, 'sans-serif'",
   ),
-  $common-component-size: (
-    'large': 35px,
+  $common-component-size: ('large': 35px,
     'default': 27px,
     'small': 20px,
   ),
-  $border-radius: (
-    'base': 8px,
-  )
-);
+  $border-radius: ('round': 10px,
+  ));
 
 // @forward 'element-plus/theme-chalk/src/dark/var.scss' with (
 //     $bg-color: (

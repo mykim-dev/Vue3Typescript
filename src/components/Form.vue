@@ -27,10 +27,7 @@ const formData = defaultData.formData
       <div class="ev-form">
         <el-row class="type-grid">
           <el-col v-for="formDataItem in formData" :span="formDataItem.span">
-            <div
-              class="form-item"
-              :class="[formDataItem.item.itemType, { 'is-left': formDataItem.isLeft === true }]"
-            >
+            <div class="form-item" :class="[formDataItem.item.itemType, { 'is-left': formDataItem.isLeft === true }]">
               <div class="form-item-label">
                 <evLabel :value="formDataItem.item.itemLabel" />
               </div>

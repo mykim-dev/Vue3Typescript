@@ -20,15 +20,9 @@ const handleClose = (key: string, keyPath: string[]) => {
 			<el-radio-button :label="true">collapse</el-radio-button>
 		</el-radio-group> -->
     <div class="ev-menu-wrap">
-      <el-scrollbar>
-        <el-menu
-          :mode="menuMode"
-          :collapse="isCollapse"
-          default-active="2"
-          router="true"
-          @open="handleOpen"
-          @close="handleClose"
-        >
+      <el-scrollbar class="ev-menu-wrap-scrollbar" always>
+        <el-menu :mode="menuMode" :collapse="isCollapse" default-active="2" router="true" @open="handleOpen"
+          @close="handleClose">
           <el-menu-item index="/">
             <el-icon>
               <HomeFilled />

@@ -1,10 +1,13 @@
 <script lang="ts" setup>
+const isFull = true
 </script>
 
 <template>
   <div class="ev-screen dynamic" :class="{ 'is-full': isFull }">
-    <div class="ev-component">
-      <el-scrollbar class="ev-component-scrollbar">Dynamic</el-scrollbar>
+    <div class="ev-screen-item">
+      <el-scrollbar class="ev-component-scrollbar">
+        dynamic
+      </el-scrollbar>
     </div>
   </div>
 </template>

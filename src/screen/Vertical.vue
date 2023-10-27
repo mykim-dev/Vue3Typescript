@@ -1,12 +1,14 @@
 <script lang="ts" setup>
+import Form from '@/components/Form.vue'
+
 const isFull = true
 </script>
 
 <template>
   <div class="ev-screen vertical" :class="{ 'is-full': isFull }">
-    <div class="ev-component" v-for="index in 2">
+    <div class="ev-screen-item" v-for="index in 2">
       <el-scrollbar class="ev-component-scrollbar">
-        <div class="ev-tmp">component_{{ index }}</div>
+        <Form />
       </el-scrollbar>
     </div>
   </div>
