@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import Form from '@/components/Form.vue'
-
+import Form from '@/components/form.vue'
 const isFull = true
 </script>
 

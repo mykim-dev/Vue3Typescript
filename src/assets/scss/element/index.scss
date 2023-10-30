@@ -1,19 +1,27 @@
 // @forward 'element-plus/theme-chalk/src/mixins/config.scss' with (
-//   $namespace: 'qs'
+//   $namespace: 'el'
 // );
 
-@forward 'element-plus/theme-chalk/src/common/var.scss' with ($colors: ('primary': ( //'base': #5796ad,
-      'base': #ffb800,
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      //   'base': #5796ad,
+      //   'base': #ffb800,
+      //   'base': #328a23,,,,
     ),
   ),
-  $font-family: ('': "notosans, 'sans-serif'",
+  $font-family: (
+    '': "notosans, 'sans-serif'",
   ),
-  $common-component-size: ('large': 35px,
+  $common-component-size: (
+    'large': 35px,
     'default': 27px,
     'small': 20px,
   ),
-  $border-radius: ('round': 10px,
-  ));
+  $border-radius: (
+    'round': 10px,
+  )
+);
 
 // @forward 'element-plus/theme-chalk/src/dark/var.scss' with (
 //     $bg-color: (

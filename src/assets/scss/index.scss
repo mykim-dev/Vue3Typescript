@@ -1,8 +1,10 @@
 @import 'tokens.scss';
+@import 'element/tokens.scss';
 // @import 'element-plus/dist/index.css';
 @import 'element-plus/theme-chalk/src/var.scss';
 @import 'commons.scss';
-@import 'layouts.scss';
-@import 'screen.scss';
+@import 'layout/index.scss';
+@import 'containers.scss';
+@import 'screens.scss';
 @import 'components.scss';
 @import 'controls.scss';

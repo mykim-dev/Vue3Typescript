@@ -1,13 +1,14 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import defaultData from '@/defaultData'
+import { tmpDataStroe } from '@/stores/components/componentData'
+const tmpData = tmpDataStroe()
+const listData = tmpData.listData
 </script>
 
 <template>
   <div class="ev-component">
     <el-scrollbar class="ev-component-scrollbar">
       <div class="ev-list">
-        <el-table :data="defaultData.listData" show-summary height="300" style="width: 100%" border>
+        <el-table :data="listData" show-summary height="300" style="width: 100%" border>
           <el-table-column type="selection" width="100" align="right" header-align="center" />
           <el-table-column
             fixed
@@ -33,4 +34,4 @@ import defaultData from '@/defaultData'
       </div>
     </el-scrollbar>
   </div>
-</template>@/defaultData
+</template>

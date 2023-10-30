@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import defaultData from '@/defaultData'
+import { layoutSettingStore } from '@/stores/common/index'
+const layoutSetting = layoutSettingStore()
 import { HomeFilled, Grid, Menu, QuestionFilled } from '@element-plus/icons-vue'
 
-const menuMode = defaultData.layout === 'vertical' ? 'horizontal' : 'vertical'
-const isCollapse = ref(false)
+const layoutType = layoutSetting.layoutType === 'vertical' ? 'horizontal' : 'vertical'
+const isCollapse = layoutSetting.menuCollapse
+
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
@@ -15,14 +17,20 @@ const handleClose = (key: string, keyPath: string[]) => {
 
 <template>
   <div class="ev-menu">
-    <!-- <el-radio-group v-if="menuMode === 'vertical'" v-model="isCollapse" style="margin-bottom: 20px">
+    <!-- <el-radio-group v-if="layoutType === 'vertical'" v-model="isCollapse" style="margin-bottom: 20px">
 			<el-radio-button :label="false">expand</el-radio-button>
 			<el-radio-button :label="true">collapse</el-radio-button>
 		</el-radio-group> -->
     <div class="ev-menu-wrap">
       <el-scrollbar class="ev-menu-wrap-scrollbar" always>
-        <el-menu :mode="menuMode" :collapse="isCollapse" default-active="2" router="true" @open="handleOpen"
-          @close="handleClose">
+        <el-menu
+          :mode="layoutType"
+          :collapse="isCollapse"
+          default-active="2"
+          router="true"
+          @open="handleOpen"
+          @close="handleClose"
+        >
           <el-menu-item index="/">
             <el-icon>
               <HomeFilled />
@@ -38,6 +46,7 @@ const handleClose = (key: string, keyPath: string[]) => {
             </template>
             <el-menu-item-group title="Setting">
               <el-menu-item index="/Setting">Setting</el-menu-item>
+              <el-menu-item index="/NewAdditions">NewAdditions</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
           <el-sub-menu index="3">

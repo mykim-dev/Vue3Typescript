@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import defaultData from '@/defaultData'
+import { tmpDataStroe } from '@/stores/components/componentData'
+
 import evText from '@/controls/evText.vue'
 import evLabel from '@/controls/evLabel.vue'
 import evPassword from '@/controls/evPassword.vue'
@@ -18,7 +19,8 @@ import evSwitch from '@/controls/evSwitch.vue'
 import evColorPicker from '@/controls/evColorPicker.vue'
 import evBlank from '@/controls/evBlank.vue'
 
-const formData = defaultData.formData
+const tmpData = tmpDataStroe()
+const formData = tmpData.formData
 </script>
 
 <template>
@@ -27,7 +29,10 @@ const formData = defaultData.formData
       <div class="ev-form">
         <el-row class="type-grid">
           <el-col v-for="formDataItem in formData" :span="formDataItem.span">
-            <div class="form-item" :class="[formDataItem.item.itemType, { 'is-left': formDataItem.isLeft === true }]">
+            <div
+              class="form-item"
+              :class="[formDataItem.item.itemType, { 'is-left': formDataItem.isLeft === true }]"
+            >
               <div class="form-item-label">
                 <evLabel :value="formDataItem.item.itemLabel" />
               </div>

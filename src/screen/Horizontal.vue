@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import Form from '@/components/Form.vue'
-
+import List from '@/components/List.vue'
 const isFull = true
 </script>
 
@@ -8,7 +7,7 @@ const isFull = true
   <div class="ev-screen horizontal" :class="{ 'is-full': isFull }">
     <div class="ev-screen-item" v-for="index in 2">
       <el-scrollbar class="ev-component-scrollbar">
-        <Form />
+        <List />
       </el-scrollbar>
     </div>
   </div>

@@ -23,6 +23,11 @@ const router = createRouter({
       component: () => import('@/setting/Setting.vue')
     },
     {
+        path: '/NewAdditions',
+        name: 'NewAdditions',
+        component: () => import('@/setting/NewAdditions.vue')
+    },    
+    {
       path: '/Default',
       name: 'Default',
       component: () => import('@/screen/Default.vue')

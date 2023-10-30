@@ -144,6 +144,8 @@ const formData = [
   {
     tableName: 'CALS',
     tableData: [
+      { span: 12, label: '--el-color-white', data: '#ffffff' },
+      { span: 12, label: '--el-color-black', data: '#000000' },
       { span: 12, label: '--color-primary-10', data: '#f5fafc' },
       { span: 12, label: '--color-primary-20', data: '#f4f7f8' },
       { span: 12, label: '--color-primary-30', data: '#f3f5f5' },
@@ -588,12 +590,12 @@ const formData = [
 
 <template>
   <div class="ev-screen horizontal is-full">
-    <div class="ev-screen-item" v-for="formDataItem in     formData    ">
+    <div class="ev-screen-item" v-for="formDataItem in formData">
       <div class="ev-component">
         <el-scrollbar class="ev-component-scrollbar">
           <div class="ev-form">
             <h3>{{ formDataItem.tableName }}</h3>
-            <el-row v-for="tableDataItem in     formDataItem.tableData    ">
+            <el-row v-for="tableDataItem in formDataItem.tableData">
               <!-- <el-col :span="tableDataItem.span"> -->
               <el-col>
                 <span class="form-label">{{ tableDataItem.label }}</span>
@@ -610,7 +612,8 @@ const formData = [
 
 <style lang="scss" scoped>
 .ev-form {
-  h3 {}
+  h3 {
+  }
 
   .el-row {
     border: 1px solid var(--el-border-color);

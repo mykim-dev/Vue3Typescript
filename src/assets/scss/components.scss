@@ -2,7 +2,7 @@
   padding: 20px;
   grid-column: auto / span 24;
   border-radius: var(--el-border-radius-round);
-  background-color: #ffffff;
+  //   background-color: #ffffff;
   box-shadow: var(--el-box-shadow-lighter);
 
   &-scrollbar {
@@ -45,7 +45,8 @@
       }
     }
 
-    &__wrap {}
+    &__wrap {
+    }
 
     &.is-disabled {
       .el-collapse-item__header {
