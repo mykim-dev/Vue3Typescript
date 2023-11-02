@@ -1,9 +1,11 @@
 import { defineStore } from 'pinia';
 
-export const layoutSettingStore = defineStore('layoutSetting', {
+export const AppSettingStore = defineStore('AppSetting', {
     state: () => ({
-        layoutType: 'horizontal',
-        theme: 'core',  // green_1, yellow, green_2
+        appLayoutType: 'horizontal',
+        appTheme: 'core',  // green_1, yellow, green_2
+        screenGutter: 20,
+        screenIsFull: false,
         menuCollapse: false,
         menus: [
             { name: 'Home', link: '/', icon: '', submenu: [] },
@@ -55,7 +57,7 @@ export const layoutSettingStore = defineStore('layoutSetting', {
         tags: [
             { name: 'SampleForm', link: '/SampleForm' },
             { name: 'SampleList', link: '/SampleList' },
-            { name: 'FloatGrid', link: '/FloatGrid' },
+            { name: 'SampleFormList', link: '/SampleFormList' },
         ],
     }),
     getters: {},

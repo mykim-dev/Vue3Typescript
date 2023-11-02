@@ -35,22 +35,22 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: var(--qs-scrollbar-width);
+  height: var(--qs-scrollbar-width);
   background: transparent;
 }
 
 /* width */
 ::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: var(--el-text-color-secondary);
   border-radius: 4px;
-  //   opacity: 0.3;
+  opacity: 0.3;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ddd;
-  //   opacity: 0.5;
+  background: var(--el-text-color-secondary);
+  opacity: 0.5;
 }
 
 /* Handle on hover */

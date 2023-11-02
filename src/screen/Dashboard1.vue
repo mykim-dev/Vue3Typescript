@@ -1,15 +1,16 @@
 <script lang="ts" setup>
+import { AppSettingStore } from '@/stores/common/index'
 import Form from '@/components/Form.vue'
 
-const isFull = true
+const AppSetting = AppSettingStore()
+const isFull = AppSetting.screenIsFull
+const screenGutter = AppSetting.screenGutter
 </script>
 
 <template>
-  <div class="ev-screen dashboard1" :class="{ 'is-full': isFull }">
-    <div class="ev-screen-item" v-for="index in 9">
-      <el-scrollbar class="ev-component-scrollbar">
-        <Form />
-      </el-scrollbar>
-    </div>
-  </div>
+  <el-row class="ev-screen dashboard1" :gutter="screenGutter" :class="{ 'is-full': isFull }">
+    <el-col class="ev-screen-item" v-for="index in 9">
+      <Form />
+    </el-col>
+  </el-row>
 </template>

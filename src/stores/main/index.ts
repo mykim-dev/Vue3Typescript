@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-export const mainTaskList = defineStore('taskList', {
+export const taskListStore = defineStore('taskList', {
     state: () => ({
         tasks: [
             { id: 1, title: 'toolbar - title, button_wrap', isDo: false },

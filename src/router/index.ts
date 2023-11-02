@@ -23,10 +23,10 @@ const router = createRouter({
       component: () => import('@/setting/Setting.vue')
     },
     {
-        path: '/NewAdditions',
-        name: 'NewAdditions',
-        component: () => import('@/setting/NewAdditions.vue')
-    },    
+      path: '/NewAdditions',
+      name: 'NewAdditions',
+      component: () => import('@/setting/NewAdditions.vue')
+    },
     {
       path: '/Default',
       name: 'Default',
@@ -116,6 +116,11 @@ const router = createRouter({
       path: '/SampleList',
       name: 'SampleList',
       component: () => import('@/sample/SampleList.vue')
+    },
+    {
+      path: '/SampleFormList',
+      name: 'SampleFormList',
+      component: () => import('@/sample/SampleFormList.vue')
     },
     {
       path: '/FloatGrid',

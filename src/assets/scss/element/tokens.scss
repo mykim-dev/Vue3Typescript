@@ -94,7 +94,7 @@
   --el-index-popper: 2000;
   --el-border-radius-base: 4px;
   --el-border-radius-small: 2px;
-  --el-border-radius-round: 20px;
+  --el-border-radius-round: 10px;
   --el-border-radius-circle: 100%;
   --el-component-size-large: 40px;
   --el-component-size: 32px;
@@ -155,6 +155,7 @@
 }
 
 .green_2 {
+  --el-color-primary: #328a23;
   --el-color-primary-light-3: #70ad65;
   --el-color-primary-light-5: #99c591;
   --el-color-primary-light-7: #c2dcbd;
@@ -162,4 +163,15 @@
   --el-color-primary-light-9: #ebf3e9;
   --el-color-primary-dark-2: #286e1c;
   --el-color-primary-rgb: 50, 138, 35;
+}
+
+.purple {
+  --el-color-primary: #9065db;
+  --el-color-primary-light-3: #b193e6;
+  --el-color-primary-light-5: #c8b2ed;
+  --el-color-primary-light-7: #ded1f4;
+  --el-color-primary-light-8: #e9e0f8;
+  --el-color-primary-light-9: #f4f0fb;
+  --el-color-primary-dark-2: #7351af;
+  --el-color-primary-rgb: 144, 101, 219;
 }

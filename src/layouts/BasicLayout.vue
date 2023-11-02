@@ -9,7 +9,7 @@ import EvMain from '@/containers/evMain.vue'
 
 <template>
   <!-- {{ layout }} -->
-  <div class="ev-layout">
+  <div class="ev-layout" data-layout="horizontal">
     <EvLogo />
     <el-header class="ev-header">
       <!-- {{ layout }} -->

@@ -1,38 +1,40 @@
 <script lang="ts" setup>
+import { AppSettingStore } from '@/stores/common/index'
+const AppSetting = AppSettingStore()
+const isFull = AppSetting.screenIsFull
+const screenGutter = AppSetting.screenGutter
 </script>
 
 <template>
-  <div class="ev-screen horizontal is-full">
-    <div class="ev-screen-item">
+  <el-row class="ev-screen horizontal" :gutter="screenGutter" :class="{ 'is-full': isFull }">
+    <el-col class="ev-screen-item">
       <div class="ev-component">
-        <h3>NewAdditions</h3>
-        <div class="ev-form">
-          <el-row class="type-grid">
-            <el-col>
-              <div class="form-item is-left">
-                <div class="form-item-label">
-                  <label></label>
+        <el-scrollbar class="ev-component-scrollbar">
+          <h3>NewAdditions</h3>
+          <div class="ev-form">
+            <el-row class="type-grid">
+              <el-col>
+                <div class="form-item is-left">
+                  <div class="form-item-label">
+                    <label></label>
+                  </div>
+                  <div class="form-item-data"></div>
                 </div>
-                <div class="form-item-data"></div>
-              </div>
-            </el-col>
-            <el-col>
-              <div class="form-item is-left">
-                <div class="form-item-label">
-                  <label></label>
+              </el-col>
+              <el-col>
+                <div class="form-item is-left">
+                  <div class="form-item-label">
+                    <label></label>
+                  </div>
+                  <div class="form-item-data"></div>
                 </div>
-                <div class="form-item-data"></div>
-              </div>
-            </el-col>
-          </el-row>
-        </div>
+              </el-col>
+            </el-row>
+          </div>
+        </el-scrollbar>
       </div>
-    </div>
-    <div class="ev-screen-item">
-      <div class="ev-component"></div>
-    </div>
-  </div>
+    </el-col>
+  </el-row>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

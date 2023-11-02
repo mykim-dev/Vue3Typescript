@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-const isFull = true
+import { AppSettingStore } from '@/stores/common/index'
+const AppSetting = AppSettingStore()
+const isFull = AppSetting.screenIsFull
 </script>
 
 <template>
-  <div class="ev-screen dynamic" :class="{ 'is-full': isFull }">
-    <div class="ev-screen-item">
-      <el-scrollbar class="ev-component-scrollbar">
-        dynamic
-      </el-scrollbar>
-    </div>
-  </div>
+  <el-row class="ev-screen dynamic" :gutter="screenGutter" :class="{ 'is-full': isFull }">
+    <el-col class="ev-screen-item">
+      dynamic
+    </el-col>
+  </el-row>
 </template>

@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import { AppSettingStore } from '@/stores/common/index'
+const AppSetting = AppSettingStore()
+const isFull = AppSetting.screenIsFull
+const screenGutter = AppSetting.screenGutter
 const formData = [
   {
     tableName: 'Element Plus',
@@ -589,13 +593,13 @@ const formData = [
 </script>
 
 <template>
-  <div class="ev-screen horizontal is-full">
-    <div class="ev-screen-item" v-for="formDataItem in formData">
+  <el-row class="ev-screen horizontal" :gutter="screenGutter" :class="{ 'is-full': isFull }">
+    <el-col class="ev-screen-item" v-for="formDataItem in formData" :span="12">
       <div class="ev-component">
         <el-scrollbar class="ev-component-scrollbar">
           <div class="ev-form">
             <h3>{{ formDataItem.tableName }}</h3>
-            <el-row v-for="tableDataItem in formDataItem.tableData">
+            <el-row v-for="tableDataItem in formDataItem.tableData" :span="12">
               <!-- <el-col :span="tableDataItem.span"> -->
               <el-col>
                 <span class="form-label">{{ tableDataItem.label }}</span>
@@ -606,14 +610,13 @@ const formData = [
           </div>
         </el-scrollbar>
       </div>
-    </div>
-  </div>
+    </el-col>
+  </el-row>
 </template>
 
 <style lang="scss" scoped>
 .ev-form {
-  h3 {
-  }
+  h3 {}
 
   .el-row {
     border: 1px solid var(--el-border-color);
