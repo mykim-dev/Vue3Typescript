@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 
 export const AppSettingStore = defineStore('AppSetting', {
     state: () => ({
-        appLayoutType: 'horizontal',
+        appLayoutType: 'vertical',
         appTheme: 'core',  // green_1, yellow, green_2
         screenGutter: 20,
         screenIsFull: false,

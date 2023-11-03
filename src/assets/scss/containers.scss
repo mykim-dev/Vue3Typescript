@@ -9,6 +9,10 @@
 
   h1 {
     margin: initial;
+
+    a {
+      display: flex;
+    }
   }
 }
 
@@ -36,7 +40,7 @@
   margin: 0;
   list-style: none;
 
-  &>li {
+  & > li {
     display: flex;
     align-items: center;
   }
@@ -52,7 +56,7 @@
 
 .ev-tags {
   height: var(--qs-header-height);
-  padding: 0 var(--qs-component-margin);
+  padding: 0 var(--qs-base-column-gap);
   border-radius: var(--qs-container-border-radius);
   background-color: var(--qs-container-bg-color);
   box-shadow: var(--qs-container-shadow);
@@ -71,7 +75,7 @@
   row-gap: var(--qs-base-row-gap);
   height: var(--qs-menu-height);
 
-  &-scroll {
+  .el-menu {
     border-radius: var(--qs-container-border-radius);
     background-color: var(--qs-container-bg-color);
     box-shadow: var(--qs-container-shadow);
@@ -113,7 +117,7 @@
 
 .ev-main {
   width: calc(100vw - (var(--qs-logo-width) + var(--qs-base-column-gap)));
-  height: calc(100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-base-row-gap) * 3));
+  height: var(--qs-main-height);
 
   &-scrollbar {
     &__bar.is-vertical {

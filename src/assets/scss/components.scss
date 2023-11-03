@@ -6,18 +6,20 @@
   box-shadow: var(--qs-container-shadow);
 
   &.is-full {
-    height: calc(100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-base-row-gap) * 3));
+    height: calc(
+      100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-base-row-gap) * 3)
+    );
   }
 }
 
 .ev-form,
 .ev-list {
-  padding: var(--qs-component-margin);
+  padding: var(--qs-base-column-gap);
 }
 
 .ev-toolbarlist,
 .ev-toolbarform {
-  padding: var(--qs-component-margin);
+  padding: var(--qs-base-column-gap);
 
   .el-collapse-item {
     &__header {

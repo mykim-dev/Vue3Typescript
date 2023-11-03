@@ -4,7 +4,8 @@ import { AppSettingStore } from '@/stores/common/index'
 const AppSetting = AppSettingStore()
 import { HomeFilled, Grid, Menu, QuestionFilled } from '@element-plus/icons-vue'
 
-const appLayoutType = AppSetting.appLayoutType === 'vertical' ? 'horizontal' : 'vertical'
+const appLayoutType = AppSetting.appLayoutType
+const menuType = appLayoutType === 'horizontal' ? 'vertical' : 'horizontal'
 const isCollapse = AppSetting.menuCollapse
 
 const handleOpen = (key: string, keyPath: string[]) => {
@@ -22,8 +23,14 @@ const handleClose = (key: string, keyPath: string[]) => {
 			<el-radio-button :label="true">collapse</el-radio-button>
 		</el-radio-group> -->
     <el-scrollbar always class="ev-menu-scroll">
-      <el-menu :mode="appLayoutType" :collapse="isCollapse" default-active="2" router="true" @open="handleOpen"
-        @close="handleClose">
+      <el-menu
+        :mode="menuType"
+        :collapse="isCollapse"
+        default-active="2"
+        router="true"
+        @open="handleOpen"
+        @close="handleClose"
+      >
         <el-menu-item index="/">
           <el-icon>
             <HomeFilled />

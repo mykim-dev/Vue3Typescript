@@ -1,4 +1,8 @@
 .ev-layout {
+  --qs-main-height: calc(
+    100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-base-row-gap) * 3)
+  );
+
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -8,9 +12,11 @@
   align-content: stretch;
   background-color: var(--el-color-primary-light-9);
   background-image: url(../img/pattern.png),
-    radial-gradient(50% 50% at center top,
+    radial-gradient(
+      50% 50% at center top,
       var(--el-color-primary-light-5) 0%,
-      var(--el-color-primary-light-9) 100%);
+      var(--el-color-primary-light-9) 100%
+    );
   background-repeat: no-repeat;
   background-position: top;
   background-size: auto 20rem;
@@ -18,21 +24,15 @@
   grid-auto-flow: dense;
 
   &[data-layout='horizontal'] {
-    --qs-logo-width: 250px;
-    --qs-header-height: 60px;
-    --qs-tags-height: 60px;
     --qs-menu-height: calc(100vh - (var(--qs-header-height) + var(--qs-base-row-gap) * 2));
-    --qs-main-height: calc(100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-base-row-gap) * 2));
 
     column-gap: var(--qs-base-column-gap);
     row-gap: var(--qs-base-row-gap);
 
-    .ev-logo,
-    .ev-header,
-    .ev-menu,
-    .ev-tags,
-    .ev-main {
-      border: 1px solid red;
+    .ev-logo {
+      --qs-container-shadow: 5px;
+      box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1);
+      border-radius: initial;
     }
 
     .ev-header,
@@ -43,9 +43,15 @@
     .ev-menu {
       grid-column: 1 / span 1;
       grid-row: 2 / span 2;
+      row-gap: initial;
+
+      .el-menu {
+        border-radius: initial;
+      }
     }
 
-    .ev-main {}
+    .ev-main {
+    }
   }
 
   &.is-main-expand {
