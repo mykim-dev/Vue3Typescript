@@ -1,36 +1,17 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { AppSettingStore } from '@/stores/common/index'
+import { HomeFilled, Grid, Menu, QuestionFilled, DArrowRight, DArrowLeft } from '@element-plus/icons-vue'
+
 const AppSetting = AppSettingStore()
-import { HomeFilled, Grid, Menu, QuestionFilled } from '@element-plus/icons-vue'
-
-const appLayoutType = AppSetting.appLayoutType
-const menuType = appLayoutType === 'horizontal' ? 'vertical' : 'horizontal'
-const isCollapse = AppSetting.menuCollapse
-
-const handleOpen = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
-const handleClose = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
 </script>
 
 <template>
   <div class="ev-menu">
-    <!-- <el-radio-group v-if="appLayoutType === 'vertical'" v-model="isCollapse" style="margin-bottom: 20px">
-			<el-radio-button :label="false">expand</el-radio-button>
-			<el-radio-button :label="true">collapse</el-radio-button>
-		</el-radio-group> -->
+    <el-button :icon="AppSetting.menuCollapse === true ? 'DArrowRight' : 'DArrowLeft'"
+      @click="AppSetting.changeMenuCollapse" />
     <el-scrollbar always class="ev-menu-scroll">
-      <el-menu
-        :mode="menuType"
-        :collapse="isCollapse"
-        default-active="2"
-        router="true"
-        @open="handleOpen"
-        @close="handleClose"
-      >
+      <el-menu :mode="AppSetting.menuType" :collapse="AppSetting.menuCollapse" default-active="2" router="true">
         <el-menu-item index="/">
           <el-icon>
             <HomeFilled />

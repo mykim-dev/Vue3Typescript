@@ -1,12 +1,14 @@
 import { defineStore } from 'pinia';
+import { ref } from 'vue'
 
 export const AppSettingStore = defineStore('AppSetting', {
     state: () => ({
-        appLayoutType: 'vertical',
-        appTheme: 'core',  // green_1, yellow, green_2
-        screenGutter: 20,
-        screenIsFull: false,
-        menuCollapse: false,
+        appLayoutType: ref('horizontal'),
+        appTheme: ref('green'),  // green_1, yellow, green_2
+        screenGutter: ref(20),
+        screenIsFull: ref(false),
+        menuType: ref('vertical'),
+        menuCollapse: ref(false),
         menus: [
             { name: 'Home', link: '/', icon: '', submenu: [] },
             { name: 'Setting', link: '/Setting', icon: 'Setting', submenu: [] },
@@ -61,5 +63,25 @@ export const AppSettingStore = defineStore('AppSetting', {
         ],
     }),
     getters: {},
-    actions: {}
+    actions: {
+        changeTheme(theme: string) {
+            if (this.appTheme !== theme) {
+                this.appTheme = theme
+                document.querySelector('body')?.setAttribute('class', theme)
+            }
+        },
+
+        changeLayout(layout: string) {
+            this.appLayoutType = layout
+            this.menuType = (layout === 'vertical' || layout === 'vertical2') ? 'horizontal' : 'vertical'
+        },
+
+        changeMenuCollapse() {
+            this.menuCollapse = !this.menuCollapse
+        },
+
+        mainExpand() {
+
+        },
+    }
 })
