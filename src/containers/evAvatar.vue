@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { UserFilled } from '@element-plus/icons-vue'
+import { UserFilled, Plus, CirclePlusFilled, CirclePlus, Check, CircleCheck } from '@element-plus/icons-vue'
 </script>
 
 <template>
