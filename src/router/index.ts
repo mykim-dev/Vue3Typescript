@@ -131,6 +131,11 @@ const router = createRouter({
       path: '/Bind',
       name: 'Bind',
       component: () => import('@/study/vBind.vue')
+    },
+    {
+      path: '/Snow',
+      name: 'Snow',
+      component: () => import('@/study/Snow.vue')
     }
   ]
 })
