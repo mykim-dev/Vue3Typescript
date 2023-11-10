@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico">
+    <title>TEST2</title>
+    <style>
+        :root {
+            color-scheme: light;            
+            --color-background: #000000;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: light;            
+                --color-background: yellow;
+            }
+        }
+
+        .container {
+            height: 100px;
+            background-color: var(--color-background);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>color-scheme: light;</p>
+    </div>
+    가나다라마바사
+
+    <div class="container">
+        <p></p>
+    </div>    
+</body>
+
+</html>

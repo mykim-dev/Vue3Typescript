@@ -37,11 +37,7 @@ const AppSetting = AppSettingStore()
       </el-button-group>
     </li>
     <li>
-      <el-link :underline="false" @click="AppSetting.mainExpand">
-        <el-icon :size="20">
-          <Rank />
-        </el-icon>
-      </el-link>
+      <el-button :icon="Rank" class="ev-header-navigation__icon" link size="large" @click="AppSetting.mainExpand" />
     </li>
     <li>
       <EvBadge />

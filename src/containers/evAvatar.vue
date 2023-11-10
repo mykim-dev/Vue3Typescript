@@ -4,10 +4,10 @@ import { UserFilled, Plus, CirclePlusFilled, CirclePlus, Check, CircleCheck } fr
 
 <template>
   <el-dropdown trigger="click">
-    <el-link>
+    <el-button class="ev-header-navigation__icon" link>
       <el-avatar :size="20" :icon="UserFilled" />
       Education Admin
-    </el-link>
+    </el-button>
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item :icon="Plus">Action 1</el-dropdown-item>

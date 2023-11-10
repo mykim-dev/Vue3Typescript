@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { Plus, CirclePlusFilled, CirclePlus, Check, CircleCheck } from '@element-plus/icons-vue'
+import { Tools, Plus, CirclePlusFilled, CirclePlus, Check, CircleCheck } from '@element-plus/icons-vue'
 </script>
 
 <template>
   <el-dropdown trigger="click">
-    <el-link>
-      <el-icon :size="20"><Tools /></el-icon>
-    </el-link>
+    <el-button :icon="Tools" class="ev-header-navigation__icon" link />
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item :icon="Plus">Action 1</el-dropdown-item>
