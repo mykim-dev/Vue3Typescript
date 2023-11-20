@@ -1,20 +1,8 @@
-$--colors: (
-  "primary": (
-    // 'base': #5796ad,
-    // 'base': #ffb800,
-    // 'base': #328a23,
-    'base': #9065db,
-    // 'base': colortest.SelectColor,
-  )
-);
-
 // @forward 'element-plus/theme-chalk/src/mixins/config.scss' with (
 //   $namespace: 'el'
 // );
 
-@forward 'element-plus/theme-chalk/src/common/var.scss' with (
-  $colors: $--colors,
-  $font-family: ('': "notosans, 'sans-serif'",
+@forward 'element-plus/theme-chalk/src/common/var.scss' with ($font-family: ('': "notosans, 'sans-serif'",
   ),
   $common-component-size: ('large': 35px,
     'default': 27px,
