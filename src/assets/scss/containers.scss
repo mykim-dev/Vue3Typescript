@@ -40,7 +40,7 @@
   margin: 0;
   list-style: none;
 
-  & > li {
+  &>li {
     display: flex;
     align-items: center;
   }
@@ -228,11 +228,17 @@
 }
 
 .el-popper.is-pure.is-light {
-  // display: block !important;
+  background-color: transparent;
 
-  .el-menu--vertical {
-    // &.el-menu--popup-container {
-    //   border: 1px solid red;
-    // }
+  &.subMain {
+    right: 0 !important;
+    bottom: 0 !important;
+    overflow: auto;
+
+    .el-menu--vertical.el-menu--popup-container {
+      &.subMain {
+        width: 200px;
+      }
+    }
   }
 }
