@@ -84,7 +84,7 @@
     background-color: var(--qs-container-bg-color);
 
     &-item-group__title {
-      display: none;
+      // display: none;
     }
 
     .el-icon {
@@ -224,5 +224,15 @@
         gap: 2px;
       }
     }
+  }
+}
+
+.el-popper.is-pure.is-light {
+  // display: block !important;
+
+  .el-menu--vertical {
+    // &.el-menu--popup-container {
+    //   border: 1px solid red;
+    // }
   }
 }
