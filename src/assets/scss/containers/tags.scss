@@ -1,0 +1,14 @@
+.ev-tags {
+    height: var(--qs-header-height);
+    padding: 0 var(--qs-base-column-gap);
+    border-radius: var(--qs-container-border-radius);
+    background-color: var(--qs-container-bg-color);
+    box-shadow: var(--qs-container-shadow);
+
+    &-group {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+        height: var(--qs-header-height);
+    }
+}

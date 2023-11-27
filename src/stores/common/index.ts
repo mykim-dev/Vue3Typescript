@@ -58,7 +58,6 @@ export const AppSettingStore = defineStore('AppSetting', {
                 ]
             },
             { name: 'Control', link: '/', icon: 'Mouse', menus: [] },
-
         ],
         tags: [
             { name: 'SampleForm', link: '/SampleForm' },

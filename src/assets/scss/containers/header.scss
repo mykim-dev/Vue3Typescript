@@ -54,87 +54,6 @@
   }
 }
 
-.ev-tags {
-  height: var(--qs-header-height);
-  padding: 0 var(--qs-base-column-gap);
-  border-radius: var(--qs-container-border-radius);
-  background-color: var(--qs-container-bg-color);
-  box-shadow: var(--qs-container-shadow);
-
-  &-group {
-    display: flex;
-    align-items: center;
-    gap: 0 10px;
-    height: var(--qs-header-height);
-  }
-}
-
-.ev-menu {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--qs-base-row-gap);
-  height: var(--qs-menu-height);
-  position: relative;
-
-  .el-menu {
-    border: initial;
-    border-radius: var(--qs-container-border-radius);
-    background-color: var(--qs-container-bg-color);
-    box-shadow: var(--qs-container-shadow);
-    background-color: var(--qs-container-bg-color);
-
-    &-item-group__title {
-      // display: none;
-    }
-
-    .el-icon {
-      margin-right: initial;
-    }
-
-    a {
-      flex: 1;
-    }
-
-    &.el-menu--horizontal {
-      border-bottom: initial;
-    }
-  }
-
-  &-toggle.el-button {
-    // width: 30px;
-    // height: 30px;
-    border-radius: 15px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(15px, -15px);
-    z-index: 9;
-  }
-
-  &__banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 140px;
-    border-radius: var(--qs-container-border-radius);
-    background-color: var(--qs-container-bg-color);
-    box-shadow: var(--qs-container-shadow);
-    overflow: hidden;
-  }
-}
-
-.ev-main {
-  width: calc(100vw - (var(--qs-logo-width) + var(--qs-base-column-gap)));
-  height: var(--qs-main-height);
-
-  &-scrollbar {
-    &__bar.is-vertical {
-      right: 0;
-    }
-  }
-}
-
 //
 .theme-group {
   .el-button {
@@ -222,22 +141,6 @@
       span {
         padding: 2px;
         gap: 2px;
-      }
-    }
-  }
-}
-
-.el-popper.is-pure.is-light {
-  background-color: transparent;
-
-  &.subMain {
-    right: 0 !important;
-    bottom: 0 !important;
-    overflow: auto;
-
-    .el-menu--vertical.el-menu--popup-container {
-      &.subMain {
-        width: 200px;
       }
     }
   }

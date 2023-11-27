@@ -1,0 +1,10 @@
+.ev-main {
+    width: calc(100vw - (var(--qs-logo-width) + var(--qs-base-column-gap)));
+    height: var(--qs-main-height);
+
+    &-scrollbar {
+        &__bar.is-vertical {
+            right: 0;
+        }
+    }
+}

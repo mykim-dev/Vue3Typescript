@@ -1,0 +1,63 @@
+.ev-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--qs-base-row-gap);
+  // height: var(--qs-menu-height);
+  position: relative;
+
+  .el-scrollbar__view {
+    height: var(--qs-menu-height);
+  }
+
+  .el-menu {
+    border-radius: var(--qs-container-border-radius);
+    background-color: var(--qs-container-bg-color);
+    box-shadow: var(--qs-container-shadow);
+
+    &.el-menu--horizontal {
+      height: 100%;
+      justify-content: center;
+      border-bottom: initial;
+    }
+  }
+
+  &-toggle.el-button {
+    // width: 30px;
+    // height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(15px, -15px);
+    z-index: 9;
+  }
+
+  &__banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 140px;
+    border-radius: var(--qs-container-border-radius);
+    background-color: var(--qs-container-bg-color);
+    box-shadow: var(--qs-container-shadow);
+    overflow: hidden;
+  }
+}
+
+// 
+.el-popper.is-pure.is-light {
+  background-color: transparent;
+
+  &.subMain {
+    right: 0 !important;
+    bottom: 0 !important;
+    overflow: auto;
+
+    .el-menu--vertical.el-menu--popup-container {
+      &.subMain {
+        width: 200px;
+      }
+    }
+  }
+}
