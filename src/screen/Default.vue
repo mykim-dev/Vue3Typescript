@@ -11,7 +11,7 @@ const screenGutter = AppSetting.screenGutter
 <template>
   <el-row class="ev-screen default" :gutter="screenGutter" :class="{ 'is-full': isFull }">
     <el-col class="ev-screen-item">
-      <Form />
+      <!-- <Form /> -->
     </el-col>
   </el-row>
 </template>

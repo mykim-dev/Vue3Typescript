@@ -10,7 +10,7 @@ const screenGutter = AppSetting.screenGutter
 <template>
   <el-row class="ev-screen dashboard2" :gutter="screenGutter" :class="{ 'is-full': isFull }">
     <el-col class="ev-screen-item" v-for="index in 11">
-      <Form />
+      <!-- <Form /> -->
     </el-col>
   </el-row>
 </template>

@@ -16,33 +16,13 @@ export const AppSettingStore = defineStore('AppSetting', {
                 name: 'Screen', link: '/Default', icon: 'FullScreen',
                 menus: [
                     { name: 'Default', link: '/Default', icon: '', menus: [] },
-                    {
-                        name: 'Horizontal', link: '/Horizontal', icon: '', menus: [
-                            { name: 'Default', link: '/Default', icon: '', menus: [] },
-                            {
-                                name: 'Horizontal',
-                                link: '/Horizontal',
-                                icon: 'Location',
-                                menus: [],
-                            }
-                        ],
-                    },
+                    { name: 'Horizontal', link: '/Horizontal', icon: '', menus: [] },
                     { name: 'Vertical', link: '/Vertical', icon: '', menus: [] },
                     { name: 'Horizontal2', link: '/Horizontal2', icon: '', menus: [] },
                     { name: 'Vertical2', link: '/Vertical2', icon: '', menus: [] },
-                    {
-                        name: 'Horizontal3',
-                        link: '/Horizontal3',
-                        icon: '',
-                        menus: [],
-                    },
+                    { name: 'Horizontal3', link: '/Horizontal3', icon: '', menus: [], },
                     { name: 'Dashboard', link: '/Dashboard', icon: '', menus: [] },
-                    {
-                        name: 'Dashboard1',
-                        link: '/Dashboard1',
-                        icon: '',
-                        menus: [],
-                    },
+                    { name: 'Dashboard1', link: '/Dashboard1', icon: '', menus: [] },
                     { name: 'Dashboard2', link: '/Dashboard2', icon: '', menus: [] },
                     { name: 'Dashboard3', link: '/Dashboard3', icon: '', menus: [] },
                     { name: 'Dynamic', link: '/Dynamic', icon: '', menus: [] },

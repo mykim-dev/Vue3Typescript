@@ -5,7 +5,7 @@ const AppSetting = AppSettingStore()
 </script>
 
 <template>
-  <div class="ev-tags">
+  <div class="ev-tags ev-layout-item">
     <el-scrollbar class="ev-tags-scrollbar">
       <div class="ev-tags-group">
         <el-tag v-for="tag in AppSetting.tags" :key="tag.name" closable>

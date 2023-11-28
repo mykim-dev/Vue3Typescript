@@ -1,34 +1,48 @@
 .ev-menu {
   display: flex;
   flex-direction: column;
-  row-gap: var(--qs-base-row-gap);
-  // height: var(--qs-menu-height);
+  row-gap: var(--qs-layout-gap);
   position: relative;
 
-  .el-scrollbar__view {
+  &-scroll {
     height: var(--qs-menu-height);
+    border-radius: var(--qs-layout-item-border-radius);
+    background-color: var(--qs-layout-item-background-color);
+    background-image: var(--qs-layout-item-background-image);
+    box-shadow: var(--qs-layout-item-shadow);
   }
 
-  .el-menu {
-    border-radius: var(--qs-container-border-radius);
-    background-color: var(--qs-container-bg-color);
-    box-shadow: var(--qs-container-shadow);
-
+  .el-menu {    
+    background-color: initial;
+    
     &.el-menu--horizontal {
-      height: 100%;
+      --el-menu-horizontal-height: var(--qs-menu-height);
+      
       justify-content: center;
+      align-items: center;
       border-bottom: initial;
+
+      & > .el-menu-item {
+        height: initial;
+      }
+
+      .el-sub-menu {
+        height: 100%;
+      }
+    }
+
+    .el-menu-item {      
+      line-height: initial;
     }
   }
 
   &-toggle.el-button {
-    // width: 30px;
-    // height: 30px;
-    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(15px, -15px);
+    top: calc(var(--qs-header-height) / 2.5 * -1);
+    right: calc(var(--qs-header-height) / 3 * -1);
     z-index: 9;
   }
 
@@ -38,9 +52,7 @@
     align-items: center;
     width: 250px;
     height: 140px;
-    border-radius: var(--qs-container-border-radius);
-    background-color: var(--qs-container-bg-color);
-    box-shadow: var(--qs-container-shadow);
+    border-radius: var(--qs-layout-item-border-radius);    
     overflow: hidden;
   }
 }

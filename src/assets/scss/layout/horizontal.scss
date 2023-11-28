@@ -1,74 +1,15 @@
 .ev-layout {
-  --qs-main-height: calc(100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-base-row-gap) * 3));
-
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: var(--qs-logo-width) 1fr;
-  grid-template-rows: var(--qs-header-height) var(--qs-tags-height) 1fr;
-  justify-content: stretch;
-  align-content: stretch;
-  background-color: var(--el-color-primary-light-9);
-  background-image: url(../img/pattern.png),
-    radial-gradient(50% 50% at center top,
-      var(--el-color-primary-light-5) 0%,
-      var(--el-color-primary-light-9) 100%);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: auto 20rem;
-  transition: var(--el-transition-duration-fast);
-  grid-auto-flow: dense;
-
   &[data-layout='horizontal'] {
-    --qs-menu-height: calc(100vh - (var(--qs-header-height) + 140 + var(--qs-base-row-gap)));
+    --qs-menu-height: calc(100vh - (var(--qs-header-height) + 140px + calc(var(--qs-layout-gap) * 2)));
+    --qs-main-height: calc(100vh - (var(--qs-header-height) + var(--qs-tags-height) + calc(var(--qs-layout-gap) * 2)));
 
-    column-gap: var(--qs-base-column-gap);
-    row-gap: var(--qs-base-row-gap);
-
-    .ev-logo {
-      --qs-container-shadow: 5px;
-      box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1);
-      border-radius: initial;
-    }
-
-    .ev-header,
-    .ev-tags {
-      margin-right: var(--qs-base-column-gap);
-    }
-
+    grid-template-columns: var(--qs-menu-width) 1fr;
+    grid-template-rows: var(--qs-header-height) var(--qs-tags-height) 1fr;
+    gap: var(--qs-layout-gap);
+    
     .ev-menu {
       grid-column: 1 / span 1;
       grid-row: 2 / span 2;
-
-      .el-menu {
-        border-radius: initial;
-      }
-    }
-  }
-
-  &[data-collapse='true'] {
-    --qs-logo-width: 65px;
-
-    .ev-menu__banner {
-      display: none;
-    }
-  }
-
-  &.is-main-expand {
-    --qs-logo-width: 0px;
-    --qs-header-height: 0px;
-    --qs-tags-height: 0px;
-
-    gap: initial;
-
-    .ev-logo,
-    .ev-menu,
-    .ev-header {
-      display: none;
-    }
-
-    .ev-main {
-      // height: calc(100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-base-column-gap) * 2))
     }
   }
 }

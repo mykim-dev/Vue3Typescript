@@ -7,7 +7,7 @@ const isFull = AppSetting.screenIsFull
 <template>
   <el-row class="ev-screen dynamic" :gutter="screenGutter" :class="{ 'is-full': isFull }">
     <el-col class="ev-screen-item">
-      dynamic
+      <!-- dynamic -->
     </el-col>
   </el-row>
 </template>

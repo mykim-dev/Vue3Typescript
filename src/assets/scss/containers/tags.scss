@@ -1,14 +1,18 @@
 .ev-tags {
-    height: var(--qs-header-height);
-    padding: 0 var(--qs-base-column-gap);
-    border-radius: var(--qs-container-border-radius);
-    background-color: var(--qs-container-bg-color);
-    box-shadow: var(--qs-container-shadow);
+    border-radius: var(--qs-layout-item-border-radius);
+    background-color: var(--qs-layout-item-background-color);
+    background-image: var(--qs-layout-item-background-image);
+    box-shadow: var(--qs-layout-item-shadow);
+
+    // .el-scrollbar__view {
+    //     height: 100%;
+    // }
 
     &-group {
         display: flex;
         align-items: center;
+        height: var(--qs-tags-height);
         gap: 0 10px;
-        height: var(--qs-header-height);
+        padding: 0 10px;
     }
 }

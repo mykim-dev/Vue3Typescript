@@ -1,0 +1,16 @@
+:root {
+    --qs-layout-gap: 15px;
+    --qs-scrollbar-width: 6px;
+
+    --qs-layout-item-background-color: var(--el-color-white);
+    --qs-layout-item-background-image: none;
+    --qs-layout-item-shadow: var(--el-box-shadow-lighter);
+    --qs-layout-item-border-radius: var(--el-border-radius-round);
+
+    --qs-header-height: 60px;    
+    --qs-menu-width: 250px;
+    --qs-menu-height: 60px;
+    --qs-tags-height: 60px;
+
+    --qs-form-gap: 20px 10px;
+}

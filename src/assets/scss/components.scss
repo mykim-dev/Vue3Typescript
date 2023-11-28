@@ -1,25 +1,24 @@
 .ev-component {
-  // grid-column: auto / span 24;
-
-  border-radius: var(--qs-container-border-radius);
-  background-color: var(--qs-container-bg-color);
-  box-shadow: var(--qs-container-shadow);
+  border-radius: var(--qs-layout-item-border-radius);
+  background-color: var(--qs-layout-item-background-color);
+  background-image: var(--qs-layout-item-background-image);
+  box-shadow: var(--qs-layout-item-shadow);
 
   &.is-full {
     height: calc(
-      100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-base-row-gap) * 3)
+      100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-layout-gap) * 3)
     );
   }
 }
 
 .ev-form,
 .ev-list {
-  padding: var(--qs-base-column-gap);
+  padding: var(--qs-layout-gap);
 }
 
 .ev-toolbarlist,
 .ev-toolbarform {
-  padding: var(--qs-base-column-gap);
+  padding: var(--qs-layout-gap);
 
   .el-collapse-item {
     &__header {

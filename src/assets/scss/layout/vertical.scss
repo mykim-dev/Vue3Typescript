@@ -1,62 +1,31 @@
 .ev-layout {
   &[data-layout='vertical'] {
-    --qs-menu-height: 60px;
-    --qs-base-row-gap: 10px;
+    --qs-menu-height: 40px;
+    --qs-tags-height: 40px;    
+    --qs-main-height: calc(100vh - (var(--qs-header-height) + var(--qs-menu-height) + var(--qs-tags-height) + calc(var(--qs-layout-gap) * 3)));
 
-    --qs-main-height: calc(
-      100vh -
-        (
-          var(--qs-header-height) + var(--qs-menu-height) + var(--qs-tags-height) +
-            var(--qs-base-row-gap) * 4
-        )
-    );
-
+    grid-template-columns: var(--qs-menu-width) 1fr;
     grid-template-rows: var(--qs-header-height) var(--qs-menu-height) var(--qs-tags-height) 1fr;
-    row-gap: var(--qs-base-row-gap);
-
-    .ev-logo {
-      box-shadow: initial;
-      border-radius: initial;
-    }
-
-    .ev-header {
-      background-color: var(--qs-container-bg-color);
-    }
+    row-gap: var(--qs-layout-gap);
 
     .ev-menu {
       grid-column: 1 / span 2;
-      height: 100%;
-      margin: 0 var(--qs-base-column-gap);
 
-      .el-scrollbar__view {
-        height: 100%;
-
-        .el-menu--horizontal {
-          height: 100%;
-          justify-content: center;
-          align-items: center;
-
-          .el-sub-menu {
-            height: 100%;
-          }
-        }
+      &-toggle {
+        display: none;
       }
 
-      .ev-menu__banner {
+      &__banner {
         display: none;
       }
     }
 
     .ev-tags {
       grid-column: 1 / span 2;
-      margin: 0 var(--qs-base-column-gap);
-      width: initial;
     }
 
     .ev-main {
       grid-column: 1 / span 2;
-      width: initial;
-      margin-left: var(--qs-base-column-gap);
     }
   }
 }

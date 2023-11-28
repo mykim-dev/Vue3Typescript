@@ -1,16 +1,23 @@
 .ev-screen {
   width: 100%;
   height: 100%;
-  // display: grid;
-  // grid-template-columns: repeat(24, 1fr);
-  // grid-template-rows: repeat(24, 1fr);
-  // gap: var(--qs-base-column-gap);
-  // grid-auto-flow: row dense;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(24, 1fr);
+  gap: var(--qs-layout-gap);
+  grid-auto-flow: row dense;
+
+  &.el-row {
+    margin: initial !important;
+  }
 
   .ev-screen-item {
-    // border-radius: var(--qs-container-border-radius);
-    // background-color: var(--qs-container-bg-color);
-    // box-shadow: var(--qs-container-shadow);
+    border: 1px solid purple;
+    
+    &[class*=el-col-] {
+      max-width: initial;
+      padding: initial !important;      
+    }
   }
 
   &.default {
@@ -142,7 +149,7 @@
 
   // &.is-full {
   //   min-height: 100%;
-  //   height: calc(100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-base-row-gap) * 3));
+  //   height: calc(100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-layout-gap) * 3));
   //   justify-content: stretch;
   //   align-content: stretch;
 
