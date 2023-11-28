@@ -3,26 +3,26 @@
   flex-direction: column;
   row-gap: var(--qs-layout-gap);
   position: relative;
+  border-radius: var(--qs-layout-item-border-radius);
+  background-color: var(--qs-layout-item-background-color);
+  background-image: var(--qs-layout-item-background-image);
+  box-shadow: var(--qs-layout-item-shadow);
 
   &-scroll {
     height: var(--qs-menu-height);
-    border-radius: var(--qs-layout-item-border-radius);
-    background-color: var(--qs-layout-item-background-color);
-    background-image: var(--qs-layout-item-background-image);
-    box-shadow: var(--qs-layout-item-shadow);
   }
 
-  .el-menu {    
+  .el-menu {
     background-color: initial;
-    
+
     &.el-menu--horizontal {
       --el-menu-horizontal-height: var(--qs-menu-height);
-      
+
       justify-content: center;
       align-items: center;
       border-bottom: initial;
 
-      & > .el-menu-item {
+      &>.el-menu-item {
         height: initial;
       }
 
@@ -31,7 +31,7 @@
       }
     }
 
-    .el-menu-item {      
+    .el-menu-item {
       line-height: initial;
     }
   }
@@ -52,7 +52,7 @@
     align-items: center;
     width: 250px;
     height: 140px;
-    border-radius: var(--qs-layout-item-border-radius);    
+    border-radius: var(--qs-layout-item-border-radius);
     overflow: hidden;
   }
 }

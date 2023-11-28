@@ -1,11 +1,11 @@
 .ev-layout {
   &[data-layout='horizontal2'] {
-    --qs-layout-item-background-image: linear-gradient(red, yellow);
-    --qs-layout-item-shadow: initial;
-    --qs-layout-item-border-radius: initial;
+    --qs-layout-item-background-color: rgba(255, 255, 255, 0.5);
+    --qs-layout-item-background-image: none;
+    --qs-layout-item-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 
     --qs-menu-height: calc(100vh - (var(--qs-header-height) + 140px + calc(var(--qs-layout-gap) * 4)));
-    --qs-main-height: calc(100vh - (var(--qs-header-height) + var(--qs-tags-height) + calc(var(--qs-layout-gap) * 4)));    
+    --qs-main-height: calc(100vh - (var(--qs-header-height) + var(--qs-tags-height) + calc(var(--qs-layout-gap) * 4)));
 
     grid-template-columns: var(--qs-menu-width) 1fr;
     grid-template-rows: var(--qs-header-height) var(--qs-tags-height) 1fr;
