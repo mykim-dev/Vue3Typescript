@@ -1,15 +1,23 @@
-// @forward 'element-plus/theme-chalk/src/mixins/config.scss' with (
-//   $namespace: 'el'
+// @forward 'element-plus/theme-chalk/src/mixins/config.scss' with ($namespace: 'el'
 // );
 
-@forward 'element-plus/theme-chalk/src/common/var.scss' with ($font-family: ('': "notosans, 'sans-serif'",
+@forward 'element-plus/theme-chalk/src/common/var.scss' with ($colors: ("primary": ("base": #5796ad)),
+  $font-family: ("": "'Noto Sans KR', sans-serif",
   ),
-  $common-component-size: ('large': 35px,
-    'default': 27px,
-    'small': 20px,
+  $font-size: ('extra-large': 1.2em,
+    'large': 1.15em,
+    'medium': 0.9em,
+    'base': 0.875em,
+    'small': 0.85em,
+    'extra-small': 0.825em,
   ),
-  $border-radius: ('round': 10px,
-  ));
+  $common-component-size: ("large": 35px,
+    "default": 27px,
+    "small": 20px,
+  ),
+  $border-radius: ("round": 10px,
+  ),
+);
 
 // @forward 'element-plus/theme-chalk/src/dark/var.scss' with (
 //     $bg-color: (

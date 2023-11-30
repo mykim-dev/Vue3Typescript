@@ -62,6 +62,8 @@
 // 
 .submenu-popper {
   &.el-popper {
+    font-size: var(--evc-font-size-root);
+
     &.is-light {
       border: initial;
       background: transparent;

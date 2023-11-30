@@ -57,3 +57,9 @@
     background-color: var(--el-bg-color-page);
   }
 }
+
+.ev-button {
+  .el-button {
+    height: var(--el-component-size);
+  }
+}

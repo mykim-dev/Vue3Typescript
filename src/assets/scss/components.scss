@@ -9,11 +9,6 @@
   }
 }
 
-.ev-form,
-.ev-list {
-  padding: var(--evc-form-gap);
-}
-
 .ev-toolbarlist,
 .ev-toolbarform {
   padding: var(--evc-form-gap);
@@ -53,6 +48,22 @@
       .el-collapse-item__arrow {
         display: none;
       }
+    }
+  }
+}
+
+.ev-list {
+  .el-table {
+    font-size: var(--evc-font-size-root);
+
+    .el-table__cell {
+      height: var(--el-component-size);
+      padding: initial;
+    }
+
+    .cell {
+      line-height: initial;
+      font-size: var(--el-font-size-base);
     }
   }
 }

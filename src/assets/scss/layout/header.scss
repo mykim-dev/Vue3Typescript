@@ -30,10 +30,18 @@
     padding: 0;
     margin: 0;
     list-style: none;
-  
+
     &>li {
       display: flex;
       align-items: center;
+    }
+
+    &__icon {
+      font-size: var(--el-font-size-base);
+
+      .el-icon {
+        font-size: var(--el-font-size-extra-large);
+      }
     }
   }
 
@@ -51,7 +59,7 @@
     align-items: center;
     width: 200px;
     height: var(--evc-header-height);
-    border-radius: var(--evc-layout-item-border-radius);    
+    border-radius: var(--evc-layout-item-border-radius);
     overflow: hidden;
   }
 }
@@ -100,7 +108,7 @@
       span {
         flex-direction: column;
         padding: initial;
-        gap: initial;       
+        gap: initial;
 
         .item {
           width: 100%;
