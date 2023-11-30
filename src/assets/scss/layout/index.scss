@@ -1,7 +1,9 @@
 @import 'horizontal.scss';
-@import 'horizontal2.scss';
 @import 'vertical.scss';
-@import 'vertical2.scss';
+@import 'header.scss';
+@import 'menu.scss';
+@import 'tags.scss';
+@import 'main.scss';
 
 .ev-layout {
     display: grid;
@@ -20,8 +22,16 @@
     transition: var(--el-transition-duration-fast);
     grid-auto-flow: dense;
 
+    // .ev-sidebar {
+    //     border: 1px solid red;
+
+    //     .ev-menu {
+    //         border: 1px solid green;
+    //     }
+    // }
+
     &[data-collapse='true'] {
-        --qs-menu-width: 65px;
+        --evc-menu-width: 65px;
 
         .ev-menu__banner {
             display: none;
@@ -29,9 +39,9 @@
     }
 
     &.is-main-expand {
-        --qs-menu-width: 0px;
-        --qs-header-height: 0px;
-        --qs-tags-height: 0px;
+        --evc-menu-width: 0px;
+        --evc-header-height: 0px;
+        --evc-tags-height: 0px;
 
         gap: initial;
 

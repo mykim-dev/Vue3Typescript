@@ -1,24 +1,22 @@
 .ev-component {
-  border-radius: var(--qs-layout-item-border-radius);
-  background-color: var(--qs-layout-item-background-color);
-  background-image: var(--qs-layout-item-background-image);
-  box-shadow: var(--qs-layout-item-shadow);
+  border-radius: var(--evc-layout-item-border-radius);
+  background-color: var(--evc-layout-item-background-color);
+  background-image: var(--evc-layout-item-background-image);
+  box-shadow: var(--evc-layout-item-shadow);
 
   &.is-full {
-    height: calc(
-      100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-layout-gap) * 3)
-    );
+    height: var(--evc-main-height);
   }
 }
 
 .ev-form,
 .ev-list {
-  padding: var(--qs-layout-gap);
+  padding: var(--evc-form-gap);
 }
 
 .ev-toolbarlist,
 .ev-toolbarform {
-  padding: var(--qs-layout-gap);
+  padding: var(--evc-form-gap);
 
   .el-collapse-item {
     &__header {

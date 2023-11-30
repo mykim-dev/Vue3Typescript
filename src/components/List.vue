@@ -5,7 +5,7 @@ const listData = listDataStore()
 
 <template>
   <div class="ev-component">
-    <el-scrollbar class="ev-component-scrollbar">
+    <el-scrollbar view-class="ev-component-scrollbar">
       <div class="ev-list">
         <el-table :data="listData.listItems" show-summary height="300" style="width: 100%" border>
           <el-table-column type="selection" width="100" align="right" header-align="center" />

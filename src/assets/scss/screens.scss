@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: repeat(24, 1fr);
-  gap: var(--qs-layout-gap);
+  gap: var(--evc-layout-gap);
   grid-auto-flow: row dense;
 
   &.el-row {
@@ -146,15 +146,4 @@
   &.dynamic {
     .ev-screen-item {}
   }
-
-  // &.is-full {
-  //   min-height: 100%;
-  //   height: calc(100vh - (var(--qs-header-height) + var(--qs-tags-height) + var(--qs-layout-gap) * 3));
-  //   justify-content: stretch;
-  //   align-content: stretch;
-
-  //   .ev-component {
-  //     height: 100%;
-  //   }
-  // }
 }

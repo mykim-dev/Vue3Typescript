@@ -9,7 +9,7 @@ const screenGutter = AppSetting.screenGutter
   <el-row class="ev-screen default" :gutter="screenGutter" :class="{ 'is-full': isFull }">
     <el-col class="ev-screen-item" :span="24">
       <div class="ev-component">
-        <el-scrollbar class="ev-component-scrollbar">
+        <el-scrollbar view-class="ev-component-scrollbar">
           <div class="ev-tabs">
             <el-tabs :tab-position="'left'">
               <el-tab-pane label="Extention 배포">

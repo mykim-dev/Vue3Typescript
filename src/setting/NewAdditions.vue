@@ -9,9 +9,9 @@ const screenGutter = AppSetting.screenGutter
   <el-row class="ev-screen horizontal" :gutter="screenGutter" :class="{ 'is-full': isFull }">
     <el-col class="ev-screen-item">
       <div class="ev-component">
-        <el-scrollbar class="ev-component-scrollbar">
+        <el-scrollbar view-class="ev-component-scrollbar">
           <h3>NewAdditions</h3>
-          <div class="ev-form">
+          <el-form>
             <el-row class="type-grid">
               <el-col>
                 <div class="form-item is-left">
@@ -30,7 +30,7 @@ const screenGutter = AppSetting.screenGutter
                 </div>
               </el-col>
             </el-row>
-          </div>
+          </el-form>
         </el-scrollbar>
       </div>
     </el-col>

@@ -17,15 +17,15 @@ import evImageView from '@/controls/evImageView.vue'
 import evTextarea from '@/controls/evTextarea.vue'
 import evSwitch from '@/controls/evSwitch.vue'
 import evColorPicker from '@/controls/evColorPicker.vue'
-import evBlank from '@/controls/evBlank.vue'
+import evDivider from '@/controls/evDivider.vue'
 
 const formData = formDataStroe()
 </script>
 
 <template>
   <div class="ev-component" style="">
-    <el-scrollbar class="ev-component-scrollbar">
-      <div class="ev-form">
+    <el-scrollbar view-class="ev-component-scrollbar">
+      <el-form>
         <el-row class="type-grid">
           <el-col v-for="formItem in formData.formItems" :span="formItem.span">
             <div class="form-item" :class="[formItem.item.itemType, { 'is-left': formItem.isLeft === true }]">
@@ -52,7 +52,7 @@ const formData = formDataStroe()
             </div>
           </el-col>
         </el-row>
-      </div>
+      </el-form>
     </el-scrollbar>
   </div>
 </template>

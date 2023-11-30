@@ -596,8 +596,8 @@ const formData = [
   <el-row class="ev-screen horizontal" :gutter="screenGutter" :class="{ 'is-full': isFull }">
     <el-col class="ev-screen-item" v-for="formDataItem in formData" :span="12">
       <div class="ev-component">
-        <el-scrollbar class="ev-component-scrollbar">
-          <div class="ev-form">
+        <el-scrollbar view-class="ev-component-scrollbar">
+          <el-form>
             <h3>{{ formDataItem.tableName }}</h3>
             <el-row v-for="tableDataItem in formDataItem.tableData" :span="12">
               <!-- <el-col :span="tableDataItem.span"> -->
@@ -607,7 +607,7 @@ const formData = [
                 <span class="form-color" :style="{ 'background-color': tableDataItem.data }"></span>
               </el-col>
             </el-row>
-          </div>
+          </el-form>
         </el-scrollbar>
       </div>
     </el-col>

@@ -17,7 +17,7 @@ const handleChange = (val: string[]) => {
   <el-row class="ev-screen default" :gutter="screenGutter" :class="{ 'is-full': isFull }">
     <el-col class="ev-screen-item">
       <div class="ev-component">
-        <el-scrollbar class="ev-component-scrollbar">
+        <el-scrollbar view-class="ev-component-scrollbar">
           <div class="ev-toolbarform">
             <el-collapse v-model="activeNames" @change="handleChange">
               <el-collapse-item title="Consistency" name="1">

@@ -130,6 +130,24 @@
     --overlay-z-index: 30;
     --code-line-height: 1.4;
     --code-tooltip-color: #0c61c9;
+
+
+    // 
+    --evc-layout-gap: 15px;
+    --evc-layout-padding: 15px;
+    --evc-scrollbar-width: 6px;
+
+    --evc-layout-item-background-color: var(--el-color-white);
+    --evc-layout-item-background-image: none;
+    --evc-layout-item-shadow: var(--el-box-shadow-lighter);
+    --evc-layout-item-border-radius: var(--el-border-radius-round);
+
+    --evc-header-height: 60px;    
+    --evc-menu-width: 250px;
+    --evc-menu-height: 60px;
+    --evc-tags-height: 60px;
+
+    --evc-form-gap: 20px 10px;
 }
 
 .green {

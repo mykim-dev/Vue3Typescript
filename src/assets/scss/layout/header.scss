@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: var(--qs-menu-width);
-  border-radius: var(--qs-layout-item-border-radius);
+  width: var(--evc-menu-width);
+  border-radius: var(--evc-layout-item-border-radius);
 
   h1 {
     margin: initial;
@@ -18,22 +18,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: var(--qs-header-height);
+  height: var(--evc-header-height);
+  column-gap: var(--evc-layout-gap);
   padding: initial;
 
-  &__banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: var(--qs-header-height);
-    border-radius: var(--qs-layout-item-border-radius);    
-    overflow: hidden;
-  }
-  
   &-navigation {
+    flex: 1;
+    justify-content: flex-end;
     display: flex;
-    column-gap: 20px;
+    column-gap: var(--evc-layout-gap);
     padding: 0;
     margin: 0;
     list-style: none;
@@ -43,38 +36,23 @@
       align-items: center;
     }
   }
-}
 
-.ev-breadcrumb {
-  .el-breadcrumb {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
+  .ev-breadcrumb {
+    .el-breadcrumb {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
   }
-}
 
-//
-.theme-group {
-  .el-button {
-    &.element {
-      background-color: #409eff;
-    }
-
-    &.green {
-      background-color: #5796ad;
-    }
-
-    &.yellow {
-      background-color: #ffb800;
-    }
-
-    &.green_2 {
-      background-color: #328a23;
-    }
-
-    &.purple {
-      background-color: #9065db;
-    }
+  &-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: var(--evc-header-height);
+    border-radius: var(--evc-layout-item-border-radius);    
+    overflow: hidden;
   }
 }
 
@@ -107,40 +85,52 @@
       }
     }
 
-    &.horizontal,
-    &.horizontal2 {
+    &.horizontal {
       span {
+        padding: initial;
+        gap: initial;
+
         .item {
           height: 100%;
         }
       }
     }
 
-    &.vertical,
-    &.vertical2 {
+    &.vertical {
       span {
         flex-direction: column;
+        padding: initial;
+        gap: initial;       
 
         .item {
           width: 100%;
         }
       }
     }
+  }
+}
 
-    &.horizontal,
-    &.vertical {
-      span {
-        padding: initial;
-        gap: initial;
-      }
+//
+.theme-group {
+  .el-button {
+    &.element {
+      background-color: #409eff;
     }
 
-    &.horizontal2,
-    &.vertical2 {
-      span {
-        padding: 2px;
-        gap: 2px;
-      }
+    &.green {
+      background-color: #5796ad;
+    }
+
+    &.yellow {
+      background-color: #ffb800;
+    }
+
+    &.green_2 {
+      background-color: #328a23;
+    }
+
+    &.purple {
+      background-color: #9065db;
     }
   }
 }

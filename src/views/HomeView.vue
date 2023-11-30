@@ -20,7 +20,7 @@ const stripeState = ref([true])
   <el-row class="ev-screen vertical" :gutter="screenGutter" :class="{ 'is-full': isFull }">
     <el-col class="ev-screen-item">
       <div class="ev-component">
-        <el-scrollbar class="ev-component-scrollbar">
+        <el-scrollbar view-class="ev-component-scrollbar">
           <div class="ev-toolbarlist">
             <el-collapse model-value="1">
               <el-collapse-item title=" Tasks" name="1">

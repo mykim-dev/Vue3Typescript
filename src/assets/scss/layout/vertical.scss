@@ -1,22 +1,25 @@
 .ev-layout {
   &[data-layout='vertical'] {
-    --qs-menu-height: 40px;
-    --qs-tags-height: 40px;    
-    --qs-main-height: calc(100vh - (var(--qs-header-height) + var(--qs-menu-height) + var(--qs-tags-height) + calc(var(--qs-layout-gap) * 3)));
+    --evc-menu-height: var(--el-menu-horizontal-height);
+    --evc-tags-height: 40px;    
+    --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-menu-height) + var(--evc-tags-height) + calc(var(--evc-layout-gap) * 2) + var(--evc-layout-padding)));
 
-    grid-template-columns: var(--qs-menu-width) 1fr;
-    grid-template-rows: var(--qs-header-height) var(--qs-menu-height) var(--qs-tags-height) 1fr;
-    row-gap: var(--qs-layout-gap);
+    grid-template-columns: var(--evc-menu-width) 1fr;
+    grid-template-rows: var(--evc-header-height) var(--evc-menu-height) var(--evc-tags-height) 1fr;
+    row-gap: var(--evc-layout-gap);
+    padding: var(--evc-layout-padding);
 
-    .ev-menu {
+    .ev-sidebar {
       grid-column: 1 / span 2;
 
-      &-toggle {
-        display: none;
-      }
-
-      &__banner {
-        display: none;
+      .ev-menu {
+        &-toggle {
+          display: none;
+        }
+  
+        &-banner {
+          display: none;
+        }
       }
     }
 
