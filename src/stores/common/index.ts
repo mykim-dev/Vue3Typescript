@@ -11,7 +11,10 @@ export const AppSettingStore = defineStore('AppSetting', {
         menuCollapse: ref(false),
         menus: [
             { name: 'Home', link: '/', icon: 'HomeFilled', menus: [] },
-            { name: 'Setting', link: '/Setting', icon: 'Setting', menus: [] },
+            { name: 'Setting', link: '/FloatGrid', icon: 'Setting', menus: [
+                { name: 'FloatGrid', link: '/FloatGrid', icon: '', menus: []},
+                { name: 'ThemeColor', link: '/ThemeColor', icon: '', menus: []},
+            ] },
             {
                 name: 'Screen', link: '/Default', icon: 'FullScreen',
                 menus: [
@@ -29,20 +32,32 @@ export const AppSettingStore = defineStore('AppSetting', {
                 ],
             },
             {
-                name: 'Component', link: '/', icon: 'Grid', menus: [
+                name: 'Component', link: '/Form', icon: 'Grid', menus: [
                     { name: 'Form', link: '/Form', icon: '', menus: [] },
                     { name: 'List', link: '/List', icon: '', menus: [] },
+                    { name: 'Toolbar', link: '/', icon: '', menus: [] },
                     { name: 'ToolbarForm', link: '/ToolbarForm', icon: '', menus: [] },
                     { name: 'ToolbarList', link: '/ToolbarList', icon: '', menus: [] },
-                    { name: 'Tabs', link: '/Tabs', icon: '', menus: [] },
+                    { name: 'Steps', link: '/', icon: '', menus: [] },
+                    { name: 'Tree', link: '/', icon: '', menus: [] },
+                    { name: 'Timeline', link: '/', icon: '', menus: [] },
+                    { name: 'Kanban', link: '/', icon: '', menus: [] },
+                    { name: 'IFrame', link: '/', icon: '', menus: [] },
+                    { name: 'Schedule', link: '/', icon: '', menus: [] },
+                    { name: 'Box', link: '/', icon: '', menus: [] },
+                    { name: 'Web Component', link: '/', icon: '', menus: [] },
+                    { name: 'Carousel', link: '/', icon: '', menus: [] },                    
+                    // { name: 'Tabs', link: '/Tabs', icon: '', menus: [] },
                 ]
             },
-            { name: 'Control', link: '/', icon: 'Mouse', menus: [] },
+            { name: 'Control', link: '/Control', icon: 'Scissor', menus: [] },            
         ],
         tags: [
             { name: 'SampleForm', link: '/SampleForm' },
             { name: 'SampleList', link: '/SampleList' },
-            { name: 'SampleFormList', link: '/SampleFormList' },
+            { name: 'Control', link: '/Control' },
+            { name: 'FloatGrid', link: '/FloatGrid' },
+            { name: 'ThemeColor', link: '/ThemeColor' }
         ],
     }),
     getters: {},

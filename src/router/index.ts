@@ -18,14 +18,14 @@ const router = createRouter({
     //   component: () => import('../views/_AboutView.vue')
     // },
     {
-      path: '/Setting',
-      name: 'Setting',
-      component: () => import('@/setting/Setting.vue')
+      path: '/FloatGrid',
+      name: 'FloatGrid',
+      component: () => import('@/setting/FloatGrid.vue')
     },
     {
-      path: '/NewAdditions',
-      name: 'NewAdditions',
-      component: () => import('@/setting/NewAdditions.vue')
+      path: '/ThemeColor',
+      name: 'ThemeColor',
+      component: () => import('@/setting/ColorList.vue')
     },
     {
       path: '/Default',
@@ -103,6 +103,11 @@ const router = createRouter({
       component: () => import('@/components/ToolbarList.vue')
     },
     {
+      path: '/Control',
+      name: 'Control',
+      component: () => import('@/controls/evControl.vue')
+    },
+    {
       path: '/Tabs',
       name: 'Tabs',
       component: () => import('@/components/Tabs.vue')
@@ -121,22 +126,7 @@ const router = createRouter({
       path: '/SampleFormList',
       name: 'SampleFormList',
       component: () => import('@/sample/SampleFormList.vue')
-    },
-    {
-      path: '/FloatGrid',
-      name: 'FloatGrid',
-      component: () => import('@/sample/FloatGrid.vue')
-    },
-    {
-      path: '/Bind',
-      name: 'Bind',
-      component: () => import('@/study/vBind.vue')
     },    
-    // {
-    //   path: '/Snow',
-    //   name: 'Snow',
-    //   component: () => import('@/study/Snow.vue')
-    // }
   ]
 })
 

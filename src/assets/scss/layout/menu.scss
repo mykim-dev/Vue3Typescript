@@ -37,6 +37,12 @@
     overflow: hidden;
   }
 
+  .el-menu--vertical {
+    .el-menu-item-group__title {
+      display: none;
+    }
+  }
+
   // horizontal menu
   .el-menu--horizontal {
     justify-content: center;
