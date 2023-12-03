@@ -31,6 +31,11 @@ const AppSetting = AppSettingStore()
       </el-button-group>
     </li>
     <li>
+      <RouterLink to="/ThemeColor">
+        <el-icon><Operation /></el-icon>
+      </RouterLink>      
+    </li>
+    <li>
       <el-button :icon="Rank" class="ev-header-navigation__icon" link size="large" @click="AppSetting.mainExpand" />
     </li>
     <li>

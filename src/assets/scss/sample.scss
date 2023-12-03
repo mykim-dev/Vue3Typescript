@@ -3,13 +3,27 @@
   grid-template-columns: repeat(2, 1fr);
   padding: 0;
   margin: 0;
-  gap: var(--evc-layout-gap);
-  
+  // gap: var(--evc-layout-gap);
+  gap: 40px;
+
   li {
-    list-style: none;    
+    list-style: none;
 
     h2 {
       text-align: center;
+    }
+  }
+
+  .sampleDesc {
+    padding-inline-start: 20px;
+
+    li {
+      list-style-type: disc;
+      line-height: 2;
+    }
+
+    &+.sampleDesc {
+      margin-top: 20px;
     }
   }
 }

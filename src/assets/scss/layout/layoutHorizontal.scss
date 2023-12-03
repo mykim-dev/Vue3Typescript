@@ -2,14 +2,14 @@
   &[data-layout='horizontal'] {
     --el-menu-horizontal-height: 44px;
     --evc-menu-height: calc(100vh - (var(--evc-header-height) + var(--evc-layout-gap) + calc(var(--evc-layout-padding) * 2)));
-    --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-tags-height) + var(--evc-laout-padding) + calc(var(--evc-layout-gap) * 2)));
+    --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-tags-height) + var(--evc-layout-padding) + calc(var(--evc-layout-gap) * 2)));
 
     grid-template-columns: var(--evc-menu-width) 1fr;
     grid-template-rows: var(--evc-header-height) var(--evc-tags-height) 1fr;
     gap: var(--evc-layout-gap);
     padding: var(--evc-layout-padding);
 
-    .ev-sidebar {
+    .ev-aside {
       // grid-column: 1 / span 1;
       grid-row: 2 / span 2;
       height: var(--evc-menu-height);

@@ -11,10 +11,12 @@ export const AppSettingStore = defineStore('AppSetting', {
         menuCollapse: ref(false),
         menus: [
             { name: 'Home', link: '/', icon: 'HomeFilled', menus: [] },
-            { name: 'Setting', link: '/FloatGrid', icon: 'Setting', menus: [
-                { name: 'FloatGrid', link: '/FloatGrid', icon: '', menus: []},
-                { name: 'ThemeColor', link: '/ThemeColor', icon: '', menus: []},
-            ] },
+            {
+                name: 'Setting', link: '/FloatGrid', icon: 'Setting', menus: [
+                    { name: 'FloatGrid', link: '/FloatGrid', icon: '', menus: [] },
+                    { name: 'ThemeColor', link: '/ThemeColor', icon: '', menus: [] },
+                ]
+            },
             {
                 name: 'Screen', link: '/Default', icon: 'FullScreen',
                 menus: [
@@ -46,11 +48,11 @@ export const AppSettingStore = defineStore('AppSetting', {
                     { name: 'Schedule', link: '/', icon: '', menus: [] },
                     { name: 'Box', link: '/', icon: '', menus: [] },
                     { name: 'Web Component', link: '/', icon: '', menus: [] },
-                    { name: 'Carousel', link: '/', icon: '', menus: [] },                    
+                    { name: 'Carousel', link: '/', icon: '', menus: [] },
                     // { name: 'Tabs', link: '/Tabs', icon: '', menus: [] },
                 ]
             },
-            { name: 'Control', link: '/Control', icon: 'Scissor', menus: [] },            
+            { name: 'Control', link: '/Control', icon: 'Scissor', menus: [] },
         ],
         tags: [
             { name: 'SampleForm', link: '/SampleForm' },
