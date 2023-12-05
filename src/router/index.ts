@@ -30,6 +30,11 @@ const router = createRouter({
       meta: { layout: 'LayoutSetting' }
     },
     {
+      path: '/OverlayAction',
+      name: 'OverlayAction',
+      component: () => import('@/setting/overlayAction.vue')
+    },
+    {
       path: '/Default',
       name: 'Default',
       component: () => import('@/screen/Default.vue'),

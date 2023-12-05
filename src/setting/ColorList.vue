@@ -146,8 +146,6 @@ const themeColorGroup = [
   {
     themeName: 'CALS(core)',
     themeColorData: [
-      { label: '--el-color-white', data: '#ffffff' },
-      { label: '--el-color-black', data: '#000000' },
       { label: '--color-primary-10', data: '#f5fafc' },
       { label: '--color-primary-20', data: '#f4f7f8' },
       { label: '--color-primary-30', data: '#f3f5f5' },
@@ -445,10 +443,7 @@ const themeColorGroup = [
       { label: '--color-notification-item-urgent-background-color', data: '#ffe4e4' },
       { label: '--color-notification-item-urgent-border-color', data: '#feb5b6' },
       { label: '--color-notification-item-icon-check-receipt-color', data: '#3386a2' },
-      {
-        label: '--color-notification-popup-item-urgent-background-color',
-        data: '#ffe4e4',
-      },
+      { label: '--color-notification-popup-item-urgent-background-color', data: '#ffe4e4', },
       { label: '--color-focus-border', data: '#5796ad' },
       { label: '--fontfamily-default', data: 'notosans' },
       { label: '--fontweight-100', data: '100' },
@@ -589,8 +584,6 @@ const themeColorGroup = [
   {
     themeName: 'CALS(yellow)',
     themeColorData: [
-      { label: '--el-color-white', data: '#ffffff' },
-      { label: '--el-color-black', data: '#000000' },
       { label: '--color-primary-10', data: '#f5fafc' },
       { label: '--color-primary-20', data: '#f4f7f8' },
       { label: '--color-primary-30', data: '#f3f5f5' },
