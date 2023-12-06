@@ -112,26 +112,6 @@ const router = createRouter({
       name: 'ToolbarList',
       component: () => import('@/components/ToolbarList.vue'),
     },
-    {
-      path: '/Control',
-      name: 'Control',
-      component: () => import('@/controls/evControl.vue'),
-    },
-    {
-      path: '/SampleForm',
-      name: 'SampleForm',
-      component: () => import('@/sample/SampleForm.vue'),
-    },
-    {
-      path: '/SampleList',
-      name: 'SampleList',
-      component: () => import('@/sample/SampleList.vue'),
-    },
-    {
-      path: '/SampleFormList',
-      name: 'SampleFormList',
-      component: () => import('@/sample/SampleFormList.vue'),
-    },
   ]
 })
 

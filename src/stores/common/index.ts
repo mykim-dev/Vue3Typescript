@@ -14,6 +14,7 @@ export const AppSettingStore = defineStore('AppSetting', {
                 name: 'Setting', link: '/FloatGrid', icon: 'Setting', menus: [
                     { name: 'FloatGrid', link: '/FloatGrid', icon: '', menus: [] },
                     { name: 'ThemeColor', link: '/ThemeColor', icon: '', menus: [] },
+                    { name: 'OverlayAction', link: '/OverlayAction', icon: '', menus: [] },
                 ]
             },
             {
@@ -50,12 +51,9 @@ export const AppSettingStore = defineStore('AppSetting', {
                     // { name: 'Carousel', link: '/', icon: '', menus: [] },
                 ]
             },
-            { name: 'Control', link: '/Control', icon: 'Scissor', menus: [] },
         ],
         tags: [
-            { name: 'SampleForm', link: '/SampleForm' },
-            { name: 'SampleList', link: '/SampleList' },
-            { name: 'Control', link: '/Control' },
+            { name: 'Form', link: '/Form' },
             { name: 'FloatGrid', link: '/FloatGrid' },
             { name: 'ThemeColor', link: '/ThemeColor' },
             { name: 'OverlayAction', link: '/OverlayAction' }
