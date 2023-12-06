@@ -59,7 +59,8 @@ export const AppSettingStore = defineStore('AppSetting', {
             { name: 'SampleList', link: '/SampleList' },
             { name: 'Control', link: '/Control' },
             { name: 'FloatGrid', link: '/FloatGrid' },
-            { name: 'ThemeColor', link: '/ThemeColor' }
+            { name: 'ThemeColor', link: '/ThemeColor' },
+            { name: 'OverlayAction', link: '/OverlayAction' }
         ],
     }),
     getters: {},
