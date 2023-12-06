@@ -1,5 +1,9 @@
 <script lang="ts" setup>
+import { AppSettingStore } from '@/stores/common/index'
 import { formDataStroe } from '@/stores/components/formData'
+
+const AppSetting = AppSettingStore()
+const isFull = AppSetting.screenIsFull
 
 import evText from '@/controls/evText.vue'
 import evLabel from '@/controls/evLabel.vue'
@@ -23,16 +27,13 @@ const formData = formDataStroe()
 </script>
 
 <template>
-  <div class="ev-component" style="">
-    <el-scrollbar view-class="ev-component-scrollbar">
-      <el-form>
-        <el-row class="type-grid">
-          <el-col v-for="formItem in formData.formItems" :span="formItem.span">
-            <div class="form-item" :class="[formItem.item.itemType, { 'is-left': formItem.isLeft === true }]">
-              <div class="form-item-label">
-                <evLabel :value="formItem.item.itemLabel" />
-              </div>
-              <div class="form-item-data">
+  <div class="ev-screen default" :class="{ 'is-full': isFull }">
+    <div class="ev-screen-item">
+      <div class="ev-component">
+        <el-form>
+          <el-row>
+            <el-col v-for="formItem in formData.formItems" :span="formItem.span">
+              <el-form-item  :label="formItem.item.itemLabel" :class="[formItem.item.itemType, { 'is-left': formItem.isLeft === true }]">
                 <evText v-if="formItem.item.itemType === 'ev-text'" />
                 <evPassword v-if="formItem.item.itemType === 'ev-password'" />
                 <evNumber v-if="formItem.item.itemType === 'ev-number'" />
@@ -48,11 +49,11 @@ const formData = formDataStroe()
                 <evFileUpload v-if="formItem.item.itemType === 'ev-file-upload'" />
                 <evImageUpload v-if="formItem.item.itemType === 'ev-image-upload'" />
                 <evImageView v-if="formItem.item.itemType === 'ev-image-view'" />
-              </div>
-            </div>
-          </el-col>
-        </el-row>
-      </el-form>
-    </el-scrollbar>
+              </el-form-item>
+            </el-col>
+          </el-row>
+        </el-form>
+      </div>
+    </div>
   </div>
 </template>

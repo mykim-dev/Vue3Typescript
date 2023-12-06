@@ -2,7 +2,6 @@
 import { AppSettingStore } from '@/stores/common/index'
 const AppSetting = AppSettingStore()
 const isFull = AppSetting.screenIsFull
-const screenGutter = AppSetting.screenGutter
 const themeColorGroup = [
   {
     themeName: 'Element Plus',
@@ -1026,22 +1025,20 @@ const themeColorGroup = [
 </script>
 
 <template>
-  <div class="ev-screen">
-    <div v-for="themeColorGroupItem in themeColorGroup">
-      <el-scrollbar view-class="ev-component-scrollbar">
-        <h3>{{ themeColorGroupItem.themeName }}</h3>
-        <div class="ev-component">
-          <el-form>
-            <el-row>
-              <el-col v-for="themeColorDataItem in themeColorGroupItem.themeColorData">
-                <span class="form-label">{{ themeColorDataItem.label }} : </span>
-                <span class="form-data">{{ themeColorDataItem.data }};</span>
-                <span class="form-color" :style="{ 'background-color': themeColorDataItem.data }"></span>
-              </el-col>
-            </el-row>
-          </el-form>
-        </div>
-      </el-scrollbar>      
+  <div class="ev-screen dynamic">
+    <div class="ev-screen-item" v-for="themeColorGroupItem in themeColorGroup">      
+      <div class="ev-component">
+        <h4>{{ themeColorGroupItem.themeName }}</h4>
+        <el-form>
+          <el-row>
+            <el-col v-for="themeColorDataItem in themeColorGroupItem.themeColorData">
+              <span class="form-label">{{ themeColorDataItem.label }} : </span>
+              <span class="form-data">{{ themeColorDataItem.data }};</span>
+              <span class="form-color" :style="{ 'background-color': themeColorDataItem.data }"></span>
+            </el-col>
+          </el-row>
+        </el-form>
+      </div>
     </div>
   </div>
 </template>

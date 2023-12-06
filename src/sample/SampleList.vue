@@ -4,16 +4,15 @@ import EvList from '@/components/List.vue'
 
 const AppSetting = AppSettingStore()
 const isFull = AppSetting.screenIsFull
-const screenGutter = AppSetting.screenGutter
 </script>
 
 <template>
-  <el-row class="ev-screen horizontal" :gutter="screenGutter" :class="{ 'is-full': isFull }">
-    <el-col class="ev-screen-item" :span="12">
+  <div class="ev-screen horizontal" :class="{ 'is-full': isFull }">
+    <div class="ev-screen-item" :span="12">
       <EvList />
-    </el-col>
-    <el-col class="ev-screen-item" :span="12">
+    </div>
+    <div class="ev-screen-item" :span="12">
       <EvList />
-    </el-col>
-  </el-row>
+    </div>
+  </div>
 </template>

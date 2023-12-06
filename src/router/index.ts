@@ -21,13 +21,11 @@ const router = createRouter({
       path: '/FloatGrid',
       name: 'FloatGrid',
       component: () => import('@/setting/FloatGrid.vue'),
-      meta: { layout: 'LayoutSetting' }
     },
     {
       path: '/ThemeColor',
       name: 'ThemeColor',
       component: () => import('@/setting/ColorList.vue'),
-      meta: { layout: 'LayoutSetting' }
     },
     {
       path: '/OverlayAction',
@@ -100,6 +98,11 @@ const router = createRouter({
       component: () => import('@/components/List.vue'),
     },
     {
+      path: '/Toolbar',
+      name: 'Toolbar',
+      component: () => import('@/components/Toolbar.vue'),
+    },
+    {
       path: '/ToolbarForm',
       name: 'ToolbarForm',
       component: () => import('@/components/ToolbarForm.vue'),
@@ -113,11 +116,6 @@ const router = createRouter({
       path: '/Control',
       name: 'Control',
       component: () => import('@/controls/evControl.vue'),
-    },
-    {
-      path: '/Tabs',
-      name: 'Tabs',
-      component: () => import('@/components/Tabs.vue'),
     },
     {
       path: '/SampleForm',

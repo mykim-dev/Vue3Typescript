@@ -4,13 +4,12 @@ import Form from '@/components/Form.vue'
 
 const AppSetting = AppSettingStore()
 const isFull = AppSetting.screenIsFull
-const screenGutter = AppSetting.screenGutter
 </script>
 
 <template>
-  <el-row class="ev-screen dashboard" :gutter="screenGutter" :class="{ 'is-full': isFull }">
-    <el-col class="ev-screen-item" v-for="index in 14">
+  <div class="ev-screen dashboard" :class="{ 'is-full': isFull }">
+    <div class="ev-screen-item" v-for="index in 14">
       <!-- <Form /> -->
-    </el-col>
-  </el-row>
+    </div>
+  </div>
 </template> 

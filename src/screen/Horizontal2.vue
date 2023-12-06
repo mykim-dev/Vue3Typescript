@@ -6,13 +6,12 @@ import Form from '@/components/Form.vue'
 
 const AppSetting = AppSettingStore()
 const isFull = AppSetting.screenIsFull
-const screenGutter = AppSetting.screenGutter
 </script>
 
 <template>
-  <el-row class="ev-screen horizontal2" :gutter="screenGutter" :class="{ 'is-full': isFull }">
-    <el-col class="ev-screen-item" v-for="index in 3">
+  <div class="ev-screen horizontal2" :class="{ 'is-full': isFull }">
+    <div class="ev-screen-item" v-for="index in 3">
       <!-- <Form /> -->
-    </el-col>
-  </el-row>
+    </div>
+  </div>
 </template>

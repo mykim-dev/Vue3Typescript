@@ -5,9 +5,9 @@ const isFull = AppSetting.screenIsFull
 </script>
 
 <template>
-  <el-row class="ev-screen dynamic" :gutter="screenGutter" :class="{ 'is-full': isFull }">
-    <el-col class="ev-screen-item">
+  <div class="ev-screen dynamic" :class="{ 'is-full': isFull }">
+    <div class="ev-screen-item">
       <!-- dynamic -->
-    </el-col>
-  </el-row>
+    </div>
+  </div>
 </template>

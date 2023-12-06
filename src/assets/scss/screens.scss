@@ -7,16 +7,24 @@
   gap: var(--evc-layout-gap);
   grid-auto-flow: row dense;
 
+  &.is-full {
+    height: var(--evc-main-height);
+
+    .ev-component {
+      min-height: 100%;
+    }
+  }
+
   &.el-row {
     margin: initial !important;
   }
 
   .ev-screen-item {
     border: 1px solid purple;
-    
+
     &[class*=el-col-] {
       max-width: initial;
-      padding: initial !important;      
+      padding: initial !important;
     }
   }
 

@@ -1,0 +1,41 @@
+.ev-toolbarform {
+    padding: var(--evc-form-gap);
+
+    // .el-collapse-item {
+    //     &__header {
+    //         column-gap: 10px;
+
+    //         .ev-toolbar {
+    //             &__title {
+    //                 flex: 1;
+    //                 display: block;
+    //                 padding: 0;
+    //                 margin: 0;
+    //                 text-align: left;
+    //                 font-size: var(--el-collapse-header-font-size);
+    //                 overflow: hidden;
+    //                 text-overflow: ellipsis;
+    //                 white-space: nowrap;
+    //             }
+
+    //             &__button-wrap {
+    //                 display: flex;
+    //                 column-gap: 10px;
+    //                 justify-content: flex-end;
+    //                 overflow: hidden;
+    //             }
+    //         }
+    //     }
+
+    //     &.is-disabled {
+    //         .el-collapse-item__header {
+    //             color: var(--el-collapse-header-text-color);
+    //             cursor: default;
+    //         }
+
+    //         .el-collapse-item__arrow {
+    //             display: none;
+    //         }
+    //     }
+    // }
+}

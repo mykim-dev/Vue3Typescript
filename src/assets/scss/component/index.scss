@@ -1,0 +1,15 @@
+@import 'form.scss';
+@import 'list.scss';
+@import 'toolbarForm.scss';
+@import 'toolbarList.scss';
+
+.ev-component {
+  background-color: var(--evc-layout-item-background-color);
+  background-image: var(--evc-layout-item-background-image);
+  border-radius: var(--evc-layout-item-border-radius);
+  box-shadow: var(--evc-layout-item-shadow);
+}
+
+h4.ev-toolbar__title {
+  margin: initial;
+}
