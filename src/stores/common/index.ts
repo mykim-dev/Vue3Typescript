@@ -71,6 +71,7 @@ export const AppSettingStore = defineStore('AppSetting', {
         changeLayout(layout: string) {
             this.appLayoutType = layout
             this.menuType = (layout === 'vertical' || layout === 'vertical2') ? 'horizontal' : 'vertical'
+            this.menuCollapse = false
         },
 
         changeMenuCollapse() {

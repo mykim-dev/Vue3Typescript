@@ -19,10 +19,19 @@
       gap: var(--evc-layout-gap);
 
       .ev-menu {
-        height: calc(var(--evc-menu-height) - (140px + var(--evc-layout-gap)));
+        height: var(--evc-menu-height);
         border-radius: var(--evc-layout-item-border-radius);
         background-color: var(--evc-layout-item-background-color);
       }
+    }
+  }
+
+  &[data-collapse='true'] {
+    --evc-menu-width: 65px;
+    --evc-menu-height: calc(100vh - (var(--evc-header-height) + var(--evc-layout-gap) + calc(var(--evc-layout-padding) * 2)));
+
+    .ev-menu-banner {
+        display: none;
     }
   }
 }

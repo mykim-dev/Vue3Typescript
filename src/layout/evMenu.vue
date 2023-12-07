@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
 import { AppSettingStore } from '@/stores/common/index'
 import {
   HomeFilled,

@@ -13,6 +13,7 @@ const AppSetting = AppSettingStore()
 <template>
   <ul class="ev-header-navigation">
     <li>
+      <!-- 레이아웃 -->
       <el-button-group class="layout-group">
         <el-button class="horizontal" @click="AppSetting.changeLayout('horizontal')">
           <i v-for="i in 2" :class="'item item' + i"></i>
@@ -23,12 +24,18 @@ const AppSetting = AppSettingStore()
       </el-button-group>
     </li>
     <li>
+      <!-- 테마 -->
       <el-button-group class="theme-group">
         <el-button class="green" @click="AppSetting.changeTheme('green')" />
         <el-button class="yellow" @click="AppSetting.changeTheme('yellow')" />
         <el-button class="green_2" @click="AppSetting.changeTheme('green_2')" />
         <el-button class="purple" @click="AppSetting.changeTheme('purple')" />
       </el-button-group>
+    </li>
+    <li>
+      <el-button>팝업</el-button>
+      <el-button>우측패널</el-button>
+      <el-button>하단패널</el-button>
     </li>
     <li>
       <RouterLink to="/ThemeColor">

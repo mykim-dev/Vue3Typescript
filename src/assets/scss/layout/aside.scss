@@ -15,6 +15,11 @@
   .el-menu {
     border: initial;
     background-color: initial;
+
+    .el-button {
+      padding: initial;
+      border: 1px solid red;
+    }
   }
 
   &-toggle.el-button {
@@ -45,6 +50,7 @@
 
   // horizontal menu
   .el-menu--horizontal {
+    width: 100%;
     justify-content: center;
     align-items: center;
     border-bottom: initial;

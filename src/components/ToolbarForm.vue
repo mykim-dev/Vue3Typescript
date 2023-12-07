@@ -17,15 +17,15 @@ const handleChange = (val: string[]) => {
     <div class="ev-screen-item">
       <div class="ev-component">
         <div class="ev-toolbarform">
-          <el-collapse v-model="activeNames" @change="handleChange">
-            <el-collapse-item title="Consistency" name="1">
-              <template #title>
-                <h4 class="ev-toolbar__title">Toolbar_Form</h4>
-                <div class="ev-form-button">
-                  <el-button>조회</el-button>
-                </div>
-              </template>
-              <Form />
+          <el-collapse v-model="activeNames">
+            <div class="toolbar">
+              <span class="toolbar-title"></span> Consistency
+            </div>
+            <el-collapse-item name="1">
+              <!-- <template #title>
+                <span class="toolbar-title">Consistency</span>
+              </template> -->
+              <Form />            
             </el-collapse-item>
           </el-collapse>
         </div>
@@ -33,3 +33,28 @@ const handleChange = (val: string[]) => {
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.el-collapse {
+  position: relative;
+}
+.toolbar-title {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - var(--el-collapse-header-height));
+  height: var(--el-collapse-header-height);
+  border: 1px solid green;
+  z-index: 1;
+}
+
+.el-collapse-item {
+  position: relative;
+}
+
+.el-collapse-item__header {
+  width: var(--el-collapse-header-height);
+  border: 1px solid red;
+}
+</style>

@@ -39,14 +39,6 @@
         }
     }
 
-    &[data-collapse='true'] {
-        --evc-menu-width: 65px;
-
-        .ev-menu__banner {
-            display: none;
-        }
-    }
-
     &.is-main-expand {
         --evc-menu-width: 0px;
         --evc-header-height: 0px;
