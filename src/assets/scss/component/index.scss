@@ -10,9 +10,7 @@
   box-shadow: var(--evc-layout-item-shadow);
 
   &-scroll {
-    // height: var(--evc-main-height);
     max-height: 100%;
-    border: 1px solid red;
   }
 
   .el-collapse {
@@ -36,7 +34,6 @@
   
   .el-collapse-item__header {
     width: var(--el-collapse-header-height);
-    border: 1px solid red;
   }
 }
 

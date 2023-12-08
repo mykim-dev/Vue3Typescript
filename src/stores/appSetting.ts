@@ -6,7 +6,7 @@ export const useAppStore = defineStore('AppSetting', {
         appLayoutType: ref('horizontal'),
         appTheme: ref('green'),  // green_1, yellow, green_2
         menuType: ref('vertical'),
-        menuCollapse: ref(false),
+        menuCollapse: ref(true),
         menus: [
             { name: 'Home', link: '/', icon: 'HomeFilled', menus: [] },
             {

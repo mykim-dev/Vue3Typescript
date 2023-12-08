@@ -1,15 +1,31 @@
 <script lang="ts" setup>
-import { useAppStore } from '@/stores/appSetting'
+import Form from '@/components/Form.vue'
 
-const AppSetting = useAppStore()
-const isFull = true
+const screenInfo = {
+  screenType: 'dashboard1',
+  screenFull: true,
+  screenList: [
+    { span: 8 },
+    { span: 8 },
+    { span: 8 },
+    { span: 8 },
+    { span: 8 },
+    { span: 12 },
+    { span: 12 },
+]}
 </script>
 
 <template>
-  <el-row class="ev-screen dashboard1" :class="{ 'is-full': isFull }">
-    <el-col class="ev-screen-item" v-for="index in 9">
-      <el-scrollbar wrap-class="ev-screen-scroll" v-if="isFull">        
+  <el-row class="ev-screen" :class="[screenInfo.screenType, { 'is-full': screenInfo.screenFull }]">
+    <el-col class="ev-screen-item" :span="screenItem.span" v-for="screenItem in screenInfo.screenList">
+      <el-scrollbar wrap-class="ev-screen-scroll" v-if="screenInfo.screenFull">
+        <div class="ev-component">
+          <Form />
+        </div>
       </el-scrollbar>
+      <div class="ev-component" v-else>
+        <Form />
+      </div>
     </el-col>
   </el-row>
 </template>

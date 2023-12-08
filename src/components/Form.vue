@@ -23,7 +23,6 @@ const formData = useFormStroe()
 </script>
 
 <template>
-  test
   <el-row>
     <el-col v-for="formItem in formData.formItems" :span="formItem.span">
       <el-form-item :label="formItem.item.itemLabel" :class="[formItem.item.itemType, { 'is-left': formItem.isLeft === true }]">

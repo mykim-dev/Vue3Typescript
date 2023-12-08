@@ -16,9 +16,9 @@ const AppSetting = useAppStore()
     <EvAside />
     <EvTags />
     <main class="ev-main">
-      <!-- <el-scrollbar wrap-class="ev-main-scroll"> -->
+      <el-scrollbar wrap-class="ev-main-scroll">
         <RouterView />
-      <!-- </el-scrollbar> -->
+      </el-scrollbar>
     </main>
   </div>
 </template>

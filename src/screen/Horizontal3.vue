@@ -1,14 +1,26 @@
 <script lang="ts" setup>
-import { useAppStore } from '@/stores/appSetting'
-const AppSetting = useAppStore()
-const isFull = true
+import Form from '@/components/Form.vue'
+
+const screenInfo = {
+  screenType: 'horizontal3',
+  screenFull: true,
+  screenList: [
+    { span: 6 },
+    { span: 18 },
+]}
 </script>
 
 <template>
-  <el-row class="ev-screen horizontal3" :class="{ 'is-full': isFull }">
-    <el-col class="ev-screen-item" v-for="index in 2">
-      <el-scrollbar wrap-class="ev-screen-scroll" v-if="isFull">        
+  <el-row class="ev-screen" :class="[screenInfo.screenType, { 'is-full': screenInfo.screenFull }]">
+    <el-col class="ev-screen-item" :span="screenItem.span" v-for="screenItem in screenInfo.screenList">
+      <el-scrollbar wrap-class="ev-screen-scroll" v-if="screenInfo.screenFull">
+        <div class="ev-component">
+          <Form />
+        </div>
       </el-scrollbar>
+      <div class="ev-component" v-else>
+        <Form />
+      </div>
     </el-col>
   </el-row>
 </template>
