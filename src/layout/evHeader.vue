@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { Rank } from '@element-plus/icons-vue'
-import { AppSettingStore } from '@/stores/common/index'
+import { useAppStore } from '@/stores/appSetting'
 
 import EvHeaderBanner from '@/layout/EvHeaderBanner.vue'
 import EvHeaderNavigation from '@/layout/EvHeaderNavigation.vue'
 
-const AppSetting = AppSettingStore()
+const AppSetting = useAppStore()
 </script>
 
 <template>

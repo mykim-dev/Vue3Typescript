@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 // import defaultData from '@/defaultData'
-import { AppSettingStore } from '@/stores/common/index'
-const AppSetting = AppSettingStore()
+import { useAppStore } from '@/stores/appSetting'
+const AppSetting = useAppStore()
 </script>
 
 <template>

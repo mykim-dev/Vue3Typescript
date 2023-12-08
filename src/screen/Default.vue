@@ -1,16 +1,19 @@
 <script lang="ts" setup>
-
-import { AppSettingStore } from '@/stores/common/index'
-import Form from '@/components/form.vue'
-
-const AppSetting = AppSettingStore()
-const isFull = AppSetting.screenIsFull
+const screenInfo = {
+  screenFull: true,
+  screenType: 'default',
+  screenList: [
+    { span: 24 },
+  ]}
 </script>
 
 <template>
-  <div class="ev-screen default" :class="{ 'is-full': isFull }">
-    <div class="ev-screen-item">
-      <!-- <Form /> -->
-    </div>
+  <div class="ev-screen" :class="{ 'is-full': screenInfo.screenFull }">
+    <el-row>    
+      <el-col class="ev-screen-item" :span="screenItem.span" v-for="screenItem in screenInfo.screenList"></el-col>
+    </el-row>
   </div>
 </template>
+
+<style lang="scss" scoped>
+</style>

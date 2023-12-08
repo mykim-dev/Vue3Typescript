@@ -1,19 +1,19 @@
 <script lang="ts" setup>
-import { AppSettingStore } from '@/stores/common/index'
+import { useAppStore } from '@/stores/appSetting'
 
-const AppSetting = AppSettingStore()
-// const isFull = AppSetting.screenIsFull
+const AppSetting = useAppStore()
 const isFull = true
+
 const boxHeightList = [
   { color: '', height: '40px' },
   { color: '', height: '40px' },
   { color: '', height: '40px' },
+  { color: '', height: '40px' },  
+  { color: 'purple', height: '120px' },
+  { color: 'yellow', height: '40px' },
+  { color: 'yellow', height: '80px' },
   { color: '', height: '40px' },
-  { color: '', height: '40px' },
-  { color: 'green', height: '120px' },
-  { color: 'blue', height: '100px' },
-  { color: 'blue', height: '80px' },
-  { color: 'blue', height: '40px' },
+  { color: 'cyan', height: '40px' },
   { color: '', height: '40px' },
   { color: '', height: '40px' },
   { color: '', height: '40px' },
@@ -21,14 +21,15 @@ const boxHeightList = [
 </script>
 
 <template>
-  <div class="ev-screen horizontal">
-    <div class="ev-screen-item">
+  <el-row class="ev-screen horizontal">
+    <el-col class="ev-screen-item">
       <div class="ev-component">
         <div class="sampleGuide">
           <h2>Block(현재)</h2>
           <div class="displayType typeBlock">
             <div class="box" :style="`height:${box.height};background-color:${box.color};`" v-for="(box, j) in boxHeightList">
-              {{ j + 1 }}
+              <span v-if="j==4" style="color:white;">Editor</span>
+              <span v-else>{{ j + 1 }}</span>
             </div>
           </div>
           
@@ -43,16 +44,18 @@ const boxHeightList = [
             <li><b>Form Detail 구성에 Block 방식을 적용한다면...</b></li>
             <li>컨트롤들의 명확한 높이의 기준이 필요함</li>
           </ul>
+
         </div>
       </div>
-    </div>
-    <div class="ev-screen-item">
+    </el-col>
+    <el-col class="ev-screen-item">
       <div class="ev-component">
         <div class="sampleGuide">
           <h2>Grid</h2>
           <div class="displayType typeGrid">
             <div class="box" :style="`height:${box.height};background-color:${box.color};`" v-for="(box, j) in boxHeightList">
-              {{ j + 1}}
+              <span v-if="j==4" style="color:white;">Editor</span>
+              <span v-else>{{ j + 1 }}</span>
             </div>
           </div>
 
@@ -88,10 +91,11 @@ const boxHeightList = [
             <li>Grid 방식을 추가허려면 - merge 할 수 있는 단계를 추가해야함 </li>
             <li>Block 방식을 유지 하면서 구성하려면 어떤 방법이 있을까?</li>
           </ul>
+
         </div>
       </div>
-    </div>
-  </div>
+    </el-col>
+  </el-row>
 </template>
 
 <style lang="scss" scoped>
@@ -117,7 +121,7 @@ const boxHeightList = [
   .box15,
   .box16 {
     color: white;
-    background-color: blue;
+    background-color: cyan;
   }
 
   &.typeBlock {    
@@ -136,6 +140,10 @@ const boxHeightList = [
   &.typeGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sampleDesc {
+    display: none;
   }
 }
 </style>

@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { Rank } from '@element-plus/icons-vue'
-import { AppSettingStore } from '@/stores/common/index'
+import { useAppStore } from '@/stores/appSetting'
 
 import EvBadge from '@/layout/evBadge.vue'
 import EvSetting from '@/layout/evSetting.vue'
 import EvLanguage from '@/layout/evLanguage.vue'
 import EvAvatar from '@/layout/evAvatar.vue'
 
-const AppSetting = AppSettingStore()
+const AppSetting = useAppStore()
 </script>
 
 <template>

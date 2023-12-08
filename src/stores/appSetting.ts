@@ -1,19 +1,20 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue'
 
-export const AppSettingStore = defineStore('AppSetting', {
+export const useAppStore = defineStore('AppSetting', {
     state: () => ({
         appLayoutType: ref('horizontal'),
         appTheme: ref('green'),  // green_1, yellow, green_2
-        screenIsFull: ref(true),
         menuType: ref('vertical'),
         menuCollapse: ref(false),
         menus: [
             { name: 'Home', link: '/', icon: 'HomeFilled', menus: [] },
             {
-                name: 'Setting', link: '/FloatGrid', icon: 'Setting', menus: [
-                    { name: 'FloatGrid', link: '/FloatGrid', icon: '', menus: [] },
+                name: 'Setting', link: '/AppSetting', icon: 'Setting', 
+                menus: [
+                    { name: 'AppSetting', link: '/AppSetting', icon: '', menus: [] },
                     { name: 'ThemeColor', link: '/ThemeColor', icon: '', menus: [] },
+                    { name: 'BlockGrid', link: '/BlockGrid', icon: '', menus: [] },                    
                     { name: 'OverlayAction', link: '/OverlayAction', icon: '', menus: [] },
                 ]
             },
@@ -34,29 +35,30 @@ export const AppSettingStore = defineStore('AppSetting', {
                 ],
             },
             {
-                name: 'Component', link: '/Form', icon: 'Grid', menus: [
+                name: 'Component', link: '/Form', icon: 'Grid', 
+                menus: [
                     { name: 'Form', link: '/Form', icon: '', menus: [] },
                     { name: 'List', link: '/List', icon: '', menus: [] },
                     { name: 'Toolbar', link: '/Toolbar', icon: '', menus: [] },
                     { name: 'ToolbarForm', link: '/ToolbarForm', icon: '', menus: [] },
                     { name: 'ToolbarList', link: '/ToolbarList', icon: '', menus: [] },
-                    // { name: 'Steps', link: '/', icon: '', menus: [] },
-                    // { name: 'Tree', link: '/', icon: '', menus: [] },
-                    // { name: 'Timeline', link: '/', icon: '', menus: [] },
-                    // { name: 'Kanban', link: '/', icon: '', menus: [] },
-                    // { name: 'IFrame', link: '/', icon: '', menus: [] },
-                    // { name: 'Schedule', link: '/', icon: '', menus: [] },
-                    // { name: 'Box', link: '/', icon: '', menus: [] },
-                    // { name: 'Web Component', link: '/', icon: '', menus: [] },
-                    // { name: 'Carousel', link: '/', icon: '', menus: [] },
+                ]
+            },
+            {
+                name: 'Sample', link: '/SampleForm', icon: 'HelpFilled', 
+                menus: [
+                    { name: 'SampleForm', link: '/SampleForm', icon: '', menus: [] },
+                    { name: 'SampleList', link: '/SampleList', icon: '', menus: [] },
                 ]
             },
         ],
         tags: [
-            { name: 'Form', link: '/Form' },
-            { name: 'FloatGrid', link: '/FloatGrid' },
+            { name: 'SampleForm', link: '/SampleForm' },
+            { name: 'SampleList', link: '/SampleList' },
+            { name: 'AppSetting', link: '/AppSetting' },
             { name: 'ThemeColor', link: '/ThemeColor' },
-            { name: 'OverlayAction', link: '/OverlayAction' }
+            { name: 'BlockGrid', link: '/BlockGrid' },
+            { name: 'OverlayAction', link: '/OverlayAction', }
         ],
     }),
     getters: {},
@@ -79,7 +81,6 @@ export const AppSettingStore = defineStore('AppSetting', {
         },
 
         mainExpand() {
-
         },
     }
 })

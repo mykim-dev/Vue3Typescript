@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-export const listDataStore = defineStore('listData', {
+export const useListStore = defineStore('listData', {
     state: () => ({
         listItems: [
             {

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { AppSettingStore } from '@/stores/common/index'
+import { useAppStore } from '@/stores/appSetting'
 import EvLogo from '@/layout/evLogo.vue'
 import EvHeader from '@/layout/evHeader.vue'
 import EvAside from '@/layout/evAside.vue'
 import EvTags from '@/layout/evTags.vue'
 
-const AppSetting = AppSettingStore()
+const AppSetting = useAppStore()
 
 </script>
 
@@ -16,9 +16,9 @@ const AppSetting = AppSettingStore()
     <EvAside />
     <EvTags />
     <main class="ev-main">
-      <el-scrollbar view-class="ev-main-scrollbar">
+      <!-- <el-scrollbar wrap-class="ev-main-scroll"> -->
         <RouterView />
-      </el-scrollbar>
+      <!-- </el-scrollbar> -->
     </main>
   </div>
 </template>

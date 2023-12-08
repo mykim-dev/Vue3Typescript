@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia';
 
-export const taskListStore = defineStore('taskList', {
+export const todoListStore = defineStore('todoList', {
     state: () => ({
-        tasks: [
+        todo: [
             { id: 1, title: 'toolbar - title, button_wrap', isDo: false },
             { id: 2, title: 'action overlay 움직이는 아이콘 깨지는 현상 - svg animation 으로 수정', isDo: true },
             { id: 3, title: 'console, demo 스타일 맞추기 위한 Token 정리 (범위는 Element Pluse에서 제공되는 정도 + demo asis에 적용되었던 스타일)', isDo: false },

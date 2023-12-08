@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { AppSettingStore } from '@/stores/common/index'
-const AppSetting = AppSettingStore()
-const isFull = AppSetting.screenIsFull
+import { useAppStore } from '@/stores/appSetting'
+const AppSetting = useAppStore()
+const isFull = true
 const themeColorGroup = [
   {
     themeName: 'Element Plus',
@@ -1025,8 +1025,8 @@ const themeColorGroup = [
 </script>
 
 <template>
-  <div class="ev-screen dynamic">
-    <div class="ev-screen-item" v-for="themeColorGroupItem in themeColorGroup">      
+  <el-row class="ev-screen dynamic">
+    <el-col class="ev-screen-item" v-for="themeColorGroupItem in themeColorGroup">      
       <div class="ev-component">
         <h4>{{ themeColorGroupItem.themeName }}</h4>
         <el-form>
@@ -1039,8 +1039,8 @@ const themeColorGroup = [
           </el-row>
         </el-form>
       </div>
-    </div>
-  </div>
+    </el-col>
+  </el-row>
 </template>
 
 <style lang="scss" scoped>

@@ -1,32 +1,30 @@
 .ev-screen {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  grid-template-rows: repeat(24, 1fr);
-  gap: var(--evc-layout-gap);
-  grid-auto-flow: row dense;
+  // width: 100%;  
 
   &.is-full {
-    height: var(--evc-main-height);
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+    gap: var(--evc-layout-gap);
+    grid-auto-flow: row dense;
 
-    .ev-component {
-      min-height: 100%;
-    }
-  }
-
-  &.el-row {
-    margin: initial !important;
-  }
-
-  .ev-screen-item {
-    border: 1px solid purple;
-
-    &[class*=el-col-] {
+    [class*=el-col-] {
       max-width: initial;
       padding: initial !important;
     }
   }
+
+  &-scroll {
+    height: var(--evc-main-height);
+  }
+
+  .ev-screen-item {
+    border: 1px solid purple;
+  }
+
+  // .el-row {
+  //   margin: initial !important;
+  // }  
 
   &.default {
     .ev-screen-item {

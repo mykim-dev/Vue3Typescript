@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-export const formDataStroe = defineStore('formData', {
+export const useFormStroe = defineStore('formData', {
     state: () => ({
         formItems: [
             { span: 8, isLeft: false, item: { itemType: 'ev-text', itemLabel: 'ev-text' } },

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { AppSettingStore } from '@/stores/common/index'
+import { useAppStore } from '@/stores/appSetting'
 import {
   HomeFilled,
   Grid,
@@ -10,7 +10,7 @@ import {
   Menu as IconMenu,
 } from '@element-plus/icons-vue'
 
-const AppSetting = AppSettingStore()
+const AppSetting = useAppStore()
 </script>
 
 <template>

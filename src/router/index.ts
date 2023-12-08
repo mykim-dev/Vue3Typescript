@@ -18,9 +18,9 @@ const router = createRouter({
     //   component: () => import('../views/_AboutView.vue')
     // },
     {
-      path: '/FloatGrid',
-      name: 'FloatGrid',
-      component: () => import('@/setting/FloatGrid.vue'),
+      path: '/BlockGrid',
+      name: 'BlockGrid',
+      component: () => import('@/setting/BlockGrid.vue'),
     },
     {
       path: '/ThemeColor',
@@ -30,7 +30,12 @@ const router = createRouter({
     {
       path: '/OverlayAction',
       name: 'OverlayAction',
-      component: () => import('@/setting/overlayAction.vue')
+      component: () => import('@/setting/OverlayAction.vue')
+    },
+    {
+      path: '/AppSetting',
+      name: 'AppSetting',
+      component: () => import('@/setting/AppSetting.vue')
     },
     {
       path: '/Default',
@@ -111,6 +116,16 @@ const router = createRouter({
       path: '/ToolbarList',
       name: 'ToolbarList',
       component: () => import('@/components/ToolbarList.vue'),
+    },
+    {
+      path: '/SampleForm',
+      name: 'SampleForm',
+      component: () => import('@/sample/SampleForm.vue'),
+    },
+    {
+      path: '/SampleList',
+      name: 'SampleList',
+      component: () => import('@/sample/SampleList.vue'),
     },
   ]
 })

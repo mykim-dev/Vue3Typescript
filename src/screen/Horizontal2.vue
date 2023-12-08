@@ -1,17 +1,14 @@
 <script lang="ts" setup>
-
-
-import { AppSettingStore } from '@/stores/common/index'
-import Form from '@/components/Form.vue'
-
-const AppSetting = AppSettingStore()
-const isFull = AppSetting.screenIsFull
+import { useAppStore } from '@/stores/appSetting'
+const AppSetting = useAppStore()
+const isFull = true
 </script>
 
 <template>
-  <div class="ev-screen horizontal2" :class="{ 'is-full': isFull }">
-    <div class="ev-screen-item" v-for="index in 3">
-      <!-- <Form /> -->
-    </div>
-  </div>
+  <el-row class="ev-screen horizontal2" :class="{ 'is-full': isFull }">
+    <el-col class="ev-screen-item" v-for="index in 3">
+      <el-scrollbar wrap-class="ev-screen-scroll" v-if="isFull">        
+      </el-scrollbar>
+    </el-col>
+  </el-row>
 </template>
