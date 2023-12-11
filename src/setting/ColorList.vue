@@ -1025,8 +1025,8 @@ const themeColorGroup = [
 </script>
 
 <template>
-  <el-row class="ev-screen dynamic">
-    <el-col class="ev-screen-item" v-for="themeColorGroupItem in themeColorGroup">      
+  <el-row class="ev-screen-row dynamic">
+    <el-col class="ev-screen-row-col" v-for="themeColorGroupItem in themeColorGroup">      
       <div class="ev-component">
         <h4>{{ themeColorGroupItem.themeName }}</h4>
         <el-form>

@@ -16,16 +16,9 @@ const screenInfo = {
 </script>
 
 <template>
-  <el-row class="ev-screen" :class="[screenInfo.screenType, { 'is-full': screenInfo.screenFull }]">
-    <el-col class="ev-screen-item" :span="screenItem.span" v-for="screenItem in screenInfo.screenList">
-      <el-scrollbar wrap-class="ev-screen-scroll" v-if="screenInfo.screenFull">
-        <div class="ev-component">
-          <Form />
-        </div>
-      </el-scrollbar>
-      <div class="ev-component" v-else>
-        <Form />
-      </div>
+  <el-row class="ev-screen-row" :class="[screenInfo.screenType, { 'is-full': screenInfo.screenFull }]">
+    <el-col class="ev-screen-row-col" :span="screenItem.span" v-for="screenItem in screenInfo.screenList">
+      <Form />
     </el-col>
   </el-row>
 </template>

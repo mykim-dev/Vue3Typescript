@@ -21,8 +21,8 @@ const boxHeightList = [
 </script>
 
 <template>
-  <el-row class="ev-screen horizontal">
-    <el-col class="ev-screen-item">
+  <el-row class="ev-screen-row horizontal">
+    <el-col class="ev-screen-row-col">
       <div class="ev-component">
         <div class="sampleGuide">
           <h2>Block(현재)</h2>
@@ -48,7 +48,7 @@ const boxHeightList = [
         </div>
       </div>
     </el-col>
-    <el-col class="ev-screen-item">
+    <el-col class="ev-screen-row-col">
       <div class="ev-component">
         <div class="sampleGuide">
           <h2>Grid</h2>

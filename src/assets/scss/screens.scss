@@ -1,7 +1,12 @@
-.ev-screen {
-  .ev-screen-item {
+.ev-screen-row {
+  height: var(--evc-main-height);
+  overflow: auto;
+  border: 1px solid red;
+
+  .ev-screen-row-col {
     height: 100%;
-  }
+    border: 1px solid green;
+  }  
 
   // is-full 일때
   &.is-full {
@@ -11,26 +16,28 @@
     gap: var(--evc-layout-gap);
     grid-auto-flow: row dense;
     height: var(--evc-main-height);
+    overflow: initial;
 
     [class*=el-col-] {
       max-width: initial;
       padding: initial !important;
+      overflow: auto;
     }
 
     &.default {
-      .ev-screen-item {
+      .ev-screen-row-col {
         grid-area: span 24 / span 24;
       }
     }
   
     &.horizontal {
-      .ev-screen-item {
+      .ev-screen-row-col {
         grid-area: span 24 / span 12;
       }
     }
   
     &.horizontal2 {
-      .ev-screen-item {
+      .ev-screen-row-col {
         &:nth-of-type(1) {
           grid-area: span 24 / span 12;
         }
@@ -43,23 +50,23 @@
     }
   
     &.horizontal3 {
-      .ev-screen-item:nth-of-type(1) {
+      .ev-screen-row-col:nth-of-type(1) {
         grid-area: span 24 / span 6;
       }
   
-      .ev-screen-item:nth-last-of-type(1) {
+      .ev-screen-row-col:nth-last-of-type(1) {
         grid-area: span 24 / span 18;
       }
     }
   
     &.vertical {
-      .ev-screen-item {
+      .ev-screen-row-col {
         grid-area: span 12 / span 24;
       }
     }
   
     &.vertical2 {
-      .ev-screen-item {
+      .ev-screen-row-col {
         &:nth-of-type(1) {
           grid-area: span 12 / span 24;
         }
@@ -72,7 +79,7 @@
     }
   
     &.dashboard {
-      .ev-screen-item {
+      .ev-screen-row-col {
   
         &:nth-child(n + 1):nth-child(-n + 3) {
           grid-area: span 4 / span 8;
@@ -93,7 +100,7 @@
     }
   
     &.dashboard1 {
-      .ev-screen-item {
+      .ev-screen-row-col {
   
         &:nth-child(n + 1),
         &:nth-child(n + 2),
@@ -115,7 +122,7 @@
     &.dashboard2 {
       grid-template-columns: repeat(20, 1fr);
   
-      .ev-screen-item {
+      .ev-screen-row-col {
         &:nth-child(n + 1):nth-child(-n + 5) {
           grid-area: span 6 / span 4;
         }
@@ -129,7 +136,7 @@
     &.dashboard3 {
       grid-template-rows: repeat(20, 1fr);
   
-      .ev-screen-item {
+      .ev-screen-row-col {
         &:nth-child(n + 1):nth-child(-n + 6) {
           grid-area: span 5 / span 8;
         }
@@ -141,7 +148,7 @@
     }
   
     &.dynamic {
-      .ev-screen-item {}
+      .ev-screen-row-col {}
     }
   }
 }

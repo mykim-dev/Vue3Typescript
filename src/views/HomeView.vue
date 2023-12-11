@@ -16,8 +16,8 @@ const stripeState = ref([true])
 </script>
 
 <template>
-  <div class="ev-screen default" :class="{ 'is-full': isFull }">
-    <div class="ev-screen-item">
+  <div class="ev-screen-row default" :class="{ 'is-full': isFull }">
+    <div class="ev-screen-row-col">
       <div class="ev-component">        
         <div class="ev-toolbarlist">
           <el-collapse model-value="1">

@@ -1,4 +1,6 @@
 .form-item {
+  --font-size: var(--el-font-size-base);    
+
   &-label {
     margin-bottom: 4px;
   }
@@ -62,4 +64,12 @@
   .el-button {
     height: var(--el-component-size);
   }
+}
+
+.el-date-editor {
+  --el-date-editor-width: 100%;
+}
+
+.el-switch__label * {
+  font-size: var(--el-font-size-base);
 }
