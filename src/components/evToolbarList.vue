@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import Toolbar from '@/components/Toolbar.vue'
-import List from '@/components/List.vue'
+import Toolbar from '@/components/evToolbar.vue'
+import List from '@/components/evList.vue'
 
 const activeNames = ref(['1'])
 const handleChange = (val: string[]) => {
@@ -14,7 +14,7 @@ const handleChange = (val: string[]) => {
     <el-collapse v-model="activeNames" @change="handleChange">
       <toolbar />
       <el-collapse-item name="1">
-        <List />            
+        <List />
       </el-collapse-item>
     </el-collapse>
   </div>

@@ -1,7 +1,4 @@
-<script lang="ts" setup>
-import { ref } from 'vue'
-// const input = ref('')
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="ev-label">

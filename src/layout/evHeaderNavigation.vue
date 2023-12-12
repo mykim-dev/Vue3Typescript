@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Rank } from '@element-plus/icons-vue'
+import { Rank, Operation } from '@element-plus/icons-vue'
 import { useAppStore } from '@/stores/appSetting'
 
 import EvBadge from '@/layout/evBadge.vue'
@@ -24,37 +24,26 @@ const AppSetting = useAppStore()
       </el-button-group>
     </li>
     <li>
-      <!-- 테마 -->
-      <el-button-group class="theme-group">
-        <el-button class="green" @click="AppSetting.changeTheme('green')" />
-        <el-button class="yellow" @click="AppSetting.changeTheme('yellow')" />
-        <el-button class="green_2" @click="AppSetting.changeTheme('green_2')" />
-        <el-button class="purple" @click="AppSetting.changeTheme('purple')" />
-      </el-button-group>
+      <div class="ev-button">
+        <el-button @click="AppSetting.togglePopup">팝업</el-button>
+      </div>
+      <div class="ev-button">
+        <el-button @click="AppSetting.toggleRightPanel">우측패널</el-button>
+      </div>
+      <div class="ev-button">
+        <el-button @click="AppSetting.toggleBottomPanel">하단패널</el-button>
+      </div>
     </li>
     <li>
-      <el-button>팝업</el-button>
-      <el-button>우측패널</el-button>
-      <el-button>하단패널</el-button>
-    </li>
-    <li>
-      <RouterLink to="/ThemeColor">
-        <el-icon><Operation /></el-icon>
-      </RouterLink>      
-    </li>
-    <li>
-      <el-button :icon="Rank" class="ev-header-navigation__icon" link size="large" @click="AppSetting.mainExpand" />
-    </li>
-    <li>
+      <RouterLink to="/AppSetting">
+        <div class="ev-button"><el-button :icon="Operation" /></div>
+      </RouterLink>
+      <div class="ev-button">
+        <el-button :icon="Rank" link @click="AppSetting.mainExpand" />
+      </div>
       <EvBadge />
-    </li>
-    <li>
       <EvSetting />
-    </li>
-    <li>
       <EvLanguage />
-    </li>
-    <li>
       <EvAvatar />
     </li>
   </ul>

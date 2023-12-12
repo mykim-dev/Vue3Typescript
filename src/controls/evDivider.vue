@@ -1,6 +1,7 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <el-divider />
+  <div class="ev-divider">
+    <el-divider />
+  </div>
 </template>

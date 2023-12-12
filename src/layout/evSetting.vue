@@ -4,7 +4,9 @@ import { Tools, Plus, CirclePlusFilled, CirclePlus, Check, CircleCheck } from '@
 
 <template>
   <el-dropdown trigger="click">
-    <el-button :icon="Tools" class="ev-header-navigation__icon" link />
+    <div class="ev-button">
+      <el-button :icon="Tools" link />
+    </div>
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item :icon="Plus">Action 1</el-dropdown-item>

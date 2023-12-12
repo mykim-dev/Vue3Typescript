@@ -2,8 +2,6 @@
 import { ref } from 'vue'
 
 const value1 = ref('')
-const value2 = ref('')
-const value3 = ref('')
 const defaultTime = new Date(2000, 1, 1, 12, 0, 0)
 
 const shortcuts = [

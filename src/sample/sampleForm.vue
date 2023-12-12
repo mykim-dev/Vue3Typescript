@@ -1,13 +1,11 @@
 <script lang="ts" setup>
-import Form from '@/components/Form.vue'
+import Form from '@/components/evForm.vue'
 
 const screenInfo = {
   screenType: 'horizontal',
-  screenFull: false,  
-  screenList: [
-    { span: 12 },
-    { span: 12 },
-]}
+  screenFull: false,
+  screenList: [{ span: 12 }, { span: 12 }],
+}
 </script>
 
 <template>

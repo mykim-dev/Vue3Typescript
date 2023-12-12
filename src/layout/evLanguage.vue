@@ -4,7 +4,9 @@ import { LocationFilled } from '@element-plus/icons-vue'
 
 <template>
   <el-dropdown trigger="click">
-    <el-button :icon="LocationFilled" class="ev-header-navigation__icon" link />
+    <div class="ev-button">
+      <el-button :icon="LocationFilled" link />
+    </div>
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item>KOR</el-dropdown-item>

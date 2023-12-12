@@ -25,7 +25,7 @@ const formData = useFormStroe()
 <template>
   <el-row>
     <el-col v-for="formItem in formData.formItems" :span="formItem.span">
-      <el-form-item :label="formItem.item.itemLabel" :class="[formItem.item.itemType, { 'is-left': formItem.isLeft === true }]">
+      <el-form-item :label="formItem.item.itemLabel" label-width="120px" :class="[formItem.item.itemType, { 'is-left': formItem.isLeft === true }]">
         <evText v-if="formItem.item.itemType === 'ev-text'" />
         <evPassword v-if="formItem.item.itemType === 'ev-password'" />
         <evNumber v-if="formItem.item.itemType === 'ev-number'" />

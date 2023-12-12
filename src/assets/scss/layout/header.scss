@@ -15,17 +15,9 @@
     margin: 0;
     list-style: none;
 
-    &>li {
+    & > li {
       display: flex;
       align-items: center;
-    }
-
-    &__icon {
-      font-size: var(--el-font-size-base);
-
-      .el-icon {
-        font-size: var(--el-font-size-extra-large);
-      }
     }
   }
 
@@ -98,31 +90,6 @@
           width: 100%;
         }
       }
-    }
-  }
-}
-
-//
-.theme-group {
-  .el-button {
-    &.element {
-      background-color: #409eff;
-    }
-
-    &.green {
-      background-color: #5796ad;
-    }
-
-    &.yellow {
-      background-color: #ffb800;
-    }
-
-    &.green_2 {
-      background-color: #328a23;
-    }
-
-    &.purple {
-      background-color: #9065db;
     }
   }
 }

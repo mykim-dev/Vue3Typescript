@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
     // {
     //   path: '/',
@@ -17,26 +17,6 @@ const router = createRouter({
     //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/_AboutView.vue')
     // },
-    {
-      path: '/BlockGrid',
-      name: 'BlockGrid',
-      component: () => import('@/setting/BlockGrid.vue'),
-    },
-    {
-      path: '/ThemeColor',
-      name: 'ThemeColor',
-      component: () => import('@/setting/ColorList.vue'),
-    },
-    {
-      path: '/OverlayAction',
-      name: 'OverlayAction',
-      component: () => import('@/setting/OverlayAction.vue')
-    },
-    {
-      path: '/AppSetting',
-      name: 'AppSetting',
-      component: () => import('@/setting/AppSetting.vue')
-    },
     {
       path: '/Default',
       name: 'Default',
@@ -95,39 +75,59 @@ const router = createRouter({
     {
       path: '/Form',
       name: 'Form',
-      component: () => import('@/components/Form.vue'),
+      component: () => import('@/components/evForm.vue'),
     },
     {
       path: '/List',
       name: 'List',
-      component: () => import('@/components/List.vue'),
+      component: () => import('@/components/evList.vue'),
     },
     {
       path: '/Toolbar',
       name: 'Toolbar',
-      component: () => import('@/components/Toolbar.vue'),
+      component: () => import('@/components/evToolbar.vue'),
     },
     {
       path: '/ToolbarForm',
       name: 'ToolbarForm',
-      component: () => import('@/components/ToolbarForm.vue'),
+      component: () => import('@/components/evToolbarForm.vue'),
     },
     {
       path: '/ToolbarList',
       name: 'ToolbarList',
-      component: () => import('@/components/ToolbarList.vue'),
+      component: () => import('@/components/evToolbarList.vue'),
+    },
+    {
+      path: '/ThemeSetting',
+      name: 'ThemeSetting',
+      component: () => import('@/setting/setThemeView.vue'),
+    },
+    {
+      path: '/AppSetting',
+      name: 'AppSetting',
+      component: () => import('@/setting/setAppView.vue'),
+    },
+    {
+      path: '/SampleBlockGrid',
+      name: 'sampleBlockGrid',
+      component: () => import('@/sample/sampleBlockGrid.vue'),
+    },
+    {
+      path: '/SampleOverlayAction',
+      name: 'SampleOverlayAction',
+      component: () => import('@/sample/sampleOverlayAction.vue'),
     },
     {
       path: '/SampleForm',
       name: 'SampleForm',
-      component: () => import('@/sample/SampleForm.vue'),
+      component: () => import('@/sample/sampleForm.vue'),
     },
     {
       path: '/SampleList',
       name: 'SampleList',
-      component: () => import('@/sample/SampleList.vue'),
+      component: () => import('@/sample/sampleList.vue'),
     },
-  ]
+  ],
 })
 
 export default router

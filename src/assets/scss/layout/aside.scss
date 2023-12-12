@@ -21,13 +21,10 @@
     }
   }
 
-  &-toggle.el-button {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+  &-toggle {
     position: absolute;
-    top: calc(var(--evc-header-height) / 2.5 * -1);
-    right: calc(var(--evc-header-height) / 3 * -1);
+    top: calc(var(--evc-header-height) / 4 * -1);
+    right: calc(var(--evc-header-height) / 4 * -1);
     z-index: 9;
   }
 
@@ -54,7 +51,7 @@
     align-items: center;
     border-bottom: initial;
 
-    &>.el-menu-item {
+    & > .el-menu-item {
       border: initial;
     }
 
@@ -70,7 +67,7 @@
   }
 }
 
-// 
+//
 .submenu-popper {
   &.el-popper {
     font-size: var(--evc-font-size-root);

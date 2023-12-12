@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import Toolbar from '@/components/Toolbar.vue'
-import Form from '@/components/Form.vue'
+import Toolbar from '@/components/evToolbar.vue'
+import Form from '@/components/evForm.vue'
 
 const activeNames = ref(['1'])
 const handleChange = (val: string[]) => {
@@ -14,11 +14,10 @@ const handleChange = (val: string[]) => {
     <el-collapse v-model="activeNames">
       <toolbar />
       <el-collapse-item name="1">
-        <Form />            
+        <Form />
       </el-collapse-item>
     </el-collapse>
   </div>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

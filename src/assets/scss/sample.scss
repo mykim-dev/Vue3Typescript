@@ -11,7 +11,7 @@
       line-height: 2;
     }
 
-    &+.sampleDesc {
+    & + .sampleDesc {
       margin-top: 20px;
     }
   }
@@ -24,86 +24,9 @@
     grid-template-rows: repeat(2, 1fr);
     gap: var(--evc-layout-gap);
     height: var(--evc-main-height);
-  
+
     .ev-component {
-        overflow: auto;        
+      overflow: auto;
     }
-  }
-}
-
-.setting-option {
-  width: 360px;
-  display: flex;
-  flex-direction: column;  
-  row-gap: var(--evc-layout-gap);
-  background-color: white;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-  z-index: 9; 
-  border: 1px solid red;
-
-  dl {
-      display: flex;
-      flex-direction: column;        
-      margin: initial;
-      border-radius: var(--el-border-radius-base);
-      border: 1px solid var(--el-border-color);
-      background-color: white;
-
-      dt {
-          padding: 5px 10px;
-      }
-      dd {
-          padding: 5px 10px;
-          margin: initial;
-      }
-  }
-
-  .el-form-item {
-      &__label {
-          flex: 1;
-          align-items: center;
-          height: var(--el-component-size);
-      }
-      &__content {
-          flex: 2;
-          justify-content: flex-end;
-          line-height: initial;
-      }
-  }
-
-  .el-button,
-  .el-checkbox-button__inner {
-    padding: 0 10px;
-    line-height: var(--el-component-size);
-    height: var(--el-component-size);
-  }
-
-  .ThemeColor {
-    width: var(--el-component-size);
-    height: var(--el-component-size);
-  }
-
-  .progressIcon {
-    width: var(--el-component-size-large);
-    height: var(--el-component-size-large);
-    background-color: var(--el-overlay-color-lighter);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 80%;
-    text-indent: -9999px;
-
-    &.basic { background-image: url(../img/calsloader.svg); }
-    &.cloud { background-image: url(../img/cloud.svg); }
-    &.ellipsis { background-image: url(../img/index.svg); }
-    &.gear { background-image: url(../img/setting.svg); }
-    &.straight { background-image: url(../img/straight.svg); }
-  }
-
-  .el-divider--horizontal {
-    margin: initial;
   }
 }

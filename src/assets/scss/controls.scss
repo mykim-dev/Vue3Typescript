@@ -1,75 +1,116 @@
-.form-item {
-  --font-size: var(--el-font-size-base);    
+// reset
+.el-form {
+  --el-form-inline-content-width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 
-  &-label {
-    margin-bottom: 4px;
-  }
+  .el-form-item {
+    margin-bottom: initial;
 
-  &-data {
-    .el-date-editor {
-      --el-date-editor-width: 100%;
-    }
-
-    .el-input__wrapper {
-      flex: 1;
-    }
-  }
-
-  &.ev-blank {
-    .form-item-label {
-      margin: initial;
-    }
-  }
-
-  &.is-left {
-    display: flex;
-    align-items: center;
-
-    &.ev-textarea,
-    &.ev-file-upload,
-    &.ev-image-upload,
-    &.ev-image-view {
-      align-items: flex-start;
-    }
-
-    .form-item-label {
-      width: 100px;
-      padding-right: 10px;
-      margin-bottom: initial;
-
+    &__label {
+      display: block;
+      width: 120px;
+      height: var(--el-component-size);
+      line-height: var(--el-component-size);
+      padding: 0 5px;
+      justify-content: flex-start;
+      font-size: var(--el-font-size-base);
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
 
-    .form-item-data {
-      flex: 1;
+    &__content {
+      width: 100%;
+      min-width: 100px;
+      line-height: initial;
+      padding: 0 0 0 5px;
+
+      [class*='ev-'] {
+        width: 100%;
+      }
+
+      .el-select,
+      .el-input-number {
+        width: 100%;
+      }
     }
   }
 }
 
-.ev-number {
-  .el-input-number {
-    width: 100%;
-  }
+.el-input__inner {
+  font-size: var(--el-font-size-base);
 }
 
-.ev-image-view {
-  .el-carousel__container {
-    background-color: var(--el-bg-color-page);
-  }
+.el-button,
+.el-input-group__append .el-button,
+.el-input-group__append .el-select,
+.el-input-group__prepend .el-button,
+.el-input-group__prepend .el-select {
+  min-width: var(--el-component-size);
+  line-height: var(--el-component-size);
+  height: var(--el-component-size);
+  padding: 0 0.5em;
+  margin: 0;
+  border: 1px solid green;
 }
 
-.ev-button {
-  .el-button {
-    height: var(--el-component-size);
-  }
+.el-button.is-circle {
+  padding: initial;
+}
+
+.el-input-group__append,
+.el-input-group__prepend {
+  min-width: var(--el-component-size);
+  min-height: initial;
+  padding: initial;
 }
 
 .el-date-editor {
   --el-date-editor-width: 100%;
 }
 
-.el-switch__label * {
+.el-checkbox {
+  --el-checkbox-font-size: var(--el-font-size-base);
+  --el-checkbox-font-weight: 400;
+  height: var(--el-component-size);
+
+  &-button__inner {
+    padding: 0 0.5em;
+    height: var(--el-component-size);
+    line-height: var(--el-component-size);
+  }
+}
+
+.el-radio {
+  --el-radio-font-weight: 400;
+  height: var(--el-component-size);
+}
+
+.el-switch {
+  height: var(--el-component-size);
+  line-height: initial;
+
+  &__label {
+    color: var(--el-text-color-placeholder);
+    font-size: var(--el-font-size-base);
+  }
+}
+
+.el-tag {
   font-size: var(--el-font-size-base);
+}
+
+.el-color-picker__trigger {
+  height: var(--el-component-size);
+  width: var(--el-component-size);
+}
+
+.el-divider--horizontal {
+  margin: initial;
+}
+
+.el-carousel__container {
+  background-color: var(--el-bg-color-page);
 }

@@ -12,7 +12,9 @@ const listData = useListStore()
       <el-table-column prop="name" label="Name" sortable width="300" />
       <el-table-column prop="amount" label="Amount" width="300" align="center" header-align="right" />
       <el-table-column fixed="right" prop="fixed" label="fixed" width="300">
-        <el-button link type="primary" @click.prevent="">Remove</el-button>
+        <div class="ev-button">
+          <el-button link type="primary" @click.prevent="">Remove</el-button>
+        </div>
       </el-table-column>
     </el-table>
   </div>

@@ -25,14 +25,19 @@ const handlePreview: UploadProps['onPreview'] = (file) => {
 
 <template>
   <div class="ev-image-upload">
-    <el-upload v-model:file-list="fileList" class="upload-demo"
-      action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15" :on-preview="handlePreview"
-      :on-remove="handleRemove" list-type="picture">
-      <el-button type="primary">Click to upload</el-button>
+    <el-upload
+      v-model:file-list="fileList"
+      class="upload-demo"
+      action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
+      :on-preview="handlePreview"
+      :on-remove="handleRemove"
+      list-type="picture"
+    >
+      <div class="ev-button">
+        <el-button type="primary">Click to upload</el-button>
+      </div>
       <template #tip>
-        <div class="el-upload__tip">
-          jpg/png files with a size less than 500kb
-        </div>
+        <div class="el-upload__tip">jpg/png files with a size less than 500kb</div>
       </template>
     </el-upload>
   </div>
