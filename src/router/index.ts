@@ -118,15 +118,10 @@ const router = createRouter({
       component: () => import('@/sample/sampleOverlayAction.vue'),
     },
     {
-      path: '/SampleForm',
-      name: 'SampleForm',
-      component: () => import('@/sample/sampleForm.vue'),
-    },
-    {
-      path: '/SampleList',
-      name: 'SampleList',
-      component: () => import('@/sample/sampleList.vue'),
-    },
+      path: '/SampleComponent',
+      name: 'SampleComponent',
+      component: () => import('@/sample/sampleComponent.vue'),
+    }
   ],
 })
 

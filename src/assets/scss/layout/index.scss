@@ -36,17 +36,21 @@
     }
   }
 
-  &.is-screen-expand {
-    --evc-menu-width: 0px;
-    --evc-header-height: 0px;
-    --evc-tags-height: 0px;
-
-    gap: initial;
+  &[data-screen-expand='true'] {
+    --evc-main-height: calc(100vh - (calc(var(--evc-layout-gap) * 2)));
 
     .ev-logo,
-    .ev-menu,
-    .ev-header {
+    .ev-header,
+    .ev-aside,
+    .ev-tags {
       display: none;
+    }
+
+    .ev-screen {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 4;
+      height: var(--evc-main-height);
+
     }
   }
 }
@@ -60,7 +64,7 @@ dl.ev-panel {
   overflow: auto;
   z-index: 9;
 
-  & > dt {
+  &>dt {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +77,7 @@ dl.ev-panel {
     }
   }
 
-  & > dd {
+  &>dd {
     padding: 0 10px;
     margin: initial;
   }
@@ -130,13 +134,13 @@ dl.ev-panel {
     border: 1px solid var(--el-border-color);
     background-color: white;
 
-    & > dt {
+    &>dt {
       padding: 10px;
       font-size: var(--el-font-size-medium);
       font-weight: var(--el-font-weight-primary);
     }
 
-    & > dd {
+    &>dd {
       padding: 10px;
       margin: initial;
       border-top: 1px solid var(--el-border-color);
@@ -167,15 +171,19 @@ dl.ev-panel {
       &.basic {
         background-image: url(../img/calsloader.svg);
       }
+
       &.cloud {
         background-image: url(../img/cloud.svg);
       }
+
       &.ellipsis {
         background-image: url(../img/index.svg);
       }
+
       &.gear {
         background-image: url(../img/setting.svg);
       }
+
       &.straight {
         background-image: url(../img/straight.svg);
       }

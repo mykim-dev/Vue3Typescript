@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import { useAppStore } from '@/stores/appSetting'
-const AppSetting = useAppStore()
-const isFull = true
 const themeColorGroup = [
   {
     themeName: 'Element Plus',
@@ -1025,60 +1022,39 @@ const themeColorGroup = [
 </script>
 
 <template>
-  <el-row class="ev-screen-row dynamic">
-    <el-col class="ev-screen-row-col" v-for="themeColorGroupItem in themeColorGroup">      
-      <div class="ev-component">
-        <h4>{{ themeColorGroupItem.themeName }}</h4>
-        <el-form>
-          <el-row>
-            <el-col v-for="themeColorDataItem in themeColorGroupItem.themeColorData">
+  <el-row class="ev-screen-row default" :gutter="14">
+    <el-col class="ev-screen-col" v-for="themeColorGroupItem in themeColorGroup" :span="8">
+        <h4>{{ themeColorGroupItem.themeName }}</h4>        
+        <el-row>
+          <el-col v-for="themeColorDataItem in themeColorGroupItem.themeColorData">
+            <p>
               <span class="form-label">{{ themeColorDataItem.label }} : </span>
               <span class="form-data">{{ themeColorDataItem.data }};</span>
               <span class="form-color" :style="{ 'background-color': themeColorDataItem.data }"></span>
-            </el-col>
-          </el-row>
-        </el-form>
-      </div>
+            </p>
+          </el-col>
+        </el-row>
     </el-col>
   </el-row>
 </template>
 
 <style lang="scss" scoped>
-// .ev-form {
-  h3 {}
-
-  .el-row {
-    border: 1px solid var(--el-border-color);
-    border-bottom: initial;
-
-    &:last-of-type {
-      border-bottom: 1px solid var(--el-border-color);
+p {
+  display: flex;
+  justify-content: space-between;
+   span {
+    &.form-label {
+      flex: 2;
     }
 
-    [class*='el-col-'] {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 8px;
+    &.form-data {
+      flex: 1;
     }
 
-    .el-col {
-      span {
-        &.form-label {
-          flex: 5;
-        }
-
-        &.form-data {
-          flex: 5;
-        }
-
-        &.form-color {
-          flex: 1;
-          height: 14px;
-          border: 1px solid lightgray;
-        }
-      }
+    &.form-color {
+      width: var(--el-component-size);
+      border: 1px solid lightgray;
     }
-  // }
+  }
 }
 </style>

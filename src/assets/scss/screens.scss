@@ -1,154 +1,157 @@
-.ev-screen-row {
-  height: var(--evc-main-height);
-  overflow: auto;
-  border: 1px solid red;
+.ev-screen {
+  max-height: var(--evc-main-height);
+  position: relative;
 
-  .ev-screen-row-col {
-    height: 100%;
-    border: 1px solid green;
-  }  
-
-  // is-full 일때
-  &.is-full {
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    grid-template-rows: repeat(24, 1fr);
-    gap: var(--evc-layout-gap);
-    grid-auto-flow: row dense;
+  .ev-screen-row {
     height: var(--evc-main-height);
-    overflow: initial;
+    overflow: auto;
 
-    [class*=el-col-] {
-      max-width: initial;
-      padding: initial !important;
-      overflow: auto;
-    }
+    .ev-screen-col {}
 
-    &.default {
-      .ev-screen-row-col {
-        grid-area: span 24 / span 24;
+    // is-full 일때
+    &.is-full {
+      display: grid;
+      grid-template-columns: repeat(24, 1fr);
+      grid-template-rows: repeat(24, 1fr);
+      gap: var(--evc-layout-gap);
+      grid-auto-flow: row dense;
+      height: var(--evc-main-height);
+      overflow: initial;
+
+      [class*=el-col-] {
+        max-width: initial;
+        height: 100%;
+        padding: initial !important;
+        overflow: auto;
+        border: 1px solid purple;
       }
-    }
-  
-    &.horizontal {
-      .ev-screen-row-col {
-        grid-area: span 24 / span 12;
+
+      &.default {
+        .ev-screen-col {
+          grid-area: span 24 / span 24;
+        }
       }
-    }
-  
-    &.horizontal2 {
-      .ev-screen-row-col {
-        &:nth-of-type(1) {
+
+      &.horizontal {
+        .ev-screen-col {
           grid-area: span 24 / span 12;
         }
-  
-        &:nth-of-type(2),
-        &:nth-of-type(3) {
-          grid-area: span 12 / span 12;
+      }
+
+      &.horizontal2 {
+        .ev-screen-col {
+          &:nth-of-type(1) {
+            grid-area: span 24 / span 12;
+          }
+
+          &:nth-of-type(2),
+          &:nth-of-type(3) {
+            grid-area: span 12 / span 12;
+          }
         }
       }
-    }
-  
-    &.horizontal3 {
-      .ev-screen-row-col:nth-of-type(1) {
-        grid-area: span 24 / span 6;
+
+      &.horizontal3 {
+        .ev-screen-col:nth-of-type(1) {
+          grid-area: span 24 / span 6;
+        }
+
+        .ev-screen-col:nth-last-of-type(1) {
+          grid-area: span 24 / span 18;
+        }
       }
-  
-      .ev-screen-row-col:nth-last-of-type(1) {
-        grid-area: span 24 / span 18;
-      }
-    }
-  
-    &.vertical {
-      .ev-screen-row-col {
-        grid-area: span 12 / span 24;
-      }
-    }
-  
-    &.vertical2 {
-      .ev-screen-row-col {
-        &:nth-of-type(1) {
+
+      &.vertical {
+        .ev-screen-col {
           grid-area: span 12 / span 24;
         }
-  
-        &:nth-of-type(2),
-        &:nth-of-type(3) {
-          grid-area: span 12 / span 12;
+      }
+
+      &.vertical2 {
+        .ev-screen-col {
+          &:nth-of-type(1) {
+            grid-area: span 12 / span 24;
+          }
+
+          &:nth-of-type(2),
+          &:nth-of-type(3) {
+            grid-area: span 12 / span 12;
+          }
         }
       }
-    }
-  
-    &.dashboard {
-      .ev-screen-row-col {
-  
-        &:nth-child(n + 1):nth-child(-n + 3) {
-          grid-area: span 4 / span 8;
-        }
-  
-        &:nth-child(4) {
-          grid-area: span 8 / span 12;
-        }
-  
-        &:nth-child(n + 5):nth-child(-n + 8) {
-          grid-area: span 4 / span 6;
-        }
-  
-        &:nth-child(n + 9):nth-child(-n + 14) {
-          grid-area: span 4 / span 12;
-        }
-      }
-    }
-  
-    &.dashboard1 {
-      .ev-screen-row-col {
-  
-        &:nth-child(n + 1),
-        &:nth-child(n + 2),
-        &:nth-child(n + 4),
-        &:nth-child(n + 5) {
-          grid-area: span 6 / span 8;
-        }
-  
-        &:nth-child(3) {
-          grid-area: span 12 / span 8;
-        }
-  
-        &:nth-child(n + 6):nth-child(-n + 9) {
-          grid-area: span 12 / span 12;
+
+      &.dashboard {
+        .ev-screen-col {
+
+          &:nth-child(n + 1):nth-child(-n + 3) {
+            grid-area: span 4 / span 8;
+          }
+
+          &:nth-child(4) {
+            grid-area: span 8 / span 12;
+          }
+
+          &:nth-child(n + 5):nth-child(-n + 8) {
+            grid-area: span 4 / span 6;
+          }
+
+          &:nth-child(n + 9):nth-child(-n + 14) {
+            grid-area: span 4 / span 12;
+          }
         }
       }
-    }
-  
-    &.dashboard2 {
-      grid-template-columns: repeat(20, 1fr);
-  
-      .ev-screen-row-col {
-        &:nth-child(n + 1):nth-child(-n + 5) {
-          grid-area: span 6 / span 4;
-        }
-  
-        &:nth-child(n + 6):nth-child(-n + 11) {
-          grid-area: span 12 / span 10;
-        }
-      }
-    }
-  
-    &.dashboard3 {
-      grid-template-rows: repeat(20, 1fr);
-  
-      .ev-screen-row-col {
-        &:nth-child(n + 1):nth-child(-n + 6) {
-          grid-area: span 5 / span 8;
-        }
-  
-        &:nth-child(n + 7):nth-child(-n + 10) {
-          grid-area: span 5 / span 12;
+
+      &.dashboard1 {
+        .ev-screen-col {
+
+          &:nth-child(n + 1),
+          &:nth-child(n + 2),
+          &:nth-child(n + 4),
+          &:nth-child(n + 5) {
+            grid-area: span 6 / span 8;
+          }
+
+          &:nth-child(3) {
+            grid-area: span 12 / span 8;
+          }
+
+          &:nth-child(n + 6):nth-child(-n + 9) {
+            grid-area: span 12 / span 12;
+          }
         }
       }
-    }
-  
-    &.dynamic {
-      .ev-screen-row-col {}
+
+      &.dashboard2 {
+        grid-template-columns: repeat(20, 1fr);
+
+        .ev-screen-col {
+          &:nth-child(n + 1):nth-child(-n + 5) {
+            grid-area: span 6 / span 4;
+          }
+
+          &:nth-child(n + 6):nth-child(-n + 11) {
+            grid-area: span 12 / span 10;
+          }
+        }
+      }
+
+      &.dashboard3 {
+        grid-template-rows: repeat(20, 1fr);
+
+        .ev-screen-col {
+          &:nth-child(n + 1):nth-child(-n + 6) {
+            grid-area: span 5 / span 8;
+          }
+
+          &:nth-child(n + 7):nth-child(-n + 10) {
+            grid-area: span 5 / span 12;
+          }
+        }
+      }
+
+      &.dynamic {
+        .ev-screen-col {}
+      }
     }
   }
 }

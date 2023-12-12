@@ -3,8 +3,6 @@ import { ref } from 'vue'
 import { useAppStore } from '@/stores/appSetting'
 const AppSetting = useAppStore()
 
-const setLayout = ref(true)
-const setTheme = ref('#5796ad')
 const setTopBanner = ref(true)
 const setBottomBanner = ref(true)
 const setProgressIcon = ref('basic')
@@ -12,16 +10,16 @@ const setLoginLogo = ref(true)
 const setLoginImage = ref(true)
 const setTopLogo = ref(true)
 
-const gnbLogin = ref(['Login'])
-const gnbLanguage = ref(['Language'])
-const gnbNavigation = ref(['Navigation'])
-const gnbSiteMap = ref(['Site Map'])
-const gnbNotification = ref(['Notification'])
-const gnbSetting = ref(['Setting'])
-const gnbLoginLogo = ref(['Login Logo'])
-const gnbLoginImage = ref(['Login Image'])
-const gnbTopLogo = ref(['Top Logo'])
-const gnbs = ['Login', 'Language', 'Navigation', 'Site Map', 'Notification', 'Setting', 'Login Logo', 'Login Image', 'Top Logo']
+// const gnbLogin = ref(['Login'])
+// const gnbLanguage = ref(['Language'])
+// const gnbNavigation = ref(['Navigation'])
+// const gnbSiteMap = ref(['Site Map'])
+// const gnbNotification = ref(['Notification'])
+// const gnbSetting = ref(['Setting'])
+// const gnbLoginLogo = ref(['Login Logo'])
+// const gnbLoginImage = ref(['Login Image'])
+// const gnbTopLogo = ref(['Top Logo'])
+// const gnbs = ['Login', 'Language', 'Navigation', 'Site Map', 'Notification', 'Setting', 'Login Logo', 'Login Image', 'Top Logo']
 
 const themeList = [
   { name: 'green', color: '#5796ad' },
@@ -36,10 +34,14 @@ const themeList = [
     <dt>Common Setting</dt>
     <dd>
       <el-form label-position="left">
-        <el-form-item label="Layout">
-          <div class="ev-switch"><el-switch v-model="setLayout" active-text="Horizontal" inactive-text="Vertical" size="small" /></div>
+        <el-form-item label="Layout">          
+          <!-- <div class="ev-switch"><el-switch v-model="setLayout" active-text="Horizontal" inactive-text="Vertical" size="small" /></div> -->
+          <el-radio-group v-model="AppSetting.appLayoutType" @click="AppSetting.changeLayout()">
+            <el-radio-button class="layout horizontal" label="horizontal" />
+            <el-radio-button class="layout vertical" label="vertical" />
+          </el-radio-group>
         </el-form-item>
-        <el-form-item label="Theme">
+        <el-form-item label="Theme">          
           <el-button-group v-model="AppSetting.appTheme">
             <el-button :class="theme.name" :style="`background-color:${theme.color}`" v-for="theme in themeList" @click="AppSetting.changeTheme(theme.name)" />
           </el-button-group>

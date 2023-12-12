@@ -13,17 +13,6 @@ const AppSetting = useAppStore()
 <template>
   <ul class="ev-header-navigation">
     <li>
-      <!-- 레이아웃 -->
-      <el-button-group class="layout-group">
-        <el-button class="horizontal" @click="AppSetting.changeLayout('horizontal')">
-          <i v-for="i in 2" :class="'item item' + i"></i>
-        </el-button>
-        <el-button class="vertical" @click="AppSetting.changeLayout('vertical')">
-          <i v-for="i in 2" :class="'item item' + i"></i>
-        </el-button>
-      </el-button-group>
-    </li>
-    <li>
       <div class="ev-button">
         <el-button @click="AppSetting.togglePopup">팝업</el-button>
       </div>
@@ -39,7 +28,7 @@ const AppSetting = useAppStore()
         <div class="ev-button"><el-button :icon="Operation" /></div>
       </RouterLink>
       <div class="ev-button">
-        <el-button :icon="Rank" link @click="AppSetting.mainExpand" />
+        <el-button :icon="Rank" @click="AppSetting.toggleScreenExpand" />
       </div>
       <EvBadge />
       <EvSetting />

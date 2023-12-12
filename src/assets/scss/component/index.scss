@@ -4,39 +4,39 @@
 @import 'toolbarList.scss';
 
 .ev-component {
-  background-color: var(--evc-layout-item-background-color);
-  background-image: var(--evc-layout-item-background-image);
+  // background-color: var(--evc-layout-item-background-color);
+  // background-image: var(--evc-layout-item-background-image);
   border-radius: var(--evc-layout-item-border-radius);
-  box-shadow: var(--evc-layout-item-shadow);
+  // box-shadow: var(--evc-layout-item-shadow);
+  // border: 1px solid cyan;
 
   &-scroll {
     max-height: 100%;
   }
 
   .el-collapse {
-    position: relative;
-  }
-  
-  .toolbar-title {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - var(--el-collapse-header-height));
-    height: var(--el-collapse-header-height);
-    border: 1px solid green;
-    z-index: 1;
-  }
-  
-  .el-collapse-item {
-    position: relative;
-  }
-  
-  .el-collapse-item__header {
-    width: var(--el-collapse-header-height);
-  }
-}
+    // --el-collapse-header-height: initial;
+    --el-collapse-header-bg-color: initial;
+    --el-collapse-content-bg-color: initial;
 
-h4.ev-toolbar__title {
-  margin: initial;
+    .ev-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 10px;
+
+      &__title {
+        margin: initial;
+      }
+
+      &__wrap {
+        display: flex;
+        column-gap: 10px;
+        z-index: 9;
+      }
+    }
+
+    &-item__wrap {}
+  }
 }

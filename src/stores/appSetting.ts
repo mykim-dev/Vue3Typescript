@@ -10,7 +10,7 @@ export const useAppStore = defineStore('AppSetting', {
     PanelBottom: ref(false),
     screenExpand: ref(false),
     menuType: ref('vertical'),
-    menuCollapse: ref(true),
+    menuCollapse: ref(false),
     menus: [
       { name: 'Home', link: '/', icon: 'HomeFilled', menus: [] },
       {
@@ -54,11 +54,10 @@ export const useAppStore = defineStore('AppSetting', {
       },
       {
         name: 'Sample',
-        link: '/SampleForm',
+        link: '/SampleComponent',
         icon: 'HelpFilled',
         menus: [
-          { name: 'SampleForm', link: '/SampleForm', icon: '', menus: [] },
-          { name: 'SampleList', link: '/SampleList', icon: '', menus: [] },
+          { name: 'SampleComponent', link: '/SampleComponent', icon: '', menus: [] },
           { name: 'SampleBlockGrid', link: '/SampleBlockGrid', icon: '', menus: [] },
           { name: 'SampleOverlayAction', link: '/SampleOverlayAction', icon: '', menus: [] },
         ],
@@ -67,8 +66,7 @@ export const useAppStore = defineStore('AppSetting', {
     tags: [
       { name: 'ThemeSetting', link: '/ThemeSetting' },
       { name: 'AppSetting', link: '/AppSetting' },
-      { name: 'SampleForm', link: '/SampleForm' },
-      { name: 'SampleList', link: '/SampleList' },
+      { name: 'SampleComponent', link: '/SampleComponent' },
       { name: 'SampleBlockGrid', link: '/SampleBlockGrid' },
       { name: 'SampleOverlayAction', link: '/SampleOverlayAction' },
     ],
@@ -82,10 +80,10 @@ export const useAppStore = defineStore('AppSetting', {
       }
     },
 
-    changeLayout(layout: string) {
-      this.appLayoutType = layout
-      this.menuType = layout === 'vertical' || layout === 'vertical2' ? 'horizontal' : 'vertical'
+    changeLayout() {
+      this.appLayoutType = this.appLayoutType === 'horizontal' ? 'vertical' : 'horizontal'
       this.menuCollapse = false
+      this.menuType = this.appLayoutType === 'horizontal' ? 'vertical' : 'horizontal'
     },
 
     changeMenuCollapse() {
