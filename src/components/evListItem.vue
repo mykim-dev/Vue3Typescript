@@ -5,7 +5,7 @@ const listData = useListStore()
 
 <template>
   <div class="ev-list-item">
-    <el-table :data="listData.listItems" show-summary height="300" style="width: 100%" border>
+    <el-table :data="listData.listItems" highlight-current-row show-summary border style="width: 100%">
       <el-table-column type="selection" width="100" align="right" header-align="center" />
       <el-table-column fixed type="index" label="No" width="100" align="right" header-align="center" />
       <el-table-column prop="date" label="Date" width="300" />

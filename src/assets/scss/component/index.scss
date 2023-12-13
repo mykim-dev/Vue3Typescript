@@ -4,27 +4,51 @@
 @import 'toolbarList.scss';
 
 .ev-component {
-  // background-color: var(--evc-layout-item-background-color);
-  // background-image: var(--evc-layout-item-background-image);
-  border-radius: var(--evc-layout-item-border-radius);
-  // box-shadow: var(--evc-layout-item-shadow);
-  // border: 1px solid cyan;
+  padding: var(--evc-component-padding);
+  border-radius: var(--evc-component-border-radius);
+  border: 1px solid var(--evc-component-border-color);
+  background-color: rgba(var(--evc-component-background-color));
+  background-image: var(--evc-component-background-image);
+  backdrop-filter: blur(var(--evc-component-background-filter-blur));
+  box-shadow: var(--evc-component-shadow);
+
+  // &.is-glassmorphism {
+  //   border-color: var(--el-color-white);
+  //   background-color: rgba(var(--evc-component-background-color), 0.4);
+  //   backdrop-filter: blur(16px);
+  // }
 
   &-scroll {
     max-height: 100%;
   }
 
   .el-collapse {
-    // --el-collapse-header-height: initial;
+    --el-collapse-header-height: initial;
+    --el-collapse-border-color: var(--el-border-color-dark);
     --el-collapse-header-bg-color: initial;
     --el-collapse-content-bg-color: initial;
+
+    border: initial;
+
+    &-item__header {
+      border: initial;
+    }
+
+    &-item__wrap {
+      border: initial;
+    }
+
+    &-item__content {
+      line-height: 1;
+      padding: var(--evc-layout-padding) 0;
+    }
 
     .ev-toolbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding: 0 10px;
+      padding: 0 var(--evc-control-padding);
 
       &__title {
         margin: initial;
@@ -32,11 +56,12 @@
 
       &__wrap {
         display: flex;
-        column-gap: 10px;
+        column-gap: var(--evc-control-padding);
         z-index: 9;
       }
     }
 
-    &-item__wrap {}
+    &-item__wrap {
+    }
   }
 }

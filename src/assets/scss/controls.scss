@@ -3,18 +3,18 @@
   --el-form-inline-content-width: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: var(--evc-control-padding);
 }
 
 .el-form-item {
-  margin-bottom: 10px;
+  margin-bottom: var(--evc-layout-gap);
 
   &__label {
     display: block;
     width: 120px;
     height: var(--el-component-size);
     line-height: var(--el-component-size);
-    padding: 0 5px;
+    padding: 0 var(--evc-control-padding);
     justify-content: flex-start;
     font-size: var(--el-font-size-base);
     overflow: hidden;
@@ -26,7 +26,7 @@
     width: 100%;
     min-width: 100px;
     line-height: initial;
-    padding: 0 0 0 5px;
+    padding: 0 0 0 var(--evc-control-padding);
 
     [class*='ev-'] {
       width: 100%;
@@ -43,17 +43,22 @@
   font-size: var(--el-font-size-base);
 }
 
-.el-button,
+.el-button:not(.is-link),
 .el-input-group__append .el-button,
 .el-input-group__append .el-select,
 .el-input-group__prepend .el-button,
 .el-input-group__prepend .el-select {
   min-width: var(--el-component-size);
-  line-height: var(--el-component-size);
+  // line-height: var(--el-component-size);
   height: var(--el-component-size);
-  padding: 0 0.5em;
+  padding: 0 var(--evc-control-padding);
   margin: 0;
-  border: 1px solid green;
+  // border: 1px solid green;
+}
+
+.el-button:has(.el-icon) {
+  padding: initial;
+  font-size: initial;
 }
 
 .el-button.is-circle {

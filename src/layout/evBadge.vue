@@ -4,9 +4,11 @@ import { BellFilled } from '@element-plus/icons-vue'
 
 <template>
   <el-dropdown trigger="click">
-    <el-badge :value="100">
-      <div class="ev-button"><el-button :icon="BellFilled" link /></div>
-    </el-badge>
+    <div class="ev-header-navigation__icon">
+      <el-badge :value="100">
+        <el-button :icon="BellFilled" link />
+      </el-badge>
+    </div>
     <template #dropdown>notofication</template>
   </el-dropdown>
 </template>

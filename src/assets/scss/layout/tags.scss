@@ -1,18 +1,16 @@
 .ev-tags {
-    border-radius: var(--evc-layout-item-border-radius);
-    background-color: var(--evc-layout-item-background-color);
-    background-image: var(--evc-layout-item-background-image);
-    box-shadow: var(--evc-layout-item-shadow);
+  border-radius: var(--evc-layout-item-border-radius);
+  border: 1px solid var(--evc-layout-item-border-color);
+  background-color: rgba(var(--evc-layout-item-background-color));
+  background-image: var(--evc-layout-item-background-image);
+  backdrop-filter: blur(var(--evc-layout-item-background-filter-blur));
+  box-shadow: var(--evc-layout-item-shadow);
 
-    // .el-scrollbar__view {
-    //     height: 100%;
-    // }
-
-    &-group {
-        display: flex;
-        align-items: center;
-        height: var(--evc-tags-height);
-        gap: 0 10px;
-        padding: 0 10px;
-    }
+  &-group {
+    display: flex;
+    align-items: center;
+    height: var(--evc-tags-height);
+    gap: 0 var(--evc-control-padding);
+    padding: 0 var(--evc-layout-gap);
+  }
 }

@@ -4,7 +4,7 @@ import List from '@/components/evList.vue'
 </script>
 
 <template>
-  <el-row class="ev-screen-row default" :gutter="14">
+  <el-row class="ev-screen-row default" :gutter="16">
     <el-col class="ev-screen-col" :span="12">
       <Form />
     </el-col>

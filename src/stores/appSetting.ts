@@ -9,6 +9,7 @@ export const useAppStore = defineStore('AppSetting', {
     panelRight: ref(false),
     PanelBottom: ref(false),
     screenExpand: ref(false),
+    glassmorphism: ref(false),
     menuType: ref('vertical'),
     menuCollapse: ref(false),
     menus: [
@@ -76,7 +77,7 @@ export const useAppStore = defineStore('AppSetting', {
     changeTheme(theme: string) {
       if (this.appTheme !== theme) {
         this.appTheme = theme
-        document.querySelector('body')?.setAttribute('class', theme)
+        document.querySelector('html')?.setAttribute('class', theme)
       }
     },
 
@@ -104,6 +105,10 @@ export const useAppStore = defineStore('AppSetting', {
 
     toggleScreenExpand() {
       this.screenExpand = !this.screenExpand
+    },
+
+    toggleGlassmorphism() {
+      this.glassmorphism = !this.glassmorphism
     },
   },
 })

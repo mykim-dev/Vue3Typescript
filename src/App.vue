@@ -9,6 +9,9 @@ import EvPanelPopup from '@/layout/evPanelPopup.vue'
 import EvPanelRight from '@/layout/evPanelRight.vue'
 import EvPanelBottom from '@/layout/evPanelBottom.vue'
 
+import { ElDrawer, ElMessageBox } from 'element-plus'
+const dialog = ref(false)
+
 const AppSetting = useAppStore()
 
 const activeName = ref('2')

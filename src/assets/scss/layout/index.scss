@@ -1,6 +1,5 @@
 @import 'layoutHorizontal.scss';
 @import 'layoutVertical.scss';
-@import 'layoutSetting.scss';
 @import 'header.scss';
 @import 'aside.scss';
 @import 'tags.scss';
@@ -12,11 +11,11 @@
   align-content: stretch;
   width: 100vw;
   height: 100vh;
-  background-color: var(--el-color-primary-light-9);
-  background-image: url(../img/pattern.png), radial-gradient(50% 50% at center top, var(--el-color-primary-light-5) 0%, var(--el-color-primary-light-9) 100%);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: auto 20rem;
+  background-color: var(--evc-layout-background-color);
+  background-image: var(--evc-layout-background-image);
+  background-repeat: var(--evc-layout-background-repeat);
+  background-position: var(--evc-layout-background-position);
+  background-size: var(--evc-layout-background-size);
   transition: var(--el-transition-duration-fast);
   grid-auto-flow: dense;
 
@@ -50,7 +49,6 @@
       grid-column: 1 / span 2;
       grid-row: 1 / span 4;
       height: var(--evc-main-height);
-
     }
   }
 }
@@ -59,16 +57,17 @@
 dl.ev-panel {
   margin: initial;
   position: fixed;
+  border: 1px solid var(--el-border-color);
   background-color: white;
-  box-shadow: var(--el-box-shadow-light);
+  box-shadow: var(--evc-layout-item-shadow);
   overflow: auto;
   z-index: 9;
 
-  &>dt {
+  & > dt {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: var(--evc-control-padding);
     background-color: var(--el-fill-color-light);
 
     h3 {
@@ -77,8 +76,8 @@ dl.ev-panel {
     }
   }
 
-  &>dd {
-    padding: 0 10px;
+  & > dd {
+    padding: 0 var(--evc-control-padding);
     margin: initial;
   }
 
@@ -103,7 +102,7 @@ dl.ev-panel {
     border-radius: var(--el-border-radius-round) 0 0 var(--el-border-radius-round);
     top: 90px;
     right: -400px;
-    bottom: 10px;
+    bottom: var(--evc-control-padding);
     transition: right ease var(--el-transition-duration-fast);
 
     &.is-active {
@@ -115,9 +114,9 @@ dl.ev-panel {
   &.ev-panel-bottom {
     height: 30vh;
     border-radius: var(--el-border-radius-round) var(--el-border-radius-round) 0 0;
-    right: 10px;
+    right: var(--evc-layout-gap);
     bottom: -30vh;
-    left: 10px;
+    left: var(--evc-layout-gap);
     transition: bottom ease var(--el-transition-duration-fast);
 
     &.is-active {
@@ -129,19 +128,19 @@ dl.ev-panel {
   dl.panel-item {
     display: flex;
     flex-direction: column;
-    margin: 10px 0;
+    margin: var(--evc-control-padding) 0;
     border-radius: var(--el-border-radius-base);
     border: 1px solid var(--el-border-color);
     background-color: white;
 
-    &>dt {
-      padding: 10px;
+    & > dt {
+      padding: var(--evc-control-padding);
       font-size: var(--el-font-size-medium);
       font-weight: var(--el-font-weight-primary);
     }
 
-    &>dd {
-      padding: 10px;
+    & > dd {
+      padding: var(--evc-control-padding);
       margin: initial;
       border-top: 1px solid var(--el-border-color);
     }

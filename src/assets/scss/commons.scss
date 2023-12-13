@@ -40,22 +40,19 @@ button {
 }
 
 ::-webkit-scrollbar {
-  width: var(--evc-scrollbar-width);
-  height: var(--evc-scrollbar-width);
-  background: transparent;
+  width: 8px;
+  height: 8px;
 }
 
 /* width */
 ::-webkit-scrollbar-thumb {
-  background: var(--el-text-color-secondary);
+  background: rgba(144, 147, 153, 0.3);
   border-radius: 4px;
-  opacity: 0.3;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--el-text-color-secondary);
-  opacity: 0.5;
+  background: rgba(144, 147, 153, 0.5);
 }
 
 /* Handle on hover */

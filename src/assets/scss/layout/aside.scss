@@ -3,14 +3,13 @@
   flex-direction: column;
   row-gap: var(--evc-layout-gap);
   position: relative;
-  // border-radius: var(--evc-layout-item-border-radius);
-  // background-color: var(--evc-layout-item-background-color);
-  // background-image: var(--evc-layout-item-background-image);
-  // box-shadow: var(--evc-layout-item-shadow);
 
-  // &-scroll {
-  //   height: var(--evc-menu-height);
-  // }
+  border-radius: var(--evc-layout-item-border-radius);
+  border: 1px solid var(--evc-layout-item-border-color);
+  background-color: rgba(var(--evc-layout-item-background-color));
+  background-image: var(--evc-layout-item-background-image);
+  backdrop-filter: blur(var(--evc-layout-item-background-filter-blur));
+  box-shadow: var(--evc-layout-item-shadow);
 
   .el-menu {
     border: initial;

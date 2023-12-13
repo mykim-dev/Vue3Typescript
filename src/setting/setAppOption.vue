@@ -34,17 +34,20 @@ const themeList = [
     <dt>Common Setting</dt>
     <dd>
       <el-form label-position="left">
-        <el-form-item label="Layout">          
+        <el-form-item label="Layout">
           <!-- <div class="ev-switch"><el-switch v-model="setLayout" active-text="Horizontal" inactive-text="Vertical" size="small" /></div> -->
           <el-radio-group v-model="AppSetting.appLayoutType" @click="AppSetting.changeLayout()">
             <el-radio-button class="layout horizontal" label="horizontal" />
             <el-radio-button class="layout vertical" label="vertical" />
           </el-radio-group>
         </el-form-item>
-        <el-form-item label="Theme">          
+        <el-form-item label="Theme">
           <el-button-group v-model="AppSetting.appTheme">
             <el-button :class="theme.name" :style="`background-color:${theme.color}`" v-for="theme in themeList" @click="AppSetting.changeTheme(theme.name)" />
           </el-button-group>
+        </el-form-item>
+        <el-form-item label="Component Glassmorphism">
+          <div class="ev-switch"><el-switch v-model="AppSetting.glassmorphism" active-text="YES" inactive-text="NO" size="small" /></div>
         </el-form-item>
         <el-form-item label="Top Banner">
           <div class="ev-switch"><el-switch v-model="setTopBanner" active-text="YES" inactive-text="NO" size="small" /></div>

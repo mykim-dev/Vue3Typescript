@@ -5,6 +5,7 @@
   $colors: (
     'primary': (
       'base': #5796ad,
+      // 'base': #382828,
     ),
   ),
   $font-family: (
@@ -14,17 +15,21 @@
     'extra-large': 16px,
     'large': 14px,
     'medium': 13px,
-    'base': 12.25px,
+    'base': 12.75px,
     'small': 12px,
     'extra-small': 11px,
   ),
   $common-component-size: (
-    'large': 35px,
+    'large': 36px,
     'default': 27px,
-    'small': 20px,
+    'small': 18px,
   ),
   $border-radius: (
-    'round': 10px,
+    'round': 8px,
+  ),
+  $text-color: (
+    'primary': #000000,
+    'regular': #111111,
   )
 );
 

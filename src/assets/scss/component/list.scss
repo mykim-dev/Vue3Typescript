@@ -1,15 +1,29 @@
 .ev-list-item {
-    .el-table {
-        font-size: var(--evc-font-size-root);
+  .el-table {
+    --el-table-border-color: var(--el-border-color);
+    --el-table-bg-color: transparent;
+    --el-table-header-bg-color: transparent;
+    --el-table-tr-bg-color: transparent;
+    --el-table-row-hover-bg-color: var(--el-color-primary-light-5);
+    --el-table-current-row-bg-color: var(--el-color-primary-light-5);
 
-        .el-table__cell {
-            height: var(--el-component-size);
-            padding: initial;
-        }
+    font-size: var(--evc-font-size-root);
 
-        .cell {
-            line-height: initial;
-            font-size: var(--el-font-size-base);
-        }
+    .el-table__cell {
+      height: var(--el-component-size);
+      padding: initial;
     }
+
+    .cell {
+      line-height: initial;
+      padding: 0 calc(var(--evc-layout-gap));
+      font-size: var(--el-font-size-base);
+    }
+
+    tfoot {
+      td.el-table__cell {
+        background-color: transparent;
+      }
+    }
+  }
 }

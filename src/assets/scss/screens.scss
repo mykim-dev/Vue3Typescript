@@ -3,27 +3,34 @@
   position: relative;
 
   .ev-screen-row {
+    margin-top: calc(var(--evc-layout-item-padding) * -1);
     height: var(--evc-main-height);
     overflow: auto;
 
-    .ev-screen-col {}
+    .ev-screen-col {
+      padding-top: var(--evc-layout-item-padding);
+      padding-bottom: var(--evc-layout-item-padding);
+    }
 
     // is-full 일때
     &.is-full {
       display: grid;
       grid-template-columns: repeat(24, 1fr);
       grid-template-rows: repeat(24, 1fr);
-      gap: var(--evc-layout-gap);
+      // gap: var(--evc-layout-gap);
       grid-auto-flow: row dense;
       height: var(--evc-main-height);
       overflow: initial;
 
-      [class*=el-col-] {
+      [class*='el-col-'] {
         max-width: initial;
         height: 100%;
-        padding: initial !important;
         overflow: auto;
-        border: 1px solid purple;
+        // border: 1px solid purple;
+      }
+
+      .ev-component {
+        height: 100%;
       }
 
       &.default {
@@ -82,7 +89,6 @@
 
       &.dashboard {
         .ev-screen-col {
-
           &:nth-child(n + 1):nth-child(-n + 3) {
             grid-area: span 4 / span 8;
           }
@@ -103,7 +109,6 @@
 
       &.dashboard1 {
         .ev-screen-col {
-
           &:nth-child(n + 1),
           &:nth-child(n + 2),
           &:nth-child(n + 4),
@@ -150,7 +155,8 @@
       }
 
       &.dynamic {
-        .ev-screen-col {}
+        .ev-screen-col {
+        }
       }
     }
   }

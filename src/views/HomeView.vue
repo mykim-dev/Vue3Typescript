@@ -33,14 +33,13 @@ const stripeState = ref([true])
             </template>
 
             <div class="ev-list-item">
-              <el-table :data="todoList.$state.todo" style="width: 100%" highlight-current-row v-if="{ stripe: stripeState }" border>
+              <el-table :data="todoList.$state.todo" highlight-current-row v-if="{ stripe: stripeState }" border style="width: 100%">
                 <el-table-column type="selection" width="50" align="center" header-align="center" />
                 <el-table-column type="index" label="No" width="50" fixed align="center" header-align="center" />
                 <el-table-column prop="title" label="Title" sortable width="" />
                 <!-- <el-table-column prop="isDo" label="Date" sortable width="150" align="center" header-align="center" /> -->
               </el-table>
             </div>
-
           </el-collapse-item>
         </el-collapse>
       </div>

@@ -439,7 +439,7 @@ const themeColorGroup = [
       { label: '--color-notification-item-urgent-background-color', data: '#ffe4e4' },
       { label: '--color-notification-item-urgent-border-color', data: '#feb5b6' },
       { label: '--color-notification-item-icon-check-receipt-color', data: '#3386a2' },
-      { label: '--color-notification-popup-item-urgent-background-color', data: '#ffe4e4', },
+      { label: '--color-notification-popup-item-urgent-background-color', data: '#ffe4e4' },
       { label: '--color-focus-border', data: '#5796ad' },
       { label: '--fontfamily-default', data: 'notosans' },
       { label: '--fontweight-100', data: '100' },
@@ -1017,23 +1017,23 @@ const themeColorGroup = [
       { label: '--opacity-overlay-loading', data: '30%' },
       { label: '--sizing-scrollbar', data: '6px' },
     ],
-  }
+  },
 ]
 </script>
 
 <template>
-  <el-row class="ev-screen-row default" :gutter="14">
+  <el-row class="ev-screen-row default" :gutter="32">
     <el-col class="ev-screen-col" v-for="themeColorGroupItem in themeColorGroup" :span="8">
-        <h4>{{ themeColorGroupItem.themeName }}</h4>        
-        <el-row>
-          <el-col v-for="themeColorDataItem in themeColorGroupItem.themeColorData">
-            <p>
-              <span class="form-label">{{ themeColorDataItem.label }} : </span>
-              <span class="form-data">{{ themeColorDataItem.data }};</span>
-              <span class="form-color" :style="{ 'background-color': themeColorDataItem.data }"></span>
-            </p>
-          </el-col>
-        </el-row>
+      <h4>{{ themeColorGroupItem.themeName }}</h4>
+      <el-row>
+        <el-col v-for="themeColorDataItem in themeColorGroupItem.themeColorData">
+          <p>
+            <span class="form-label">{{ themeColorDataItem.label }} :</span>
+            <span class="form-data">{{ themeColorDataItem.data }};</span>
+            <span class="form-color" :style="{ 'background-color': themeColorDataItem.data }"></span>
+          </p>
+        </el-col>
+      </el-row>
     </el-col>
   </el-row>
 </template>
@@ -1042,7 +1042,11 @@ const themeColorGroup = [
 p {
   display: flex;
   justify-content: space-between;
-   span {
+  padding: 5px 0;
+  margin: initial;
+
+  span {
+    font-size: var(--el-font-size-base);
     &.form-label {
       flex: 2;
     }
