@@ -18,7 +18,7 @@
 
   --evc-layout-item-padding: calc(var(--evc-layout-gap) / 2);
   --evc-layout-item-border-radius: var(--el-border-radius-round);
-  --evc-layout-item-border-color: var(--el-border-color);
+  --evc-layout-item-border-color: var(--el-border-color-light);
   --evc-layout-item-background-color: 255, 255, 255, 1;
   --evc-layout-item-background-image: none;
   --evc-layout-item-background-filter-blur: 0px;
@@ -31,7 +31,7 @@
 
   --evc-component-padding: 16px;
   --evc-component-border-radius: var(--el-border-radius-round);
-  --evc-component-border-color: var(--el-border-color);
+  --evc-component-border-color: var(--el-border-color-light);
   --evc-component-background-color: 255, 255, 255, 1;
   --evc-component-background-image: none;
   --evc-component-background-filter-blur: 0px;
