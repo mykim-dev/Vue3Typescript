@@ -18,7 +18,7 @@
 
   --evc-layout-item-padding: calc(var(--evc-layout-gap) / 2);
   --evc-layout-item-border-radius: var(--el-border-radius-round);
-  --evc-layout-item-border-color: var(--el-border-color-light);
+  --evc-layout-item-border-color: var(--el-color-white);
   --evc-layout-item-background-color: 255, 255, 255, 1;
   --evc-layout-item-background-image: none;
   --evc-layout-item-background-filter-blur: 0px;
@@ -31,7 +31,7 @@
 
   --evc-component-padding: 16px;
   --evc-component-border-radius: var(--el-border-radius-round);
-  --evc-component-border-color: var(--el-border-color-light);
+  --evc-component-border-color: var(--el-color-white);
   --evc-component-background-color: 255, 255, 255, 1;
   --evc-component-background-image: none;
   --evc-component-background-filter-blur: 0px;
@@ -70,13 +70,13 @@
   // --el-color-primary-dark-2: #cc9300;
   // --el-color-primary-rgb: 255, 184, 0;
 
-  --evc-layout-background-image: url(../img/golf2.jpg), radial-gradient(50% 50% at center top, #ffdc80 0%, #fff8e6 100%);
-  --evc-layout-background-size: cover;
+  --evc-layout-background-image: url(../img/pattern.png), radial-gradient(50% 50% at center top, #ffeab3 0%, #fff8e6 100%);
+  // --evc-layout-background-size: cover;
 
-  --evc-layout-item-background-color: 255, 255, 255, 0.5;
+  --evc-layout-item-background-color: 255, 255, 255, 0.8;
   --evc-layout-item-background-filter-blur: 16px;
 
-  --evc-component-background-color: 255, 255, 255, 0.5;
+  --evc-component-background-color: 255, 255, 255, 0.8;
   --evc-component-background-filter-blur: 16px;
 }
 
@@ -90,20 +90,20 @@
   --el-color-primary-dark-2: #286e1c;
   --el-color-primary-rgb: 50, 138, 35;
 
-  --evc-layout-background-image: url(../img/golf.jpg), radial-gradient(50% 50% at center top, #ffdc80 0%, #fff8e6 100%);
-  --evc-layout-background-size: cover;
+  // --evc-layout-background-image: url(../img/golf.jpg), radial-gradient(50% 50% at center top, #ffdc80 0%, #fff8e6 100%);
+  // --evc-layout-background-size: cover;
 
-  --evc-layout-item-background-color: 255, 255, 255, 0.5;
+  --evc-layout-item-background-color: 255, 255, 255, 0.8;
   --evc-layout-item-background-filter-blur: 16px;
-  --evc-layout-item-background-image: linear-gradient(180deg, var(--el-color-primary-light-7) -8px, transparent 6px),
-    linear-gradient(270deg, var(--el-color-primary-light-7) -8px, transparent 6px), linear-gradient(360deg, var(--el-color-primary-light-7) -8px, transparent 6px),
-    linear-gradient(90deg, var(--el-color-primary-light-7) -8px, transparent 6px);
+  // --evc-layout-item-background-image: linear-gradient(180deg, var(--el-color-primary-light-7) -8px, transparent 6px),
+  //   linear-gradient(270deg, var(--el-color-primary-light-7) -8px, transparent 6px), linear-gradient(360deg, var(--el-color-primary-light-7) -8px, transparent 6px),
+  //   linear-gradient(90deg, var(--el-color-primary-light-7) -8px, transparent 6px);
 
-  --evc-component-background-color: 255, 255, 255, 0.5;
+  --evc-component-background-color: 255, 255, 255, 0.8;
   --evc-component-background-filter-blur: 16px;
-  --evc-component-background-image: linear-gradient(180deg, var(--el-color-primary-light-7) -8px, transparent 6px),
-    linear-gradient(270deg, var(--el-color-primary-light-7) -8px, transparent 6px), linear-gradient(360deg, var(--el-color-primary-light-7) -8px, transparent 6px),
-    linear-gradient(90deg, var(--el-color-primary-light-7) -8px, transparent 6px);
+  // --evc-component-background-image: linear-gradient(180deg, var(--el-color-primary-light-7) -8px, transparent 6px),
+  //   linear-gradient(270deg, var(--el-color-primary-light-7) -8px, transparent 6px), linear-gradient(360deg, var(--el-color-primary-light-7) -8px, transparent 6px),
+  //   linear-gradient(90deg, var(--el-color-primary-light-7) -8px, transparent 6px);
 }
 
 .purple {

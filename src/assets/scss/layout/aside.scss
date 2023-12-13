@@ -50,7 +50,7 @@
     align-items: center;
     border-bottom: initial;
 
-    & > .el-menu-item {
+    &>.el-menu-item {
       border: initial;
     }
 
@@ -79,7 +79,6 @@
 
   .el-menu--horizontal {
     height: initial;
-    border: 1px solid green;
   }
 
   .el-menu--popup {

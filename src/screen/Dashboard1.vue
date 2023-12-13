@@ -11,7 +11,9 @@ const screenInfo = {
 <template>
   <el-row class="ev-screen-row" :class="[screenInfo.screenType, { 'is-full': screenInfo.screenFull }]" :gutter="16">
     <el-col class="ev-screen-col" :span="screenItem.span" v-for="screenItem in screenInfo.screenList">
-      <!-- <Form /> -->
+      <div class="ev-component">
+        <!-- <Form /> -->
+      </div>
     </el-col>
   </el-row>
 </template>
