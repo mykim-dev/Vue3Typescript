@@ -13,7 +13,7 @@
   box-shadow: var(--evc-component-shadow);
 
   // &.is-glassmorphism {
-  //   border-color: var(--el-color-white);
+  //   border-color: var(--el-border-color);
   //   background-color: rgba(var(--evc-component-background-color), 0.4);
   //   backdrop-filter: blur(16px);
   // }
@@ -40,7 +40,7 @@
 
     &-item__content {
       line-height: 1;
-      padding: var(--evc-layout-padding) 0;
+      padding: var(--evc-layout-gap) 0;
     }
 
     .ev-toolbar {

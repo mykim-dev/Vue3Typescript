@@ -1,13 +1,10 @@
 .ev-layout {
   &[data-layout='vertical'] {
     --evc-menu-height: var(--el-menu-horizontal-height);
-    --evc-tags-height: 40px;
-    --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-menu-height) + var(--evc-tags-height) + calc(var(--evc-layout-gap) * 2) + var(--evc-layout-padding)));
+    --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-menu-height) + var(--evc-tags-height) + var(--evc-layout-gap) * 3));
 
-    grid-template-columns: var(--evc-menu-width) 1fr;
     grid-template-rows: var(--evc-header-height) var(--evc-menu-height) var(--evc-tags-height) 1fr;
     row-gap: var(--evc-layout-gap);
-    padding: var(--evc-layout-padding);
 
     .ev-aside {
       grid-column: 1 / span 2;

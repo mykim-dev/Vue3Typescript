@@ -6,7 +6,7 @@ import { UserFilled, Plus, CirclePlusFilled, CirclePlus, Check, CircleCheck } fr
   <el-dropdown trigger="click">
     <div class="ev-header-navigation__icon">
       <el-avatar :icon="UserFilled" />
-      <span>Education Admin</span>
+      Education Admin
     </div>
     <template #dropdown>
       <el-dropdown-menu>

@@ -1,28 +1,37 @@
 // @forward 'element-plus/theme-chalk/src/mixins/config.scss' with ($namespace: 'el'
 // );
 
-@forward 'element-plus/theme-chalk/src/common/var.scss' with ($colors: ('primary': ('base': #5796ad,
-      // 'base': #fbad24,
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #5796ad,
+      // 'base': #0d2851,
     ),
   ),
-  $font-family: ('': "'Noto Sans KR', sans-serif",
+  $font-family: (
+    '': "'Noto Sans KR', sans-serif",
   ),
-  $font-size: ('extra-large': 16px,
-    'large': 14px,
-    'medium': 13px,
-    'base': 12.75px,
-    'small': 12px,
-    'extra-small': 11px,
+  $font-size: (
+    'extra-large': 20px,
+    'large': 16px,
+    'medium': 14px,
+    'base': 12.5px,
+    'small': 11px,
+    'extra-small': 10px,
   ),
-  $common-component-size: ('large': 36px,
+  $common-component-size: (
+    'large': 36px,
     'default': 27px,
     'small': 18px,
   ),
-  $border-radius: ('round': 8px,
+  $border-radius: (
+    'round': 8px,
   ),
-  $text-color: ('primary': #000000,
+  $text-color: (
+    'primary': #000000,
     'regular': #111111,
-  ));
+  )
+);
 
 // @forward 'element-plus/theme-chalk/src/dark/var.scss' with (
 //     $bg-color: (

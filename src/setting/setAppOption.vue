@@ -26,6 +26,7 @@ const themeList = [
   { name: 'yellow', color: '#ffb800' },
   { name: 'green_2', color: '#328a23' },
   { name: 'purple', color: '#9065db' },
+  { name: 'navy', color: '#0d2851' },
 ]
 </script>
 

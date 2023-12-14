@@ -8,9 +8,8 @@
 
   --evc-font-size-root: 14px;
   --evc-layout-gap: 16px;
-  --evc-layout-padding: 16px;
 
-  --evc-layout-background: transparent;
+  --evc-layout-background-color: transparent;
   --evc-layout-background-image: url(../img/pattern.png), radial-gradient(50% 50% at center top, var(--el-color-primary-light-5) 0%, var(--el-color-primary-light-9) 100%);
   --evc-layout-background-repeat: no-repeat;
   --evc-layout-background-position: top center;
@@ -18,8 +17,8 @@
 
   --evc-layout-item-padding: calc(var(--evc-layout-gap) / 2);
   --evc-layout-item-border-radius: var(--el-border-radius-round);
-  --evc-layout-item-border-color: var(--el-color-white);
-  --evc-layout-item-background-color: 255, 255, 255, 1;
+  --evc-layout-item-border-color: var(--el-border-color);
+  --evc-layout-item-background-color: var(--el-mask-color);
   --evc-layout-item-background-image: none;
   --evc-layout-item-background-filter-blur: 0px;
   --evc-layout-item-shadow: var(--el-box-shadow-light);
@@ -27,12 +26,12 @@
   --evc-header-height: 60px;
   --evc-menu-width: 250px;
   --evc-menu-height: var(--el-menu-item-height);
-  --evc-tags-height: 50px;
+  --evc-tags-height: 30px;
 
   --evc-component-padding: 16px;
   --evc-component-border-radius: var(--el-border-radius-round);
-  --evc-component-border-color: var(--el-color-white);
-  --evc-component-background-color: 255, 255, 255, 1;
+  --evc-component-border-color: var(--el-border-color);
+  --evc-component-background-color: var(--el-mask-color);
   --evc-component-background-image: none;
   --evc-component-background-filter-blur: 0px;
   --evc-component-shadow: var(--el-box-shadow-light);
@@ -70,13 +69,13 @@
   // --el-color-primary-dark-2: #cc9300;
   // --el-color-primary-rgb: 255, 184, 0;
 
-  --evc-layout-background-image: url(../img/pattern.png), radial-gradient(50% 50% at center top, #ffeab3 0%, #fff8e6 100%);
-  // --evc-layout-background-size: cover;
+  // --evc-layout-background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../img/golf2.jpg);
+  // --evc-layout-background-image: linear-gradient(135deg, #fff8e6 0%, transparent 70%, #2d2020 100%), url(../img/golf2.jpg);
+  --evc-layout-background-image: linear-gradient(135deg, #ffcd4d 10%, transparent 50%, #2d2020 100%), url(../img/golf2.jpg);
+  --evc-layout-background-size: cover;
 
-  --evc-layout-item-background-color: 255, 255, 255, 0.8;
   --evc-layout-item-background-filter-blur: 16px;
 
-  --evc-component-background-color: 255, 255, 255, 0.8;
   --evc-component-background-filter-blur: 16px;
 }
 
@@ -90,20 +89,12 @@
   --el-color-primary-dark-2: #286e1c;
   --el-color-primary-rgb: 50, 138, 35;
 
-  // --evc-layout-background-image: url(../img/golf.jpg), radial-gradient(50% 50% at center top, #ffdc80 0%, #fff8e6 100%);
-  // --evc-layout-background-size: cover;
+  --evc-layout-background-image: linear-gradient(180deg, white 0%, transparent 50%, var(--el-color-primary-dark-2) 100%), url(../img/golf.jpg);
+  --evc-layout-background-size: cover;
 
-  --evc-layout-item-background-color: 255, 255, 255, 0.8;
   --evc-layout-item-background-filter-blur: 16px;
-  // --evc-layout-item-background-image: linear-gradient(180deg, var(--el-color-primary-light-7) -8px, transparent 6px),
-  //   linear-gradient(270deg, var(--el-color-primary-light-7) -8px, transparent 6px), linear-gradient(360deg, var(--el-color-primary-light-7) -8px, transparent 6px),
-  //   linear-gradient(90deg, var(--el-color-primary-light-7) -8px, transparent 6px);
 
-  --evc-component-background-color: 255, 255, 255, 0.8;
   --evc-component-background-filter-blur: 16px;
-  // --evc-component-background-image: linear-gradient(180deg, var(--el-color-primary-light-7) -8px, transparent 6px),
-  //   linear-gradient(270deg, var(--el-color-primary-light-7) -8px, transparent 6px), linear-gradient(360deg, var(--el-color-primary-light-7) -8px, transparent 6px),
-  //   linear-gradient(90deg, var(--el-color-primary-light-7) -8px, transparent 6px);
 }
 
 .purple {
@@ -116,9 +107,41 @@
   --el-color-primary-dark-2: #7351af;
   --el-color-primary-rgb: 144, 101, 219;
 
-  --evc-layout-item-background-color: 255, 255, 255, 0.5;
-  --evc-layout-item-background-filter-blur: 10px;
+  --evc-layout-item-border-color: var(--el-color-primary-light-7);
+  --evc-layout-item-background-image: linear-gradient(180deg, var(--el-color-primary-light-7) -8px, transparent 10px),
+    linear-gradient(270deg, var(--el-color-primary-light-7) -8px, transparent 10px), linear-gradient(360deg, var(--el-color-primary-light-7) -8px, transparent 10px),
+    linear-gradient(90deg, var(--el-color-primary-light-7) -8px, transparent 10px);
+  --evc-layout-item-background-filter-blur: 16px;
 
-  --evc-component-background-color: 255, 255, 255, 0.5;
-  --evc-component-background-filter-blur: 10px;
+  --evc-component-border-color: var(--el-color-primary-light-7);
+  --evc-component-background-image: linear-gradient(180deg, var(--el-color-primary-light-7) -8px, transparent 10px),
+    linear-gradient(270deg, var(--el-color-primary-light-7) -8px, transparent 10px), linear-gradient(360deg, var(--el-color-primary-light-7) -8px, transparent 10px),
+    linear-gradient(90deg, var(--el-color-primary-light-7) -8px, transparent 10px);
+  --evc-component-background-filter-blur: 16px;
+}
+
+.navy {
+  --el-color-primary: #0d2851;
+  --el-color-primary-light-3: #566985;
+  --el-color-primary-light-5: #8694a8;
+  --el-color-primary-light-7: #b6bfcb;
+  --el-color-primary-light-8: #cfd4dc;
+  --el-color-primary-light-9: #e7eaee;
+  --el-color-primary-dark-2: #0a2041;
+  --el-color-primary-rgb: 13, 40, 81;
+
+  --evc-layout-background-image: linear-gradient(180deg, transparent 50%, var(--el-color-primary-dark-2) 100%), url(../img/airport.jpg);
+  --evc-layout-background-size: cover;
+
+  --evc-layout-item-border-color: var(--el-color-primary-light-7);
+  --evc-layout-item-background-image: linear-gradient(180deg, var(--el-color-primary-light-5) -4px, transparent 8px),
+    linear-gradient(270deg, var(--el-color-primary-light-5) -4px, transparent 8px), linear-gradient(360deg, var(--el-color-primary-light-5) -4px, transparent 8px),
+    linear-gradient(90deg, var(--el-color-primary-light-5) -4px, transparent 8px);
+  --evc-layout-item-background-filter-blur: 20px;
+
+  --evc-component-border-color: var(--el-color-primary-light-7);
+  --evc-component-background-image: linear-gradient(180deg, var(--el-color-primary-light-5) -4px, transparent 8px),
+    linear-gradient(270deg, var(--el-color-primary-light-5) -4px, transparent 8px), linear-gradient(360deg, var(--el-color-primary-light-5) -4px, transparent 8px),
+    linear-gradient(90deg, var(--el-color-primary-light-5) -4px, transparent 8px);
+  --evc-component-background-filter-blur: 20px;
 }

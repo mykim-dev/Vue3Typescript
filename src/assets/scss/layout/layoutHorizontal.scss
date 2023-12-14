@@ -1,13 +1,11 @@
 .ev-layout {
   &[data-layout='horizontal'] {
     --el-menu-horizontal-height: 44px;
-    --evc-menu-height: calc(100vh - (var(--evc-header-height) + var(--evc-layout-gap) + calc(var(--evc-layout-padding) * 2)));
-    --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-tags-height) + calc(var(--evc-layout-gap) * 1) + calc(var(--evc-layout-padding) * 2)));
+    --evc-menu-height: calc(100vh - (var(--evc-header-height) + var(--evc-layout-gap)));
+    --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-tags-height) + var(--evc-layout-gap)));
 
-    grid-template-columns: var(--evc-menu-width) 1fr;
-    grid-template-rows: var(--evc-header-height) var(--evc-tags-height) 1fr;
-    gap: var(--evc-layout-gap);
-    padding: var(--evc-layout-padding);
+    grid-template-rows: var(--evc-header-height) calc(var(--evc-tags-height) + var(--evc-layout-gap)) 1fr;
+    column-gap: var(--evc-layout-gap);
 
     .ev-aside {
       grid-row: 2 / span 2;
@@ -25,7 +23,7 @@
 
   &[data-collapse='true'] {
     --evc-menu-width: 65px;
-    --evc-menu-height: calc(100vh - (var(--evc-header-height) + var(--evc-layout-gap) + calc(var(--evc-layout-padding) * 2)));
+    --evc-menu-height: calc(100vh - (var(--evc-header-height) + var(--evc-layout-gap) + calc(var(--evc-layout-gap) * 2)));
 
     .ev-menu-banner {
       display: none;

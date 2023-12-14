@@ -6,7 +6,7 @@
 
   border-radius: var(--evc-layout-item-border-radius);
   border: 1px solid var(--evc-layout-item-border-color);
-  background-color: rgba(var(--evc-layout-item-background-color));
+  background-color: var(--evc-layout-item-background-color);
   background-image: var(--evc-layout-item-background-image);
   backdrop-filter: blur(var(--evc-layout-item-background-filter-blur));
   box-shadow: var(--evc-layout-item-shadow);
@@ -33,7 +33,6 @@
     align-items: center;
     width: 250px;
     height: 140px;
-    border-radius: var(--evc-layout-item-border-radius);
     overflow: hidden;
   }
 
@@ -50,7 +49,7 @@
     align-items: center;
     border-bottom: initial;
 
-    &>.el-menu-item {
+    & > .el-menu-item {
       border: initial;
     }
 

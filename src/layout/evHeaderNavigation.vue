@@ -24,7 +24,7 @@ const AppSetting = useAppStore()
     <div class="ev-header-navigation__icon">
       <RouterLink to="/AppSetting"><el-button :icon="Operation" /></RouterLink>
     </div>
-    <div class="ev-header-navigation__icon">
+    <div class="ev-header-navigation__icon btn-toggleScreenExpand">
       <el-button :icon="Rank" @click="AppSetting.toggleScreenExpand" />
     </div>
     <EvBadge />

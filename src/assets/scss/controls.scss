@@ -43,7 +43,7 @@
   font-size: var(--el-font-size-base);
 }
 
-.el-button:not(.is-link),
+.el-button,
 .el-input-group__append .el-button,
 .el-input-group__append .el-select,
 .el-input-group__prepend .el-button,
@@ -72,8 +72,17 @@
   padding: initial;
 }
 
-.el-date-editor {
-  --el-date-editor-width: 100%;
+.el-radio {
+  --el-radio-font-weight: 400;
+  height: var(--el-component-size);
+
+  &-button__inner {
+    display: inline-flex;
+    align-items: center;
+    min-width: var(--el-component-size);
+    height: var(--el-component-size);
+    padding: 0 var(--evc-control-padding);
+  }
 }
 
 .el-checkbox {
@@ -82,15 +91,12 @@
   height: var(--el-component-size);
 
   &-button__inner {
-    padding: 0 0.5em;
+    display: inline-flex;
+    align-items: center;
+    min-width: var(--el-component-size);
     height: var(--el-component-size);
-    line-height: var(--el-component-size);
+    padding: 0 var(--evc-control-padding);
   }
-}
-
-.el-radio {
-  --el-radio-font-weight: 400;
-  height: var(--el-component-size);
 }
 
 .el-switch {
@@ -105,6 +111,10 @@
 
 .el-tag {
   font-size: var(--el-font-size-base);
+}
+
+.el-date-editor {
+  --el-date-editor-width: 100%;
 }
 
 .el-color-picker__trigger {
