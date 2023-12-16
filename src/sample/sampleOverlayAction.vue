@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <el-row class="ev-screen-row default" :gutter="16">
+  <el-row class="ev-screen-row" :gutter="16">
     <el-col class="ev-screen-col" :span="24">
       <div class="loading">
         <div class="loading__icon0 basic"></div>

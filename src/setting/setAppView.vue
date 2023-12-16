@@ -4,7 +4,7 @@ import ToolbarList from '@/components/evToolbarList.vue'
 </script>
 
 <template>
-  <el-row class="ev-screen-row default" :gutter="16">
+  <el-row class="ev-screen-row" :gutter="16">
     <el-col class="ev-screen-col" :span="12">
       <ToolbarForm />
     </el-col>

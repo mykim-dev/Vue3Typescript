@@ -3,23 +3,11 @@ import { ref } from 'vue'
 import { useAppStore } from '@/stores/appSetting'
 const AppSetting = useAppStore()
 
-const setTopBanner = ref(true)
-const setBottomBanner = ref(true)
-const setProgressIcon = ref('basic')
 const setLoginLogo = ref(true)
 const setLoginImage = ref(true)
 const setTopLogo = ref(true)
 
-// const gnbLogin = ref(['Login'])
-// const gnbLanguage = ref(['Language'])
-// const gnbNavigation = ref(['Navigation'])
-// const gnbSiteMap = ref(['Site Map'])
-// const gnbNotification = ref(['Notification'])
-// const gnbSetting = ref(['Setting'])
-// const gnbLoginLogo = ref(['Login Logo'])
-// const gnbLoginImage = ref(['Login Image'])
-// const gnbTopLogo = ref(['Top Logo'])
-// const gnbs = ['Login', 'Language', 'Navigation', 'Site Map', 'Notification', 'Setting', 'Login Logo', 'Login Image', 'Top Logo']
+const layoutList = ['horizontal', 'vertical']
 
 const themeList = [
   { name: 'green', color: '#5796ad' },
@@ -28,52 +16,51 @@ const themeList = [
   { name: 'purple', color: '#9065db' },
   { name: 'navy', color: '#0d2851' },
 ]
+
+const componentTypeList = ['basic', 'folder']
+const progressIconList = ['basic', 'cloud', 'ellipsis', 'gear', 'straight']
+
+const activeNames = ref(['1','2','3'])
+const handleChange = (val: string[]) => {
+  console.log(val)
+}
 </script>
 
 <template>
-  <dl class="panel-item">
-    <dt>Common Setting</dt>
-    <dd>
+  <el-collapse class="set-option" v-model="activeNames" @change="handleChange">
+    <el-collapse-item class="set-option-item" title="Common Setting" name="1">
       <el-form label-position="left">
-        <el-form-item label="Layout">
-          <!-- <div class="ev-switch"><el-switch v-model="setLayout" active-text="Horizontal" inactive-text="Vertical" size="small" /></div> -->
-          <el-radio-group v-model="AppSetting.appLayoutType" @click="AppSetting.changeLayout()">
-            <el-radio-button class="layout horizontal" label="horizontal" />
-            <el-radio-button class="layout vertical" label="vertical" />
+        <el-form-item label="Layout">          
+          <el-radio-group v-model="AppSetting.appLayoutType">
+            <el-radio-button :class="['option-layout', layout]" :label="layout" v-for="layout in layoutList" @click="AppSetting.changeLayout('layout')" />
           </el-radio-group>
         </el-form-item>
         <el-form-item label="Theme">
-          <el-button-group v-model="AppSetting.appTheme">
-            <el-button :class="theme.name" :style="`background-color:${theme.color}`" v-for="theme in themeList" @click="AppSetting.changeTheme(theme.name)" />
-          </el-button-group>
-        </el-form-item>
-        <el-form-item label="Component Glassmorphism">
-          <div class="ev-switch"><el-switch v-model="AppSetting.glassmorphism" active-text="YES" inactive-text="NO" size="small" /></div>
+          <el-radio-group v-model="AppSetting.appTheme">
+            <el-radio-button :class="['option-theme', theme.name]" :label="theme.name" :style="`background-color:${theme.color}`" v-for="theme in themeList" @click="AppSetting.changeTheme(theme.name)" />
+          </el-radio-group>
         </el-form-item>
         <el-form-item label="Top Banner">
-          <div class="ev-switch"><el-switch v-model="setTopBanner" active-text="YES" inactive-text="NO" size="small" /></div>
+          <div class="ev-switch"><el-switch v-model="AppSetting.topBanner" active-text="YES" inactive-text="NO" size="small" /></div>
           <img src="" alt="" />
         </el-form-item>
         <el-form-item label="Bottom Banner">
-          <div class="ev-switch"><el-switch v-model="setBottomBanner" active-text="YES" inactive-text="NO" size="small" /></div>
+          <div class="ev-switch"><el-switch v-model="AppSetting.asideBanner" active-text="YES" inactive-text="NO" size="small" /></div>
           <img src="" alt="" />
         </el-form-item>
+        <el-form-item label="Component Type">
+          <el-radio-group v-model="AppSetting.componentType">
+            <el-radio-button :class="['option-componentType', componentType]" :label="componentType" v-for="componentType in componentTypeList" @click="AppSetting.changeComponentType(componentType)" />
+          </el-radio-group>
+        </el-form-item>
         <el-form-item label="Progress Icon">
-          <el-radio-group v-model="setProgressIcon">
-            <el-radio-button class="progressIcon basic" label="basic" />
-            <el-radio-button class="progressIcon cloud" label="cloud" />
-            <el-radio-button class="progressIcon ellipsis" label="ellipsis" />
-            <el-radio-button class="progressIcon gear" label="gear" />
-            <el-radio-button class="progressIcon straight" label="straight" />
+          <el-radio-group v-model="AppSetting.progressIcon">            
+            <el-radio-button :class="['option-progressIcon', progressIcon]" :label="progressIcon" v-for="progressIcon in progressIconList" @click="AppSetting.changeProgressIcon(progressIcon)" />
           </el-radio-group>
         </el-form-item>
       </el-form>
-    </dd>
-  </dl>
-
-  <dl class="panel-item">
-    <dt>GNB</dt>
-    <dd>
+    </el-collapse-item>
+    <el-collapse-item title="GNB" name="2">
       <el-form label-position="left">
         <el-form-item label="Login">
           <el-checkbox-button key="ALL" label="ALL">ALL</el-checkbox-button>
@@ -104,12 +91,8 @@ const themeList = [
           <el-checkbox-button key="Version" label="Version">Version</el-checkbox-button>
         </el-form-item>
       </el-form>
-    </dd>
-  </dl>
-
-  <dl class="panel-item">
-    <dt>Login</dt>
-    <dd>
+    </el-collapse-item>
+    <el-collapse-item title="Login" name="3">
       <el-form label-position="left">
         <el-form-item label="Login Logo">
           <div class="ev-switch"><el-switch v-model="setLoginLogo" active-text="YES" inactive-text="NO" size="small" /></div>
@@ -121,8 +104,8 @@ const themeList = [
           <div class="ev-switch"><el-switch v-model="setTopLogo" active-text="YES" inactive-text="NO" size="small" /></div>
         </el-form-item>
       </el-form>
-    </dd>
-  </dl>
+    </el-collapse-item>
+  </el-collapse>
 </template>
 
 <style lang="scss" scoped></style>

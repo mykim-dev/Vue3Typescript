@@ -1022,18 +1022,20 @@ const themeColorGroup = [
 </script>
 
 <template>
-  <el-row class="ev-screen-row default" :gutter="32">
+  <el-row class="ev-screen-row" :gutter="32">
     <el-col class="ev-screen-col" v-for="themeColorGroupItem in themeColorGroup" :span="8">
-      <h4>{{ themeColorGroupItem.themeName }}</h4>
-      <el-row>
-        <el-col v-for="themeColorDataItem in themeColorGroupItem.themeColorData">
-          <p>
-            <span class="form-label">{{ themeColorDataItem.label }} :</span>
-            <span class="form-data">{{ themeColorDataItem.data }};</span>
-            <span class="form-color" :style="{ 'background-color': themeColorDataItem.data }"></span>
-          </p>
-        </el-col>
-      </el-row>
+      <div class="ev-component">
+        <h4>{{ themeColorGroupItem.themeName }}</h4>
+        <el-row>
+          <el-col v-for="themeColorDataItem in themeColorGroupItem.themeColorData">
+            <p>
+              <span class="form-label">{{ themeColorDataItem.label }} :</span>
+              <span class="form-data">{{ themeColorDataItem.data }};</span>
+              <span class="form-color" :style="{ 'background-color': themeColorDataItem.data }"></span>
+            </p>
+          </el-col>
+        </el-row>
+      </div>
     </el-col>
   </el-row>
 </template>

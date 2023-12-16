@@ -1,3 +1,19 @@
+.ev-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--evc-menu-width);
+  border-radius: var(--evc-layout-item-border-radius);
+
+  h1 {
+    margin: initial;
+
+    a {
+      display: flex;
+    }
+  }
+}
+
 .ev-menu {
   display: flex;
   flex-direction: column;
@@ -49,7 +65,7 @@
     align-items: center;
     border-bottom: initial;
 
-    & > .el-menu-item {
+    &>.el-menu-item {
       border: initial;
     }
 

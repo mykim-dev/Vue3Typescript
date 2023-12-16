@@ -12,7 +12,7 @@ const AppSetting = useAppStore()
 
 <template>
   <div class="ev-header-navigation">
-    <div class="ev-header-navigation__icon">
+    <!-- <div class="ev-header-navigation__icon">
       <el-button @click="AppSetting.togglePopup">팝업</el-button>
     </div>
     <div class="ev-header-navigation__icon">
@@ -20,9 +20,9 @@ const AppSetting = useAppStore()
     </div>
     <div class="ev-header-navigation__icon">
       <el-button @click="AppSetting.toggleBottomPanel">하단패널</el-button>
-    </div>
+    </div> -->
     <div class="ev-header-navigation__icon">
-      <RouterLink to="/AppSetting"><el-button :icon="Operation" /></RouterLink>
+      <el-button :icon="Operation" @click="AppSetting.toggleAppEditMode" />
     </div>
     <div class="ev-header-navigation__icon btn-toggleScreenExpand">
       <el-button :icon="Rank" @click="AppSetting.toggleScreenExpand" />

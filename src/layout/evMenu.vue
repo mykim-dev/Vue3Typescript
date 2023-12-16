@@ -7,13 +7,22 @@ const AppSetting = useAppStore()
 
 <template>
   <div class="ev-menu">
-    <div class="ev-button ev-menu-toggle">
-      <el-button circle :icon="AppSetting.menuCollapse === true ? 'DArrowRight' : 'DArrowLeft'" @click="AppSetting.changeMenuCollapse" />
+    <div 
+      class="ev-button ev-menu-toggle" 
+      modal-value="vertical" 
+      @click="AppSetting.toggleMenuCollapse">
+      <el-button circle v-if="AppSetting.menuCollapse" :icon="DArrowRight" />
+      <el-button circle v-else :icon="DArrowLeft" />
     </div>
     <el-scrollbar view-class="ev-menu-scroll">
-      <el-menu :mode="AppSetting.menuType" :collapse="AppSetting.menuCollapse" :collapse-transition="false" :router="true" menu-trigger="click">
+      <el-menu 
+        :mode="AppSetting.menuType" 
+        :collapse="AppSetting.menuCollapse" 
+        :collapse-transition="false" 
+        :router="true" 
+        menu-trigger="click">
         <!-- <template v-for="tmp in 10"> -->
-        <template v-for="deaph1Menu in AppSetting.menus">
+        <template v-for="deaph1Menu in AppSetting.menusTree">
           <el-sub-menu v-if="deaph1Menu.menus.length > 0" :index="deaph1Menu.link" popper-class="submenu-popper" :teleported="true">
             <template #title>
               <el-button text :icon="deaph1Menu.icon" />

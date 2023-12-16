@@ -3,16 +3,20 @@ import { ref } from 'vue'
 
 export const useAppStore = defineStore('AppSetting', {
   state: () => ({
+    appEditMode: ref(true),
     appLayoutType: ref('horizontal'),
     appTheme: ref('green'), // green_1, yellow, green_2
+    topBanner: ref(true),
+    asideBanner: ref(true),
     panelPopup: ref(false),
     panelRight: ref(false),
-    PanelBottom: ref(false),
+    panelBottom: ref(false),
     screenExpand: ref(false),
-    glassmorphism: ref(false),
+    componentType: ref('basic'),
+    progressIcon: ref('basic'),
     menuType: ref('vertical'),
     menuCollapse: ref(false),
-    menus: [
+    menusTree: [
       { name: 'Home', link: '/', icon: 'HomeFilled', menus: [] },
       {
         name: 'Setting',
@@ -82,12 +86,17 @@ export const useAppStore = defineStore('AppSetting', {
     },
 
     changeLayout() {
-      this.appLayoutType = this.appLayoutType === 'horizontal' ? 'vertical' : 'horizontal'
-      this.menuCollapse = false
-      this.menuType = this.appLayoutType === 'horizontal' ? 'vertical' : 'horizontal'
+      if (this.appLayoutType === 'vertical') {
+        this.appLayoutType = 'horizontal'
+        this.menuType = 'vertical'
+      } else {
+        this.appLayoutType = 'vertical'
+        this.menuType = 'horizontal'
+        this.menuCollapse = true
+      }
     },
 
-    changeMenuCollapse() {
+    toggleMenuCollapse() {
       this.menuCollapse = !this.menuCollapse
     },
 
@@ -100,15 +109,23 @@ export const useAppStore = defineStore('AppSetting', {
     },
 
     toggleBottomPanel() {
-      this.PanelBottom = !this.PanelBottom
+      this.panelBottom = !this.panelBottom
     },
 
     toggleScreenExpand() {
       this.screenExpand = !this.screenExpand
     },
 
-    toggleGlassmorphism() {
-      this.glassmorphism = !this.glassmorphism
+    changeComponentType(type: string) {
+      this.componentType = type
     },
+
+    changeProgressIcon(type: string) {
+      this.progressIcon = type
+    },
+
+    toggleAppEditMode() {
+      this.appEditMode = !this.appEditMode
+    }
   },
 })

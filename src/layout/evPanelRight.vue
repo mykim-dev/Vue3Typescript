@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { Close } from '@element-plus/icons-vue'
 import { useAppStore } from '@/stores/appSetting'
-import setAppOption from '@/setting/setAppOption.vue'
 const AppSetting = useAppStore()
 </script>
 
@@ -13,9 +12,7 @@ const AppSetting = useAppStore()
         <el-button plain :icon="Close" @click="AppSetting.toggleRightPanel" />
       </div>
     </dt>
-    <dd>
-      <setAppOption />
-    </dd>
+    <dd></dd>
   </dl>
 </template>
 

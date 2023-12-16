@@ -16,7 +16,7 @@ const stripeState = ref([true])
 </script>
 
 <template>
-  <el-row class="ev-screen-row default">
+  <el-row class="ev-screen-row">
     <el-col class="ev-screen-row-col">
       <div class="ev-component ev-toolbarlist">
         <el-collapse model-value="1">

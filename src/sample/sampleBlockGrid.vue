@@ -21,7 +21,7 @@ const boxHeightList = [
 </script>
 
 <template>
-  <el-row class="ev-screen-row default" :gutter="16">
+  <el-row class="ev-screen-row" :gutter="16">
     <el-col class="ev-screen-col" :span="12">
       <div class="sampleGuide">
         <h2>Block(현재)</h2>
