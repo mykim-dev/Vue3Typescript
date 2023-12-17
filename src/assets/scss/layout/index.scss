@@ -7,12 +7,9 @@
 
 .ev-layout {
   display: grid;
-  // justify-content: stretch;
-  // align-content: stretch;
-  // width: 100vw;
-  // height: 100vh;  
-  padding: 0 var(--evc-layout-gap);
-  grid-template-columns: var(--evc-menu-width) 1fr;
+  height: 100vh;
+  padding: 0 var(--evc-layout-gap) var(--evc-layout-gap);
+  grid-template-columns: var(--evc-aside-width) auto;
   background-color: var(--evc-layout-background-color);
   background-image: var(--evc-layout-background-image);
   background-repeat: var(--evc-layout-background-repeat);
@@ -34,12 +31,11 @@
       overflow: hidden;
     }
 
-    .ev-screen {
+    .ev-main {
       grid-column: 1 / span 2;
-      grid-row: 1 / span 3;
+      grid-row: 1 / span 1;
       height: var(--evc-main-height);
       padding-top: var(--evc-layout-gap);
-      border: 1px solid red;
     }
 
     .btn-toggleScreenExpand {
@@ -120,82 +116,6 @@ dl.ev-panel {
 
     &.is-active {
       bottom: 0;
-    }
-  }
-}
-
-// 임시
-.layout-wrap {
-  display: grid;
-  grid-template-columns: 1fr 400px;
-}
-
-// 옵션 아이템
-.set-option {
-  height: 100vh;
-  padding: 10px;
-  ;
-  overflow: auto;
-
-  dl.set-option-item {
-    display: flex;
-    flex-direction: column;
-    margin: var(--evc-control-padding) 0;
-    border-radius: var(--el-border-radius-base);
-    border: 1px solid var(--el-border-color);
-    background-color: white;
-
-    &>dt {
-      padding: var(--evc-control-padding);
-      font-size: var(--el-font-size-medium);
-      font-weight: var(--el-font-weight-primary);
-    }
-
-    &>dd {
-      padding: var(--evc-control-padding);
-      margin: initial;
-      border-top: 1px solid var(--el-border-color);
-    }
-
-    // .el-form-item {
-    //   &__label {
-    //     flex: 1;
-    //     align-items: center;
-    //     height: var(--el-component-size);
-    //   }
-    //   &__content {
-    //     flex: 2;
-    //     justify-content: flex-end;
-    //     line-height: initial;
-    //   }
-    // }
-
-    .progressIcon {
-      background-color: var(--el-overlay-color-lighter);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 80%;
-      text-indent: -9999px;
-
-      &.basic {
-        background-image: url(../img/calsloader.svg);
-      }
-
-      &.cloud {
-        background-image: url(../img/cloud.svg);
-      }
-
-      &.ellipsis {
-        background-image: url(../img/index.svg);
-      }
-
-      &.gear {
-        background-image: url(../img/setting.svg);
-      }
-
-      &.straight {
-        background-image: url(../img/straight.svg);
-      }
     }
   }
 }

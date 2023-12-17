@@ -3,6 +3,8 @@ import { useAppStore } from '@/stores/appSetting'
 import evLayout from '@/layout/evLayout.vue'
 import setAppOption from '@/setting/setAppOption.vue'
 const AppSetting = useAppStore()
+
+AppSetting.changeTheme(AppSetting.appTheme)
 </script>
 
 <template>

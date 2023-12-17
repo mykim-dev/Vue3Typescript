@@ -10,16 +10,20 @@ const handleChange = (val: string[]) => {
 </script>
 
 <template>
-  <div class="ev-component ev-toolbarform">
-    <el-collapse v-model="activeNames">
-      <el-collapse-item title="" name="1">
-        <template #title>
-          <Toolbar />
-        </template>
-        <FormItem />
-      </el-collapse-item>
-    </el-collapse>
-  </div>
+  <el-row class="ev-screen-row default" :gutter="16">
+    <el-col class="ev-screen-col">      
+      <div class="ev-component ev-toolbarform">
+        <el-collapse v-model="activeNames">
+          <el-collapse-item title="" name="1">
+            <template #title>
+              <Toolbar />
+            </template>
+            <FormItem />
+          </el-collapse-item>
+        </el-collapse>
+      </div>
+    </el-col>
+  </el-row>
 </template>
 
 <style lang="scss" scoped></style>

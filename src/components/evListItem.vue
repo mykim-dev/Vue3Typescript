@@ -6,12 +6,12 @@ const listData = useListStore()
 <template>
   <div class="ev-list-item">
     <el-table :data="listData.listItems" highlight-current-row show-summary border style="width: 100%">
-      <el-table-column type="selection" width="100" align="right" header-align="center" />
-      <el-table-column fixed type="index" label="No" width="100" align="right" header-align="center" />
-      <el-table-column prop="date" label="Date" width="300" />
-      <el-table-column prop="name" label="Name" sortable width="300" />
-      <el-table-column prop="amount" label="Amount" width="300" align="center" header-align="right" />
-      <el-table-column fixed="right" prop="fixed" label="fixed" width="300">
+      <el-table-column type="selection" width="60" align="center" header-align="center" />
+      <el-table-column type="index" label="No" fixed width="60" align="center" header-align="center" />
+      <el-table-column prop="date" label="Date" />
+      <el-table-column prop="name" label="Name" sortable />
+      <el-table-column prop="amount" label="Amount" align="right" header-align="center" />
+      <el-table-column prop="fixed" label="fixed" fixed="right" align="center" header-align="center">
         <div class="ev-button">
           <el-button link type="primary" @click.prevent="">Remove</el-button>
         </div>

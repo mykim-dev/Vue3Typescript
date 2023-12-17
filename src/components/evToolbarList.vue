@@ -10,14 +10,18 @@ const handleChange = (val: string[]) => {
 </script>
 
 <template>
-  <div class="ev-component ev-toolbarlist">
-    <el-collapse v-model="activeNames" @change="handleChange">
-      <el-collapse-item name="1">
-        <template #title>
-          <Toolbar />
-        </template>
-        <ListItem />
-      </el-collapse-item>
-    </el-collapse>
-  </div>
+  <el-row class="ev-screen-row default" :gutter="16">
+    <el-col class="ev-screen-col">
+      <div class="ev-component ev-toolbarlist">
+        <el-collapse v-model="activeNames" @change="handleChange">
+          <el-collapse-item name="1">
+            <template #title>
+              <Toolbar />
+            </template>
+            <ListItem />
+          </el-collapse-item>
+        </el-collapse>
+      </div>
+    </el-col>
+  </el-row>
 </template>

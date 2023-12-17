@@ -14,7 +14,7 @@
     // padding: 0 var(--evc-layout-gap);
 
     .el-tag {
-      --el-tag-bg-color: rgba(var(--evc-component-background-color));
+      --el-tag-bg-color: var(--el-mask-color);
       --el-tag-border-color: var(--evc-component-border-color);
 
       height: 30px;

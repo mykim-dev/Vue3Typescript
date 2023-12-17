@@ -1,0 +1,71 @@
+// 임시
+.layout-wrap {
+  display: grid;
+  grid-template-columns: auto 300px;
+}
+
+// 옵션 아이템
+.set-option {
+  height: 100vh;
+  padding: 10px;
+  overflow: auto;
+
+  dl.set-option-item {
+    display: flex;
+    flex-direction: column;
+    margin: var(--evc-control-padding) 0;
+    border-radius: var(--el-border-radius-base);
+    border: 1px solid var(--el-border-color);
+    background-color: white;
+
+    &>dt {
+      padding: var(--evc-control-padding);
+      font-size: var(--el-font-size-medium);
+      font-weight: var(--el-font-weight-primary);
+    }
+
+    &>dd {
+      padding: var(--evc-control-padding);
+      margin: initial;
+      border-top: 1px solid var(--el-border-color);
+    }
+  }
+
+  .option-theme {
+    .el-radio-button__inner {
+      font-size: 0;
+      background-color: initial;
+      overflow: hidden;
+    }
+  }
+
+  .option-progressIcon {
+    .el-radio-button__inner {
+      background-color: var(--el-overlay-color-lighter);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 80%;
+      font-size: 0px;
+    }
+
+    &.basic .el-radio-button__inner {
+      background-image: url(../img/calsloader.svg);
+    }
+
+    &.cloud .el-radio-button__inner {
+      background-image: url(../img/cloud.svg);
+    }
+
+    &.ellipsis .el-radio-button__inner {
+      background-image: url(../img/index.svg);
+    }
+
+    &.gear .el-radio-button__inner {
+      background-image: url(../img/setting.svg);
+    }
+
+    &.straight .el-radio-button__inner {
+      background-image: url(../img/straight.svg);
+    }
+  }
+}

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: var(--evc-menu-width);
+  width: var(--evc-aside-width);
   border-radius: var(--evc-layout-item-border-radius);
 
   h1 {
@@ -88,7 +88,7 @@
 
     &.is-light {
       border: initial;
-      background: transparent;
+      // background: transparent;
     }
   }
 

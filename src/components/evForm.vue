@@ -1,11 +1,16 @@
 <script lang="ts" setup>
 import { useAppStore } from '@/stores/appSetting'
-const AppSetting = useAppStore()
 import FormItem from '@/components/evFormItem.vue'
+
+const AppSetting = useAppStore()
 </script>
 
 <template>
-  <div class="ev-component ev-form" :class="{ 'is-glassmorphism': AppSetting.glassmorphism }">
-    <FormItem />
-  </div>
+  <el-row class="ev-screen-row default" :gutter="16">
+    <el-col class="ev-screen-col">      
+      <div class="ev-component ev-form">
+        <FormItem />
+      </div>
+    </el-col>
+  </el-row>
 </template>

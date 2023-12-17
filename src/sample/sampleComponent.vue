@@ -1,15 +1,19 @@
 <script lang="ts" setup>
-import Form from '@/components/evForm.vue'
-import List from '@/components/evList.vue'
+import FormItem from '@/components/evFormItem.vue'
+import ListItem from '@/components/evListItem.vue'
 </script>
 
 <template>
   <el-row class="ev-screen-row" :gutter="16">
     <el-col class="ev-screen-col" :span="12">
-      <Form />
+      <div class="ev-component ev-form">
+        <FormItem />
+      </div>
     </el-col>
     <el-col class="ev-screen-col" :span="12">
-      <List />
+      <div class="ev-component ev-list">
+        <ListItem />
+      </div>
     </el-col>
   </el-row>
 </template>

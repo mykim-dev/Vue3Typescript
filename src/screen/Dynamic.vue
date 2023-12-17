@@ -1,19 +1,18 @@
 <script lang="ts" setup>
-// import Form from '@/components/evForm.vue'
-
-const screenInfo = {
-  screenType: 'dynamic',
-  screenFull: true,
-  screenList: [{ span: 8 }],
-}
+const screenList = [
+    { span: 8 , height: '300px' },
+    { span: 8 , height: '200px' },
+    { span: 8 , height: '80px' },
+    { span: 8 , height: '80px' },
+    { span: 8 , height: '200px' },
+    { span: 8 , height: '300px' },
+  ]
 </script>
 
 <template>
-  <el-row class="ev-screen-row" :class="[screenInfo.screenType, { 'is-full': screenInfo.screenFull }]" :gutter="16">
-    <el-col class="ev-screen-col" :span="screenItem.span" v-for="screenItem in screenInfo.screenList">
-      <div class="ev-component">
-        <!-- <Form /> -->
-      </div>
+  <el-row class="ev-screen-row" :gutter="16">
+    <el-col class="ev-screen-col" :span="screenItem.span" :style="`height: ${screenItem.height}`" v-for="screenItem in screenList">
+      <div class="ev-component" />
     </el-col>
   </el-row>
 </template>

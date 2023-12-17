@@ -1,10 +1,9 @@
 .ev-layout {
   &[data-layout='vertical'] {
-    --evc-menu-height: var(--el-menu-horizontal-height);
-    --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-menu-height) + var(--evc-tags-height) + var(--evc-layout-gap) * 3));
+    --evc-aside-height: var(--el-menu-horizontal-height);
+    --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-aside-height) + var(--evc-tags-height) + var(--evc-layout-gap) * 2));
 
-    grid-template-rows: var(--evc-header-height) var(--evc-menu-height) var(--evc-tags-height) 1fr;
-    row-gap: var(--evc-layout-gap);
+    grid-template-rows: var(--evc-header-height) var(--evc-aside-height) calc(var(--evc-tags-height) + var(--evc-layout-gap) * 2) auto;
 
     .ev-aside {
       grid-column: 1 / span 2;
@@ -22,9 +21,13 @@
 
     .ev-tags {
       grid-column: 1 / span 2;
+
+      .ev-tags-group {
+        margin: var(--evc-layout-gap) 0;
+      }
     }
 
-    .ev-screen {
+    .ev-main {
       grid-column: 1 / span 2;
     }
   }

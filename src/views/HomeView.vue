@@ -16,7 +16,7 @@ const stripeState = ref([true])
 </script>
 
 <template>
-  <el-row class="ev-screen-row">
+  <el-row class="ev-screen-row" :gutter="16">
     <el-col class="ev-screen-row-col">
       <div class="ev-component ev-toolbarlist">
         <el-collapse model-value="1">
@@ -36,7 +36,7 @@ const stripeState = ref([true])
               <el-table :data="todoList.$state.todo" highlight-current-row v-if="{ stripe: stripeState }" border style="width: 100%">
                 <el-table-column type="selection" width="50" align="center" header-align="center" />
                 <el-table-column type="index" label="No" width="80" fixed align="center" header-align="center" />
-                <el-table-column prop="title" label="Title" sortable width="" />
+                <el-table-column prop="title" label="Title" sortable />
                 <!-- <el-table-column prop="isDo" label="Date" sortable width="150" align="center" header-align="center" /> -->
               </el-table>
             </div>

@@ -1,44 +1,46 @@
 <script lang="ts" setup></script>
 
 <template>
-  <el-row class="ev-screen-row" :gutter="16">
+  <el-row class="ev-screen-row default is-full" :gutter="16">
     <el-col class="ev-screen-col" :span="24">
-      <div class="loading">
-        <div class="loading__icon0 basic"></div>
-        <div class="loading__icon0 cloud"></div>
-        <div class="loading__icon0 ellipsis"></div>
-        <div class="loading__icon0 gear"></div>
-        <div class="loading__icon0 straight"></div>
-        <br />
-        <div class="loading__icon basic">
-          <i class="c"></i>
-          <i class="a"></i>
-          <i class="l"></i>
-          <i class="s"></i>
+      <div class="ev-component">
+        <div class="loading">
+          <div class="loading__icon0 basic"></div>
+          <div class="loading__icon0 cloud"></div>
+          <div class="loading__icon0 ellipsis"></div>
+          <div class="loading__icon0 gear"></div>
+          <div class="loading__icon0 straight"></div>
+          <br />
+          <div class="loading__icon basic">
+            <i class="c"></i>
+            <i class="a"></i>
+            <i class="l"></i>
+            <i class="s"></i>
+          </div>
+          <div class="loading__icon cloud">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <div class="loading__icon ellipsis">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <div class="loading__icon gear">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <div class="loading__icon straight"><i></i></div>
         </div>
-        <div class="loading__icon cloud">
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-        </div>
-        <div class="loading__icon ellipsis">
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-        </div>
-        <div class="loading__icon gear">
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-        </div>
-        <div class="loading__icon straight"><i></i></div>
       </div>
     </el-col>
   </el-row>

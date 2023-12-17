@@ -1,17 +1,40 @@
 <script lang="ts" setup>
-import ToolbarForm from '@/components/evToolbarForm.vue'
-import ToolbarList from '@/components/evToolbarList.vue'
+import { ref } from 'vue'
+import Toolbar from '@/components/evToolbar.vue'
+import FormItem from '@/components/evFormItem.vue'
+import ListItem from '@/components/evListItem.vue'
+
+const activeNames = ref(['1', '2'])
+const handleChange = (val: string[]) => {
+  console.log(val)
+}
 </script>
 
 <template>
   <el-row class="ev-screen-row" :gutter="16">
     <el-col class="ev-screen-col" :span="12">
-      <ToolbarForm />
+      <div class="ev-component ev-toolbarform">
+        <el-collapse v-model="activeNames" @change="handleChange">
+          <el-collapse-item name="1">
+            <template #title>
+              <Toolbar />
+            </template>
+            <FormItem />
+          </el-collapse-item>
+        </el-collapse>
+      </div>
     </el-col>
     <el-col class="ev-screen-col" :span="12">
-      <ToolbarList />
+      <div class="ev-component ev-toolbarlist">
+        <el-collapse v-model="activeNames" @change="handleChange">
+          <el-collapse-item name="2">
+            <template #title>
+              <Toolbar />
+            </template>
+            <ListItem />
+          </el-collapse-item>
+        </el-collapse>
+      </div>
     </el-col>
   </el-row>
 </template>
-
-<style lang="scss" scoped></style>

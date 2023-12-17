@@ -3,7 +3,8 @@ import { ref } from 'vue'
 
 export const useAppStore = defineStore('AppSetting', {
   state: () => ({
-    appEditMode: ref(true),
+    appEditMode: ref(false),
+    appDarkMode: ref(false),
     appLayoutType: ref('horizontal'),
     appTheme: ref('green'), // green_1, yellow, green_2
     topBanner: ref(true),
@@ -52,7 +53,6 @@ export const useAppStore = defineStore('AppSetting', {
         menus: [
           { name: 'Form', link: '/Form', icon: '', menus: [] },
           { name: 'List', link: '/List', icon: '', menus: [] },
-          { name: 'Toolbar', link: '/Toolbar', icon: '', menus: [] },
           { name: 'ToolbarForm', link: '/ToolbarForm', icon: '', menus: [] },
           { name: 'ToolbarList', link: '/ToolbarList', icon: '', menus: [] },
         ],
@@ -78,21 +78,35 @@ export const useAppStore = defineStore('AppSetting', {
   }),
   getters: {},
   actions: {
-    changeTheme(theme: string) {
-      if (this.appTheme !== theme) {
-        this.appTheme = theme
-        document.querySelector('html')?.setAttribute('class', theme)
+    changeMode() {
+      console.log(this.appDarkMode)
+      if (this.appDarkMode) {
+        document.querySelector('html')?.classList.add('dark')
+      } else {
+        document.querySelector('html')?.classList.remove('dark')
       }
     },
 
-    changeLayout() {
-      if (this.appLayoutType === 'vertical') {
-        this.appLayoutType = 'horizontal'
-        this.menuType = 'vertical'
-      } else {
-        this.appLayoutType = 'vertical'
-        this.menuType = 'horizontal'
-        this.menuCollapse = true
+    changeTheme(theme: string) {
+      if (this.appTheme !== theme) {
+        document.querySelector('html')?.classList.remove(this.appTheme)
+        this.appTheme = theme
+        document.querySelector('html')?.classList.add(theme)
+      }
+    },
+
+    changeLayout(layout: string) {
+      if (this.appLayoutType !== layout) {
+        console.log(layout)
+        if (layout == 'vertical') {
+          this.appLayoutType = 'vertical'
+          this.menuType = 'horizontal'
+          this.menuCollapse = false
+        } else {
+          this.appLayoutType = 'horizontal'
+          this.menuType = 'vertical'
+          this.menuCollapse = false
+        }
       }
     },
 

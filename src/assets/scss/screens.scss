@@ -1,10 +1,10 @@
 .ev-screen {
-  max-height: var(--evc-main-height);
   position: relative;
 
   .ev-screen-row {
+    max-height: var(--evc-main-height);
     margin-top: calc(var(--evc-layout-item-padding) * -1);
-    height: var(--evc-main-height);
+    margin-bottom: calc(var(--evc-layout-item-padding) * -1);
     overflow: auto;
 
     .ev-screen-col {
@@ -26,7 +26,6 @@
         max-width: initial;
         height: 100%;
         overflow: auto;
-        // border: 1px solid purple;
       }
 
       .ev-component {
@@ -109,6 +108,7 @@
 
       &.dashboard1 {
         .ev-screen-col {
+
           &:nth-child(n + 1),
           &:nth-child(n + 2),
           &:nth-child(n + 4),
@@ -155,8 +155,7 @@
       }
 
       &.dynamic {
-        .ev-screen-col {
-        }
+        .ev-screen-col {}
       }
     }
   }

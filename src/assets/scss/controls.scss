@@ -49,11 +49,9 @@
 .el-input-group__prepend .el-button,
 .el-input-group__prepend .el-select {
   min-width: var(--el-component-size);
-  // line-height: var(--el-component-size);
   height: var(--el-component-size);
   padding: 0 var(--evc-control-padding);
   margin: 0;
-  // border: 1px solid green;
 }
 
 .el-button:has(.el-icon) {

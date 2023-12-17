@@ -7,6 +7,7 @@ const setLoginLogo = ref(true)
 const setLoginImage = ref(true)
 const setTopLogo = ref(true)
 
+const modeList = ['light', 'dark']
 const layoutList = ['horizontal', 'vertical']
 
 const themeList = [
@@ -20,7 +21,7 @@ const themeList = [
 const componentTypeList = ['basic', 'folder']
 const progressIconList = ['basic', 'cloud', 'ellipsis', 'gear', 'straight']
 
-const activeNames = ref(['1','2','3'])
+const activeNames = ref(['1'])
 const handleChange = (val: string[]) => {
   console.log(val)
 }
@@ -30,32 +31,39 @@ const handleChange = (val: string[]) => {
   <el-collapse class="set-option" v-model="activeNames" @change="handleChange">
     <el-collapse-item class="set-option-item" title="Common Setting" name="1">
       <el-form label-position="left">
-        <el-form-item label="Layout">          
+        <el-form-item label="mode">
+          <div class="ev-switch"><el-switch v-model="AppSetting.appDarkMode" active-text="dark" inactive-text="light" size="small"  @click="AppSetting.changeMode()" /></div>
+        </el-form-item>
+        <el-form-item label="Layout">
           <el-radio-group v-model="AppSetting.appLayoutType">
-            <el-radio-button :class="['option-layout', layout]" :label="layout" v-for="layout in layoutList" @click="AppSetting.changeLayout('layout')" />
+            <el-radio-button :class="['option-layout', layout]" :label="layout" v-for="layout in layoutList" @click="AppSetting.changeLayout(layout)" />
           </el-radio-group>
         </el-form-item>
         <el-form-item label="Theme">
           <el-radio-group v-model="AppSetting.appTheme">
-            <el-radio-button :class="['option-theme', theme.name]" :label="theme.name" :style="`background-color:${theme.color}`" v-for="theme in themeList" @click="AppSetting.changeTheme(theme.name)" />
+            <el-radio-button :class="['option-theme', theme.name]" :label="theme.name" :style="`background-color:${theme.color}`" v-for="theme in themeList"
+              @click="AppSetting.changeTheme(theme.name)" />
           </el-radio-group>
         </el-form-item>
         <el-form-item label="Top Banner">
-          <div class="ev-switch"><el-switch v-model="AppSetting.topBanner" active-text="YES" inactive-text="NO" size="small" /></div>
+          <div class="ev-switch"><el-switch v-model="AppSetting.topBanner" active-text="YES" inactive-text="NO"
+              size="small" /></div>
           <img src="" alt="" />
         </el-form-item>
-        <el-form-item label="Bottom Banner">
+        <el-form-item label="Bottom Banner"  v-if="AppSetting.menuCollapse === false">
           <div class="ev-switch"><el-switch v-model="AppSetting.asideBanner" active-text="YES" inactive-text="NO" size="small" /></div>
-          <img src="" alt="" />
+          <!-- <img src="" alt="" /> -->
         </el-form-item>
         <el-form-item label="Component Type">
           <el-radio-group v-model="AppSetting.componentType">
-            <el-radio-button :class="['option-componentType', componentType]" :label="componentType" v-for="componentType in componentTypeList" @click="AppSetting.changeComponentType(componentType)" />
+            <el-radio-button :class="['option-componentType', componentType]" :label="componentType"
+              v-for="componentType in componentTypeList" @click="AppSetting.changeComponentType(componentType)" />
           </el-radio-group>
         </el-form-item>
         <el-form-item label="Progress Icon">
-          <el-radio-group v-model="AppSetting.progressIcon">            
-            <el-radio-button :class="['option-progressIcon', progressIcon]" :label="progressIcon" v-for="progressIcon in progressIconList" @click="AppSetting.changeProgressIcon(progressIcon)" />
+          <el-radio-group v-model="AppSetting.progressIcon">
+            <el-radio-button :class="['option-progressIcon', progressIcon]" :label="progressIcon"
+              v-for="progressIcon in progressIconList" @click="AppSetting.changeProgressIcon(progressIcon)" />
           </el-radio-group>
         </el-form-item>
       </el-form>
@@ -102,10 +110,9 @@ const handleChange = (val: string[]) => {
         </el-form-item>
         <el-form-item label="Top Logo">
           <div class="ev-switch"><el-switch v-model="setTopLogo" active-text="YES" inactive-text="NO" size="small" /></div>
-        </el-form-item>
-      </el-form>
-    </el-collapse-item>
-  </el-collapse>
-</template>
+      </el-form-item>
+    </el-form>
+  </el-collapse-item>
+</el-collapse></template>
 
 <style lang="scss" scoped></style>

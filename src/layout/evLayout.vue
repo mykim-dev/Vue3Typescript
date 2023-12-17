@@ -21,8 +21,10 @@
       <EvHeader />
       <EvAside />
       <EvTags />
-      <main class="ev-screen">
-        <RouterView />
+      <main class="ev-main">
+        <div class="ev-screen">
+          <RouterView />
+        </div>
       </main>
     </div>
     <EvPanelPopup :class="{ 'is-active': AppSetting.panelPopup }" />

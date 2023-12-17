@@ -7,20 +7,11 @@
   padding: var(--evc-component-padding);
   border-radius: var(--evc-component-border-radius);
   border: 1px solid var(--evc-component-border-color);
-  background-color: rgba(var(--evc-component-background-color));
+  background-color: var(--evc-component-background-color);
   background-image: var(--evc-component-background-image);
   backdrop-filter: blur(var(--evc-component-background-filter-blur));
   box-shadow: var(--evc-component-shadow);
-
-  // &.is-glassmorphism {
-  //   border-color: var(--el-border-color);
-  //   background-color: rgba(var(--evc-component-background-color), 0.4);
-  //   backdrop-filter: blur(16px);
-  // }
-
-  &-scroll {
-    max-height: 100%;
-  }
+  overflow: auto;
 
   .el-collapse {
     --el-collapse-header-height: initial;
@@ -40,7 +31,10 @@
 
     &-item__content {
       line-height: 1;
-      padding: var(--evc-layout-gap) 0;
+      padding-top: var(--evc-layout-gap);
+      padding-bottom: initial;
+      margin-top: var(--evc-layout-gap);
+      border-top: 1px solid var(--el-collapse-border-color);
     }
 
     .ev-toolbar {
@@ -61,7 +55,6 @@
       }
     }
 
-    &-item__wrap {
-    }
+    &-item__wrap {}
   }
 }
