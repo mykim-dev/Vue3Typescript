@@ -58,7 +58,7 @@ dl.ev-panel {
   overflow: auto;
   z-index: 9;
 
-  &>dt {
+  & > dt {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,7 +71,7 @@ dl.ev-panel {
     }
   }
 
-  &>dd {
+  & > dd {
     padding: 0 var(--evc-control-padding);
     margin: initial;
   }
