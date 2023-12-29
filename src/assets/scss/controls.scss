@@ -7,7 +7,7 @@
 }
 
 .el-form-item {
-  margin-bottom: var(--evc-layout-gap);
+  margin-bottom: var(--evc-layout-padding);
 
   &__label {
     display: block;
@@ -43,31 +43,21 @@
   font-size: var(--el-font-size-base);
 }
 
-.el-button,
-.el-input-group__append .el-button,
-.el-input-group__append .el-select,
-.el-input-group__prepend .el-button,
-.el-input-group__prepend .el-select {
-  min-width: var(--el-component-size);
-  height: var(--el-component-size);
-  padding: 0 var(--evc-control-padding);
-  margin: 0;
-}
-
-.el-button:has(.el-icon) {
-  padding: initial;
-  font-size: initial;
-}
-
-.el-button.is-circle {
-  padding: initial;
-}
-
 .el-input-group__append,
 .el-input-group__prepend {
   min-width: var(--el-component-size);
   min-height: initial;
   padding: initial;
+}
+
+.el-input-number__decrease,
+.el-input-number__increase {
+  width: var(--el-component-size);
+  background-color: transparent;
+
+  &.is-disabled {
+    background-color: var(--el-fill-color-light);
+  }
 }
 
 .el-radio {
@@ -104,6 +94,26 @@
   &__label {
     color: var(--el-text-color-placeholder);
     font-size: var(--el-font-size-base);
+  }
+}
+
+.el-button {
+  min-width: var(--el-component-size);
+  height: var(--el-component-size);
+  padding: 0 var(--evc-control-padding);
+  margin: 0;
+
+  &:has(.el-icon) {
+    padding: initial;
+    font-size: initial;
+  }
+
+  &.is-circle {
+    padding: initial;
+  }
+
+  &:focus-visible {
+    outline-color: var(--el-color-primary);
   }
 }
 

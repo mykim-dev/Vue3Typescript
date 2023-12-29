@@ -10,6 +10,7 @@
   background-color: var(--evc-component-background-color);
   background-image: var(--evc-component-background-image);
   backdrop-filter: blur(var(--evc-component-background-filter-blur));
+  position: relative;
   box-shadow: var(--evc-component-shadow);
   overflow: auto;
 
@@ -31,9 +32,9 @@
 
     &-item__content {
       line-height: 1;
-      padding-top: var(--evc-layout-gap);
+      padding-top: var(--evc-layout-padding);
       padding-bottom: initial;
-      margin-top: var(--evc-layout-gap);
+      margin-top: var(--evc-layout-padding);
       border-top: 1px solid var(--el-collapse-border-color);
     }
 
@@ -56,5 +57,11 @@
     }
 
     &-item__wrap {}
+  }
+
+  &.is-folder {
+    min-height: 115px;
+    border-top-left-radius: 0;
+    border: initial;
   }
 }

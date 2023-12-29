@@ -8,8 +8,10 @@ const AppSetting = useAppStore()
 <template>
   <el-row class="ev-screen-row default" :gutter="16">
     <el-col class="ev-screen-col">      
-      <div class="ev-component ev-form">
-        <FormItem />
+      <div class="ev-component" :class="{ 'is-folder': AppSetting.componentType == 'folder' }">
+        <div class="ev-form">
+          <FormItem />
+        </div>        
       </div>
     </el-col>
   </el-row>

@@ -9,15 +9,16 @@
   &-group {
     display: flex;
     align-items: flex-start;
-    height: var(--evc-tags-height);
+    // height: var(--evc-tags-height);
     gap: 0 var(--evc-control-padding);
-    // padding: 0 var(--evc-layout-gap);
+    // padding: 0 var(--evc-layout-padding);
 
     .el-tag {
-      --el-tag-bg-color: var(--el-mask-color);
+      // --el-tag-bg-color: var(--el-mask-color);
+      --el-tag-bg-color: var(--evc-component-background-color);
       --el-tag-border-color: var(--evc-component-border-color);
 
-      height: 30px;
+      height: var(--evc-tags-height);
       // border-radius: var(--evc-component-border-radius);
     }
   }

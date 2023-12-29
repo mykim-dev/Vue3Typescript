@@ -6,7 +6,7 @@ const input = ref('')
 
 <template>
   <div class="ev-lookup">
-    <el-input v-model="input" placeholder="Please input" disabled>
+    <el-input v-model="input" placeholder="Please input" readonly>
       <template #append>
         <el-button :icon="Search" />
       </template>

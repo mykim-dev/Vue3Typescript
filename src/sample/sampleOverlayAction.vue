@@ -1,9 +1,12 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useAppStore } from '@/stores/appSetting'
+const AppSetting = useAppStore()
+</script>
 
 <template>
   <el-row class="ev-screen-row default is-full" :gutter="16">
     <el-col class="ev-screen-col" :span="24">
-      <div class="ev-component">
+      <div class="ev-component" :class="{ 'is-folder': AppSetting.componentType == 'folder' }">
         <div class="loading">
           <div class="loading__icon0 basic"></div>
           <div class="loading__icon0 cloud"></div>
@@ -52,7 +55,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  column-gap: var(--evc-control-padding) c(var(--evc-layout-gap) / 2);
+  column-gap: var(--evc-control-padding) c(var(--evc-layout-padding) / 2);
   position: absolute;
   top: 0;
   right: 0;

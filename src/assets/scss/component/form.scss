@@ -1,0 +1,5 @@
+.ev-form-item {
+    [class*='el-col-'] {
+        overflow: auto;
+    }
+}

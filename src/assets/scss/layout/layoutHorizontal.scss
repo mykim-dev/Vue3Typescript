@@ -1,11 +1,10 @@
 .ev-layout {
   &[data-layout='horizontal'] {
     --el-menu-horizontal-height: 44px;
-    --evc-aside-height: calc(100vh - calc(var(--evc-header-height) + var(--evc-layout-gap)));
-    --evc-main-height: calc(100vh - calc(var(--evc-header-height) + calc(var(--evc-tags-height) + var(--evc-layout-gap))));
+    --evc-aside-height: calc(100vh - calc(var(--evc-header-height) + var(--evc-layout-padding)));
+    --evc-main-height: calc(100vh - calc(var(--evc-header-height) + var(--evc-tags-height) + calc(var(--evc-layout-padding) * 2)));
 
-    grid-template-rows: var(--evc-header-height) calc(var(--evc-tags-height) + var(--evc-layout-gap)) auto;
-    column-gap: var(--evc-layout-gap);
+    grid-template-rows: var(--evc-header-height) var(--evc-tags-height) var(--evc-main-height);
 
     .ev-aside {
       grid-row: 2 / span 2;
@@ -13,36 +12,35 @@
 
       display: flex;
       flex-direction: column;
-      gap: var(--evc-layout-gap);
+      gap: var(--evc-layout-padding);
 
       .ev-menu {
-        height: calc(var(--evc-aside-height) - 140px);
+        height: var(--evc-aside-height);
       }
 
-      &:not(.ev-menu-banner) {
+      &:has(.ev-menu-banner) {
+        --evc-aside-height: calc(100vh - calc(var(--evc-header-height) + var(--evc-layout-padding)));
+
         .ev-menu {
-          height: var(--evc-aside-height);
+          height: calc(var(--evc-aside-height) - 140px);
         }
       }
     }
 
     .ev-tags-group {
-      margin: 0 0 var(--evc-layout-gap) 0;
+      padding: 0 var(--evc-layout-padding);
+    }
+
+    .ev-main {
+      margin: var(--evc-layout-padding);
     }
   }
 
   &[data-collapse='true'] {
     --evc-aside-width: 65px;
-    // --evc-aside-height: calc(100vh - (var(--evc-header-height) + var(--evc-layout-gap) + calc(var(--evc-layout-gap) * 2)));
+  }
 
-    .ev-aside {
-      .ev-menu {
-        height: var(--evc-aside-height);
-
-        &-banner {
-          display: none;
-        }
-      }
-    }
+  .layout-wrap & {
+    grid-template-columns: var(--evc-aside-width) minmax(auto, calc(100vw - var(--evc-aside-width) - 350px - var(--evc-layout-padding) * 3));
   }
 }

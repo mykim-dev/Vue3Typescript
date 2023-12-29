@@ -5,6 +5,7 @@ const input = ref('')
 
 <template>
   <div class="ev-text">
+    {{ input }}
     <el-input v-model="input" placeholder="Please input" />
   </div>
 </template>

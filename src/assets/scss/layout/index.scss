@@ -8,24 +8,24 @@
 .ev-layout {
   display: grid;
   height: 100vh;
-  padding: 0 var(--evc-layout-gap) var(--evc-layout-gap);
   grid-template-columns: var(--evc-aside-width) auto;
-  background-color: var(--evc-layout-background-color);
   background-image: var(--evc-layout-background-image);
   background-repeat: var(--evc-layout-background-repeat);
   background-position: var(--evc-layout-background-position);
   background-size: var(--evc-layout-background-size);
   transition: var(--el-transition-duration-fast);
 
+  &>[class*='ev-'] {
+    // border: 1px solid red;
+  }
+
   &[data-screen-expand='true'] {
-    --evc-main-height: calc(100vh - var(--evc-layout-gap));
-    gap: initial;
+    --evc-main-height: calc(100vh - calc(var(--evc-layout-padding) + var(--evc-layout-padding)));
 
     .ev-logo,
     .ev-header,
     .ev-aside,
     .ev-tags {
-      // display: none;
       width: 0;
       height: 0;
       overflow: hidden;
@@ -35,14 +35,13 @@
       grid-column: 1 / span 2;
       grid-row: 1 / span 1;
       height: var(--evc-main-height);
-      padding-top: var(--evc-layout-gap);
     }
 
     .btn-toggleScreenExpand {
       position: fixed;
       top: 10px;
-      left: 50%;
-      transform: scale(1.2) translate(-50%, 0);
+      left: 10px;
+      transform: scale(1.2);
       z-index: 9;
     }
   }
@@ -58,7 +57,7 @@ dl.ev-panel {
   overflow: auto;
   z-index: 9;
 
-  & > dt {
+  &>dt {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,7 +70,7 @@ dl.ev-panel {
     }
   }
 
-  & > dd {
+  &>dd {
     padding: 0 var(--evc-control-padding);
     margin: initial;
   }
@@ -109,9 +108,9 @@ dl.ev-panel {
   &.ev-panel-bottom {
     height: 30vh;
     border-radius: var(--el-border-radius-round) var(--el-border-radius-round) 0 0;
-    right: var(--evc-layout-gap);
+    right: var(--evc-layout-padding);
     bottom: -30vh;
-    left: var(--evc-layout-gap);
+    left: var(--evc-layout-padding);
     transition: bottom ease var(--el-transition-duration-fast);
 
     &.is-active {

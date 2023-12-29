@@ -1,7 +1,7 @@
 // 임시
 .layout-wrap {
   display: grid;
-  grid-template-columns: auto 350px;
+  grid-template-columns: minmax(auto, calc(100vw - 350px)) 350px;
 }
 
 // 옵션 아이템

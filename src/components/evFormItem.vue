@@ -20,11 +20,19 @@ import evColorPicker from '@/controls/evColorPicker.vue'
 import evDivider from '@/controls/evDivider.vue'
 
 const formData = useFormStroe()
+// import { ref } from 'vue'
+// const input1 = ref('default')
+// const input2 = ref('disabled')
+// const input3 = ref('readonly')
 </script>
 
 <template>
   <div class="ev-form-item">
     <el-row>
+      <!-- <el-input v-model="input1" />
+      <el-input v-model="input2" disabled />
+      <el-input v-model="input3" readonly /> -->
+
       <el-col v-for="formItem in formData.formItems" :span="formItem.span">
         <el-form-item :label="formItem.item.itemLabel" label-width="120px" :class="[formItem.item.itemType, { 'is-left': formItem.isLeft === true }]">
           <evText v-if="formItem.item.itemType === 'ev-text'" />

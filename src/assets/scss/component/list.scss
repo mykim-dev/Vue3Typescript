@@ -1,4 +1,6 @@
 .ev-list-item {
+  height: 100%;
+
   .el-table {
     --el-table-border-color: var(--el-border-color);
     --el-table-bg-color: transparent;
@@ -10,19 +12,20 @@
     font-size: var(--evc-font-size-root);
 
     .el-table__cell {
-      height: var(--el-component-size);
       padding: initial;
     }
 
     .cell {
-      line-height: initial;
-      padding: 0 calc(var(--evc-layout-gap));
+      height: var(--el-component-size);
+      line-height: var(--el-component-size);
+      padding: 0 calc(var(--evc-layout-padding));
       font-size: var(--el-font-size-base);
     }
 
     tfoot {
       td.el-table__cell {
-        background-color: transparent;
+        border-top: var(--el-table-border);
+        background-color: inherit;
       }
     }
   }

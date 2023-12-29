@@ -1,12 +1,13 @@
 .ev-layout {
   &[data-layout='vertical'] {
     --evc-aside-height: var(--el-menu-horizontal-height);
-    --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-aside-height) + var(--evc-tags-height) + var(--evc-layout-gap) * 2));
+    --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-aside-height) + var(--evc-tags-height) + var(--evc-layout-padding) * 3));
 
-    grid-template-rows: var(--evc-header-height) var(--evc-aside-height) calc(var(--evc-tags-height) + var(--evc-layout-gap) * 2) auto;
+    grid-template-rows: var(--evc-header-height) var(--evc-aside-height) calc(var(--evc-tags-height) + var(--evc-layout-padding) * 1) var(--evc-main-height);
 
     .ev-aside {
       grid-column: 1 / span 2;
+      padding: 0 var(--evc-layout-padding);
 
       .ev-menu {
         &-toggle {
@@ -23,12 +24,17 @@
       grid-column: 1 / span 2;
 
       .ev-tags-group {
-        margin: var(--evc-layout-gap) 0;
+        padding: var(--evc-layout-padding) var(--evc-layout-padding) 0 var(--evc-layout-padding);
       }
     }
 
     .ev-main {
       grid-column: 1 / span 2;
+      margin: var(--evc-layout-padding);
     }
+  }
+
+  .layout-wrap & {
+    grid-template-columns: var(--evc-aside-width) minmax(auto, calc(100vw - var(--evc-aside-width) - 350px));
   }
 }

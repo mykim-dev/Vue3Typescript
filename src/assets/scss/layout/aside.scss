@@ -17,7 +17,7 @@
 .ev-menu {
   display: flex;
   flex-direction: column;
-  row-gap: var(--evc-layout-gap);
+  row-gap: var(--evc-layout-padding);
   position: relative;
 
   border-radius: var(--evc-layout-item-border-radius);

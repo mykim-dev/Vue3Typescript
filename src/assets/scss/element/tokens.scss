@@ -7,25 +7,23 @@
   --evc-scrollbar-width: 6px;
 
   --evc-font-size-root: 14px;
-  --evc-layout-gap: 16px;
+  --evc-layout-padding: 16px;
 
   --evc-header-height: 60px;
   --evc-aside-width: 250px;
   --evc-aside-height: 65px;
   --evc-tags-height: 30px;
 
-  --evc-layout-background-color: none;
   --evc-layout-background-image: url(../img/pattern.png), radial-gradient(100% 100% at center top, var(--el-color-primary-light-7) 0%, var(--el-color-primary-dark-2) 100%);
-  // --evc-layout-background-image: url(../img/pattern.png), radial-gradient(100% 100% at center center, red 0%, green 100%);
   --evc-layout-background-repeat: no-repeat;
   --evc-layout-background-position: top center;
   --evc-layout-background-size: auto;
 
-  --evc-layout-item-padding: calc(var(--evc-layout-gap) / 2);
+  --evc-layout-item-padding: calc(var(--evc-layout-padding) / 2);
   --evc-layout-item-border-radius: var(--el-border-radius-round);
   --evc-layout-item-border-color: var(--el-border-color-extra-light);
   --evc-layout-item-background-color: var(--el-mask-color);
-  --evc-layout-item-background-image: none;
+  --evc-layout-item-background-image: var(--el-mask-color);
   --evc-layout-item-background-filter-blur: 0px;
   --evc-layout-item-shadow: var(--el-box-shadow-lighter);
 
@@ -33,17 +31,15 @@
   --evc-component-border-radius: var(--el-border-radius-round);
   --evc-component-border-color: var(--el-border-color-extra-light);
   --evc-component-background-color: var(--el-mask-color);
-  --evc-component-background-image: none;
+  --evc-component-background-image: var(--el-mask-color);
   --evc-component-background-filter-blur: 0px;
   --evc-component-shadow: var(--el-box-shadow-lighter);
 
-  --evc-control-padding: calc(var(--evc-layout-gap) / 2);
+  --evc-control-padding: calc(var(--evc-layout-padding) / 2);
+}
 
-  &.dark {
-    --evc-layout-background-image: url(../img/pattern.png), radial-gradient(100% 100% at center center, var(--el-color-primary-light-3) 0%, var(--el-color-primary-light-9) 100%);
-    --evc-layout-item-background-color: var(--el-mask-color-extra-light);
-    --evc-component-background-color: var(--el-mask-color-extra-light);
-  }
+.dark {
+  --evc-layout-background-image: url(../img/pattern.png), radial-gradient(100% 100% at center center, var(--el-color-primary-dark-2) 0%, var(--el-color-primary-light-7) 100%);
 }
 
 .green {
@@ -128,18 +124,6 @@
     --el-color-primary-light-9: #201c28;
     --el-color-primary-dark-2: #a684e2;
   }
-
-  --evc-layout-item-border-color: var(--el-color-primary-light-7);
-  --evc-layout-item-background-image: linear-gradient(180deg, var(--el-color-primary-light-7) -8px, transparent 10px),
-    linear-gradient(270deg, var(--el-color-primary-light-7) -8px, transparent 10px), linear-gradient(360deg, var(--el-color-primary-light-7) -8px, transparent 10px),
-    linear-gradient(90deg, var(--el-color-primary-light-7) -8px, transparent 10px);
-  --evc-layout-item-background-filter-blur: 16px;
-
-  --evc-component-border-color: var(--el-color-primary-light-7);
-  --evc-component-background-image: linear-gradient(180deg, var(--el-color-primary-light-7) -8px, transparent 10px),
-    linear-gradient(270deg, var(--el-color-primary-light-7) -8px, transparent 10px), linear-gradient(360deg, var(--el-color-primary-light-7) -8px, transparent 10px),
-    linear-gradient(90deg, var(--el-color-primary-light-7) -8px, transparent 10px);
-  --evc-component-background-filter-blur: 16px;
 }
 
 .navy {
@@ -161,18 +145,11 @@
     --el-color-primary-light-9: #13161a;
     --el-color-primary-dark-2: #3d5374;
 
-    --evc-layout-background-image: url(../img/pattern.png), radial-gradient(100% 100% at center center, var(--el-color-primary-dark-2) 0%, var(--el-color-primary-light-3) 100%);
+    --evc-layout-background-image: url(../img/win11.jpg), radial-gradient(100% 100% at center center, var(--el-color-primary-dark-2) 0%, var(--el-color-primary-light-7) 100%);
+    --evc-layout-background-position: center top;
+    --evc-layout-background-size: 100vw auto;
+
+    --evc-layout-item-background-filter-blur: 5px;
+    --evc-component-background-filter-blur: 5px;
   }
-
-  --evc-layout-item-border-color: var(--el-color-primary-light-5);
-  --evc-layout-item-background-image: linear-gradient(180deg, var(--el-color-primary-light-5) -8px, transparent 10px),
-    linear-gradient(270deg, var(--el-color-primary-light-5) -8px, transparent 10px), linear-gradient(360deg, var(--el-color-primary-light-5) -8px, transparent 10px),
-    linear-gradient(90deg, var(--el-color-primary-light-5) -8px, transparent 10px);
-  --evc-layout-item-background-filter-blur: 16px;
-
-  --evc-component-border-color: var(--el-color-primary-light-5);
-  --evc-component-background-image: linear-gradient(180deg, var(--el-color-primary-light-5) -8px, transparent 10px),
-    linear-gradient(270deg, var(--el-color-primary-light-5) -8px, transparent 10px), linear-gradient(360deg, var(--el-color-primary-light-5) -8px, transparent 10px),
-    linear-gradient(90deg, var(--el-color-primary-light-5) -8px, transparent 10px);
-  --evc-component-background-filter-blur: 16px;
 }
