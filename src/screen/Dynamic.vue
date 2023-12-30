@@ -23,8 +23,12 @@ const screenInfo = {
   <el-row :class="['ev-screen-row', screenInfo.screenType, { 'is-full': screenInfo.screenFull }]" :gutter="16">
     <el-col class="ev-screen-col" :span="screenItem.spanCol" :style="`grid-area: span ${screenItem.spanRow} / span ${screenItem.spanCol};`" v-for="screenItem in screenInfo.screenList">
       <div class="ev-component" :class="{ 'is-folder': AppSetting.componentType == 'folder' }">
-        <FormItem v-if="screenItem.componentType == 'Form'" />
-        <ListItem v-if="screenItem.componentType == 'List'" />
+        <div class="ev-form" v-if="screenItem.componentType == 'Form'">
+          <FormItem />
+        </div>
+        <div class="ev-list" v-if="screenItem.componentType == 'List'">
+          <ListItem />
+        </div>
       </div>
     </el-col>
   </el-row>

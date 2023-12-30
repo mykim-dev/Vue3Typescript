@@ -1,39 +1,4 @@
 // reset
-.el-form {
-  --el-form-inline-content-width: 100%;
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--evc-control-padding);
-}
-
-.el-form-item {
-  margin-bottom: var(--evc-layout-padding);
-
-  &__label {
-    display: block;
-    width: 120px;
-    height: var(--el-component-size);
-    line-height: var(--el-component-size);
-    padding: 0 var(--evc-control-padding);
-    justify-content: flex-start;
-    font-size: var(--el-font-size-base);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  &__content {
-    width: 100%;
-    min-width: 100px;
-    line-height: initial;
-    padding: 0 0 0 var(--evc-control-padding);
-
-    [class*='ev-'] {
-      width: 100%;
-    }
-  }
-}
-
 .el-select,
 .el-input-number {
   width: 100%;

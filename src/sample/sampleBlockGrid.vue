@@ -26,8 +26,7 @@ const boxHeightList = [
           <h2>Block(현재)</h2>
           <div class="displayType typeBlock">
             <div class="box" :style="`height:${box.height};background-color:${box.color};`" v-for="(box, j) in boxHeightList">
-              <span v-if="j == 4" style="color: white">Editor</span>
-              <span v-else>{{ j + 1 }}</span>
+              <span>{{ j + 1 }}</span>
             </div>
           </div>
 
@@ -52,8 +51,7 @@ const boxHeightList = [
           <h2>Grid</h2>
           <div class="displayType typeGrid">
             <div class="box" :style="`height:${box.height};background-color:${box.color};`" v-for="(box, j) in boxHeightList">
-              <span v-if="j == 4" style="color: white">Editor</span>
-              <span v-else>{{ j + 1 }}</span>
+              <span>{{ j + 1 }}</span>
             </div>
           </div>
 
@@ -64,28 +62,13 @@ const boxHeightList = [
               <br />
               merge하지 않는 경우 height의 높이가 큰 값을 기준으로 좌우에 배치되는 컴포넌트의 사이즈가 동일해짐
             </li>
-            <!-- <li>
-              User가 Grid의 개념을 이해하도록 하는것은 사용하지 않을 수 있음
-              <br />
-              Block or Grid 타입의 기준을 정해서 제공하는것이 적합할 것으로 보임
-            </li> -->
           </ul>
 
           <hr />
 
           <ul class="sampleDesc">
             <li><b>Screen 구성에 Grid 방식은 is-full 기능과 동일해 보임</b></li>
-            <!-- <li>
-              24*n의 셀 기준 row merge 후 컴포넌트를 배치하는 것이 가장 적합
-              <br />
-              merge하지 않는 경우 height의 높이가 큰 값을 기준으로 좌우에 배치되는 컴포넌트의 사이즈가 동일해짐
-            </li> -->
-            <li>
-              Dynamic, Dashboard ~ Dashboard3 타입이 Grid 방식으로 적합
-               <!-- - component + 불가능하게 해야함(높이의 기준이 불분명함)
-              <br />
-              Default, horizintal, vertical 타입은 기본에서 component + 기능을 넣으려면 Grid 타입을 권장하지 않음 -->
-            </li>
+            <li>Dynamic, Dashboard ~ Dashboard3 타입이 Grid 방식으로 적합</li>
           </ul>
         </div>
       </div>

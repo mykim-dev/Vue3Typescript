@@ -1,5 +1,36 @@
-.ev-form-item {
-    [class*='el-col-'] {
-        overflow: auto;
+// .ev-form {
+.el-form {
+    --el-form-label-font-size: var(--el-font-size-base);
+    --el-form-inline-content-width: 100%;
+
+    margin-left: calc(var(--evc-control-padding) * -3);
+
+    &-item {
+        column-gap: var(--evc-control-padding);
+        margin-bottom: var(--evc-layout-padding);
+
+        &__label {
+            display: block;
+            width: 100px;
+            height: var(--el-component-size);
+            line-height: var(--el-component-size);
+            padding: initial;
+            margin-left: calc(var(--evc-control-padding) * 3);
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        &__content {
+            width: calc(100% - 100px);
+            line-height: initial;
+
+            [class*='ev-'] {
+                width: 100%;
+            }
+        }
     }
 }
+
+// }

@@ -21,7 +21,9 @@ const handleChange = (val: string[]) => {
               <template #title>
                 <Toolbar />
               </template>
-              <FormItem />
+              <div class="ev-form">
+                <FormItem />
+              </div>
             </el-collapse-item>
           </el-collapse>
         </div>

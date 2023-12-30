@@ -24,15 +24,22 @@ const formData = useFormStroe()
 // const input1 = ref('default')
 // const input2 = ref('disabled')
 // const input3 = ref('readonly')
+
+import { reactive, ref } from 'vue'
+import type { FormProps } from 'element-plus'
+
+const labelPosition = ref<FormProps['labelPosition']>('top')
+
+const formLabelAlign = reactive({
+  name: '',
+  region: '',
+  type: '',
+})
 </script>
 
 <template>
-  <div class="ev-form-item">
-    <el-row>
-      <!-- <el-input v-model="input1" />
-      <el-input v-model="input2" disabled />
-      <el-input v-model="input3" readonly /> -->
-
+  <!-- <div class="ev-form-item"> -->
+    <!-- <el-row>
       <el-col v-for="formItem in formData.formItems" :span="formItem.span">
         <el-form-item :label="formItem.item.itemLabel" label-width="120px" :class="[formItem.item.itemType, { 'is-left': formItem.isLeft === true }]">
           <evText v-if="formItem.item.itemType === 'ev-text'" />
@@ -52,6 +59,25 @@ const formData = useFormStroe()
           <evImageView v-if="formItem.item.itemType === 'ev-image-view'" />
         </el-form-item>
       </el-col>
-    </el-row>
-  </div>
+    </el-row> -->
+    <el-form class="el-row">
+      <el-form-item :label="formItem.item.itemLabel" :class="[`el-col-${formItem.span}`, formItem.item.itemType, { 'is-left': formItem.isLeft === true }]" v-for="formItem in formData.formItems">
+        <evText v-if="formItem.item.itemType === 'ev-text'" />
+        <evPassword v-if="formItem.item.itemType === 'ev-password'" />
+        <evNumber v-if="formItem.item.itemType === 'ev-number'" />
+        <evLookup v-if="formItem.item.itemType === 'ev-lookup'" />
+        <evDatePicker v-if="formItem.item.itemType === 'ev-date-picker'" />
+        <evDateTimePicker v-if="formItem.item.itemType === 'ev-date-time-picker'" />
+        <evSelect v-if="formItem.item.itemType === 'ev-select'" />
+        <evColorPicker v-if="formItem.item.itemType === 'ev-color-picker'" />
+        <evSwitch v-if="formItem.item.itemType === 'ev-switch'" />
+        <evCheckbox v-if="formItem.item.itemType === 'ev-checkbox'" />
+        <evRadio v-if="formItem.item.itemType === 'ev-radio'" />
+        <evTextarea v-if="formItem.item.itemType === 'ev-textarea'" />
+        <evFileUpload v-if="formItem.item.itemType === 'ev-file-upload'" />
+        <evImageUpload v-if="formItem.item.itemType === 'ev-image-upload'" />
+        <evImageView v-if="formItem.item.itemType === 'ev-image-view'" />
+      </el-form-item>
+    </el-form>
+  <!-- </div> -->
 </template>
