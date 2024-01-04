@@ -1,12 +1,13 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import ToolbarItem from '@/components/evToolbarItem.vue'
+</script>
 
 <template>
-  <div class="ev-toolbar">
-    <h4 class="ev-toolbar__title">Toolbar</h4>
-    <div class="ev-toolbar__wrap">
-      <div class="ev-button">
-        <el-button>조회</el-button>
+  <el-row class="ev-screen-row default" :gutter="16">
+    <el-col class="ev-screen-col">
+      <div class="ev-component">
+        <ToolbarItem />
       </div>
-    </div>
-  </div>
+    </el-col>
+  </el-row>
 </template>

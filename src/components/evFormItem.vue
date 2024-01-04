@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useFormStroe } from '@/stores/formData'
-
 import evText from '@/controls/evText.vue'
 import evLabel from '@/controls/evLabel.vue'
 import evPassword from '@/controls/evPassword.vue'
@@ -20,63 +19,26 @@ import evColorPicker from '@/controls/evColorPicker.vue'
 import evDivider from '@/controls/evDivider.vue'
 
 const formData = useFormStroe()
-// import { ref } from 'vue'
-// const input1 = ref('default')
-// const input2 = ref('disabled')
-// const input3 = ref('readonly')
-
-import { reactive, ref } from 'vue'
-import type { FormProps } from 'element-plus'
-
-const labelPosition = ref<FormProps['labelPosition']>('top')
-
-const formLabelAlign = reactive({
-  name: '',
-  region: '',
-  type: '',
-})
 </script>
 
 <template>
-  <!-- <div class="ev-form-item"> -->
-    <!-- <el-row>
-      <el-col v-for="formItem in formData.formItems" :span="formItem.span">
-        <el-form-item :label="formItem.item.itemLabel" label-width="120px" :class="[formItem.item.itemType, { 'is-left': formItem.isLeft === true }]">
-          <evText v-if="formItem.item.itemType === 'ev-text'" />
-          <evPassword v-if="formItem.item.itemType === 'ev-password'" />
-          <evNumber v-if="formItem.item.itemType === 'ev-number'" />
-          <evLookup v-if="formItem.item.itemType === 'ev-lookup'" />
-          <evDatePicker v-if="formItem.item.itemType === 'ev-date-picker'" />
-          <evDateTimePicker v-if="formItem.item.itemType === 'ev-date-time-picker'" />
-          <evSelect v-if="formItem.item.itemType === 'ev-select'" />
-          <evColorPicker v-if="formItem.item.itemType === 'ev-color-picker'" />
-          <evSwitch v-if="formItem.item.itemType === 'ev-switch'" />
-          <evCheckbox v-if="formItem.item.itemType === 'ev-checkbox'" />
-          <evRadio v-if="formItem.item.itemType === 'ev-radio'" />
-          <evTextarea v-if="formItem.item.itemType === 'ev-textarea'" />
-          <evFileUpload v-if="formItem.item.itemType === 'ev-file-upload'" />
-          <evImageUpload v-if="formItem.item.itemType === 'ev-image-upload'" />
-          <evImageView v-if="formItem.item.itemType === 'ev-image-view'" />
-        </el-form-item>
-      </el-col>
-    </el-row> -->
-    <el-form class="el-row">
-      <el-form-item :label="formItem.item.itemLabel" :class="[`el-col-${formItem.span}`, formItem.item.itemType, { 'is-left': formItem.isLeft === true }]" v-for="formItem in formData.formItems">
-        <evText v-if="formItem.item.itemType === 'ev-text'" :attribute="formItem.item.attribute"/>
-        <evPassword v-if="formItem.item.itemType === 'ev-password'" />
-        <evNumber v-if="formItem.item.itemType === 'ev-number'" />
-        <evLookup v-if="formItem.item.itemType === 'ev-lookup'" />
-        <evDatePicker v-if="formItem.item.itemType === 'ev-date-picker'" />
-        <evDateTimePicker v-if="formItem.item.itemType === 'ev-date-time-picker'" />
-        <evSelect v-if="formItem.item.itemType === 'ev-select'" />
-        <evColorPicker v-if="formItem.item.itemType === 'ev-color-picker'" />
-        <evSwitch v-if="formItem.item.itemType === 'ev-switch'" />
-        <evCheckbox v-if="formItem.item.itemType === 'ev-checkbox'" />
-        <evRadio v-if="formItem.item.itemType === 'ev-radio'" />
-        <evTextarea v-if="formItem.item.itemType === 'ev-textarea'" />
-        <evFileUpload v-if="formItem.item.itemType === 'ev-file-upload'" />
-        <evImageUpload v-if="formItem.item.itemType === 'ev-image-upload'" />
-        <evImageView v-if="formItem.item.itemType === 'ev-image-view'" />
+    <el-form class="el-row" :gutter="16">
+      <el-form-item :label="formControl.item.label" :class="[`el-col-${formControl.span}`, formControl.item.type, { 'is-left': formControl.isLeft === true }]" v-for="formControl in formData.formControls">
+        <evText v-if="formControl.item.type === 'ev-text'" :attribute="formControl.item.attribute" />
+        <evPassword v-if="formControl.item.type === 'ev-password'"  :attribute="formControl.item.attribute" />
+        <evNumber v-if="formControl.item.type === 'ev-number'"  :attribute="formControl.item.attribute" />
+        <evLookup v-if="formControl.item.type === 'ev-lookup'"  :attribute="formControl.item.attribute" />
+        <evDatePicker v-if="formControl.item.type === 'ev-date-picker'"  :attribute="formControl.item.attribute" />
+        <evDateTimePicker v-if="formControl.item.type === 'ev-date-time-picker'"  :attribute="formControl.item.attribute" />
+        <evSelect v-if="formControl.item.type === 'ev-select'"  :attribute="formControl.item.attribute" />
+        <evColorPicker v-if="formControl.item.type === 'ev-color-picker'"  :attribute="formControl.item.attribute" />
+        <evSwitch v-if="formControl.item.type === 'ev-switch'"  :attribute="formControl.item.attribute" />
+        <evCheckbox v-if="formControl.item.type === 'ev-checkbox'"  :attribute="formControl.item.attribute" />
+        <evRadio v-if="formControl.item.type === 'ev-radio'"  :attribute="formControl.item.attribute" />
+        <evTextarea v-if="formControl.item.type === 'ev-textarea'"  :attribute="formControl.item.attribute" />
+        <evFileUpload v-if="formControl.item.type === 'ev-file-upload'"  :attribute="formControl.item.attribute" />
+        <evImageUpload v-if="formControl.item.type === 'ev-image-upload'"  :attribute="formControl.item.attribute" />
+        <evImageView v-if="formControl.item.type === 'ev-image-view'"  :attribute="formControl.item.attribute" />
       </el-form-item>
     </el-form>
   <!-- </div> -->

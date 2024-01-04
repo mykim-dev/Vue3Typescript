@@ -51,10 +51,11 @@ export const useAppStore = defineStore('AppSetting', {
         link: '/Form',
         icon: 'Grid',
         menus: [
-          { name: 'Form', link: '/Form', icon: '', menus: [] },
-          { name: 'List', link: '/List', icon: '', menus: [] },
           { name: 'ToolbarForm', link: '/ToolbarForm', icon: '', menus: [] },
           { name: 'ToolbarList', link: '/ToolbarList', icon: '', menus: [] },
+          { name: 'Toolbar', link: '/Toolbar', icon: '', menus: [] },
+          // { name: 'Form', link: '/Form', icon: '', menus: [] },
+          // { name: 'List', link: '/List', icon: '', menus: [] },
         ],
       },
       {

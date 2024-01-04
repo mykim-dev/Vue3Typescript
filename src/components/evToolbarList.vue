@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useAppStore } from '@/stores/appSetting'
-import Toolbar from '@/components/evToolbar.vue'
+import ToolbarItem from '@/components/evToolbarItem.vue'
 import ListItem from '@/components/evListItem.vue'
 
 const AppSetting = useAppStore()
@@ -19,7 +19,7 @@ const handleChange = (val: string[]) => {
           <el-collapse v-model="activeNames" @change="handleChange">
             <el-collapse-item name="1">
               <template #title>
-                <Toolbar />
+                <ToolbarItem />
               </template>
               <ListItem />
             </el-collapse-item>

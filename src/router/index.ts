@@ -88,6 +88,11 @@ const router = createRouter({
       component: () => import('@/components/evToolbarForm.vue'),
     },
     {
+      path: '/Toolbar',
+      name: 'Toolbar',
+      component: () => import('@/components/evToolbar.vue'),
+    },
+    {
       path: '/ToolbarList',
       name: 'ToolbarList',
       component: () => import('@/components/evToolbarList.vue'),
