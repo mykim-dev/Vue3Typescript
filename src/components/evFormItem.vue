@@ -62,7 +62,7 @@ const formLabelAlign = reactive({
     </el-row> -->
     <el-form class="el-row">
       <el-form-item :label="formItem.item.itemLabel" :class="[`el-col-${formItem.span}`, formItem.item.itemType, { 'is-left': formItem.isLeft === true }]" v-for="formItem in formData.formItems">
-        <evText v-if="formItem.item.itemType === 'ev-text'" />
+        <evText v-if="formItem.item.itemType === 'ev-text'" :attribute="formItem.item.attribute"/>
         <evPassword v-if="formItem.item.itemType === 'ev-password'" />
         <evNumber v-if="formItem.item.itemType === 'ev-number'" />
         <evLookup v-if="formItem.item.itemType === 'ev-lookup'" />

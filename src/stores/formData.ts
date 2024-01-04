@@ -3,9 +3,10 @@ import { defineStore } from 'pinia';
 export const useFormStroe = defineStore('formData', {
     state: () => ({
         formItems: [
-            { span: 8, isLeft: false, item: { itemType: 'ev-text', itemLabel: 'text', itemData: 'Default', attribute: { disabled: false, focus: false } } },
-            { span: 8, isLeft: false, item: { itemType: 'ev-text', itemLabel: 'text', itemData: 'disabled', attribute: { disabled: true, focus: false } } },
-            { span: 8, isLeft: false, item: { itemType: 'ev-text', itemLabel: 'text', itemData: 'focus', attribute: { disabled: false, focus: true } } },
+            { span: 6, isLeft: false, item: { itemType: 'ev-text', itemLabel: 'text', itemData: 'Default', attribute: { disabled: false, readonly: false, focus: false } } },
+            { span: 6, isLeft: false, item: { itemType: 'ev-text', itemLabel: 'text Disabled', itemData: 'disabled', attribute: { disabled: true, readonly: false, focus: false } } },
+            { span: 6, isLeft: false, item: { itemType: 'ev-text', itemLabel: 'text Readonly', itemData: 'disabled', attribute: { disabled: false, readonly: true, focus: false } } },
+            { span: 6, isLeft: false, item: { itemType: 'ev-text', itemLabel: 'text Focus', itemData: 'focus', attribute: { disabled: false, readonly: false, focus: true } } },
 
             { span: 8, isLeft: false, item: { itemType: 'ev-password', itemLabel: 'password', itemData: 'Default', attribute: { disabled: false, focus: false } } },
             { span: 8, isLeft: false, item: { itemType: 'ev-password', itemLabel: 'password', itemData: 'disabled', attribute: { disabled: true, focus: false } } },

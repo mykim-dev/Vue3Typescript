@@ -116,7 +116,7 @@ const router = createRouter({
       path: '/SampleComponent',
       name: 'SampleComponent',
       component: () => import('@/sample/sampleComponent.vue'),
-    }
+    },
   ],
 })
 

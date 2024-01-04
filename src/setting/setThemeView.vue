@@ -5,10 +5,11 @@ const AppSetting = useAppStore()
 
 const themeColorGroup = [
   {
-    themeName: 'Element Plus',
+    span: 12,
+    themeName: 'Element Plus (Light)',
     themeColorData: [
-      { label: '--el-color-white', data: '#ffffff' },
-      { label: '--el-color-black', data: '#000000' },
+      // { label: '--el-color-white', data: '#ffffff' },
+      // { label: '--el-color-black', data: '#000000' },
       { label: '--el-color-primary', data: '#409eff' },
       { label: '--el-color-primary-light-3', data: '#79bbff' },
       { label: '--el-color-primary-light-5', data: '#a0cfff' },
@@ -72,6 +73,8 @@ const themeColorGroup = [
       { label: '--el-fill-color-dark', data: '#ebedf0' },
       { label: '--el-fill-color-darker', data: '#e6e8eb' },
       { label: '--el-fill-color-blank', data: '#ffffff' },
+      { label: '--el-mask-color', data: 'rgba(255, 255, 255, 0.9)' },
+      { label: '--el-mask-color-extra-light', data: 'rgba(255, 255, 255, 0.3)' },
       {
         label: '--el-box-shadow',
         data: '0px 12px 32px 4px rgba(0, 0, 0, 0.04),	0px 8px 20px rgba(0, 0, 0, 0.08)',
@@ -84,9 +87,7 @@ const themeColorGroup = [
       },
       { label: '--el-overlay-color', data: 'rgba(0, 0, 0, 0.8)' },
       { label: '--el-overlay-color-light', data: 'rgba(0, 0, 0, 0.7)' },
-      { label: '--el-overlay-color-lighter', data: 'rgba(0, 0, 0, 0.5)' },
-      { label: '--el-mask-color', data: 'rgba(255, 255, 255, 0.9)' },
-      { label: '--el-mask-color-extra-light', data: 'rgba(255, 255, 255, 0.3)' },
+      { label: '--el-overlay-color-lighter', data: 'rgba(0, 0, 0, 0.5)' },      
       { label: '--el-color-primary-rgb', data: '64, 158, 255' },
       { label: '--el-color-success-rgb', data: '103, 194, 58' },
       { label: '--el-color-warning-rgb', data: '230, 162, 60' },
@@ -144,6 +145,82 @@ const themeColorGroup = [
     ],
   },
   {
+    span: 12,
+    themeName: 'Element Plus (Dark)',
+    themeColorData: [
+    { label: '--el-color-primary', data: '#5796ad' },
+    { label: '--el-color-primary-light-3', data: '#436f7f' },
+    { label: '--el-color-primary-light-5', data: '#365561' },
+    { label: '--el-color-primary-light-7', data: '#283b42' },
+    { label: '--el-color-primary-light-8', data: '#212e33' },
+    { label: '--el-color-primary-light-9', data: '#1b2123' },
+    { label: '--el-color-primary-dark-2', data: '#79abbd' },
+    { label: '--el-color-success', data: '#67c23a' },
+    { label: '--el-color-success-light-3', data: '#4e8e2f' },
+    { label: '--el-color-success-light-5', data: '#3e6b27' },
+    { label: '--el-color-success-light-7', data: '#2d481f' },
+    { label: '--el-color-success-light-8', data: '#25371c' },
+    { label: '--el-color-success-light-9', data: '#1c2518' },
+    { label: '--el-color-success-dark-2', data: '#85ce61' },
+    { label: '--el-color-warning', data: '#e6a23c' },
+    { label: '--el-color-warning-light-3', data: '#a77730' },
+    { label: '--el-color-warning-light-5', data: '#7d5b28' },
+    { label: '--el-color-warning-light-7', data: '#533f20' },
+    { label: '--el-color-warning-light-8', data: '#3e301c' },
+    { label: '--el-color-warning-light-9', data: '#292218' },
+    { label: '--el-color-warning-dark-2', data: '#ebb563' },
+    { label: '--el-color-danger', data: '#f56c6c' },
+    { label: '--el-color-danger-light-3', data: '#b25252' },
+    { label: '--el-color-danger-light-5', data: '#854040' },
+    { label: '--el-color-danger-light-7', data: '#582e2e' },
+    { label: '--el-color-danger-light-8', data: '#412626' },
+    { label: '--el-color-danger-light-9', data: '#2b1d1d' },
+    { label: '--el-color-danger-dark-2', data: '#f78989' },
+    { label: '--el-color-error', data: '#f56c6c' },
+    { label: '--el-color-error-light-3', data: '#b25252' },
+    { label: '--el-color-error-light-5', data: '#854040' },
+    { label: '--el-color-error-light-7', data: '#582e2e' },
+    { label: '--el-color-error-light-8', data: '#412626' },
+    { label: '--el-color-error-light-9', data: '#2b1d1d' },
+    { label: '--el-color-error-dark-2', data: '#f78989' },
+    { label: '--el-color-info', data: '#909399' },
+    { label: '--el-color-info-light-3', data: '#6b6d71' },
+    { label: '--el-color-info-light-5', data: '#525457' },
+    { label: '--el-color-info-light-7', data: '#393a3c' },
+    { label: '--el-color-info-light-8', data: '#2d2d2f' },
+    { label: '--el-color-info-light-9', data: '#202121' },
+    { label: '--el-color-info-dark-2', data: '#a6a9ad' },
+    { label: '--el-bg-color', data: '#141414' },
+    { label: '--el-bg-color-page', data: '#0a0a0a' },
+    { label: '--el-bg-color-overlay', data: '#1d1e1f' },
+    { label: '--el-text-color-primary', data: '#E5EAF3' },
+    { label: '--el-text-color-regular', data: '#CFD3DC' },
+    { label: '--el-text-color-secondary', data: '#A3A6AD' },
+    { label: '--el-text-color-placeholder', data: '#8D9095' },
+    { label: '--el-text-color-disabled', data: '#6C6E72' },
+    { label: '--el-border-color-darker', data: '#636466' },
+    { label: '--el-border-color-dark', data: '#58585B' },
+    { label: '--el-border-color', data: '#4C4D4F' },
+    { label: '--el-border-color-light', data: '#414243' },
+    { label: '--el-border-color-lighter', data: '#363637' },
+    { label: '--el-border-color-extra-light', data: '#2B2B2C' },
+    { label: '--el-fill-color-darker', data: '#424243' },
+    { label: '--el-fill-color-dark', data: '#39393A' },
+    { label: '--el-fill-color', data: '#303030' },
+    { label: '--el-fill-color-light', data: '#262727' },
+    { label: '--el-fill-color-lighter', data: '#1D1D1D' },
+    { label: '--el-fill-color-extra-light', data: '#191919' },
+    { label: '--el-fill-color-blank', data: 'transparent' },
+    { label: '--el-mask-color', data: 'rgba(0, 0, 0, 0.8)' },
+    { label: '--el-mask-color-extra-light', data: 'rgba(0, 0, 0, 0.3)' },
+    { label: '--el-box-shadow', data: '0px 12px 32px 4px rgba(0, 0, 0, 0.36), 0px 8px 20px rgba(0, 0, 0, 0.72)' },
+    { label: '--el-box-shadow-light', data: '0px 0px 12px rgba(0, 0, 0, 0.72)' },
+    { label: '--el-box-shadow-lighter', data: '0px 0px 6px rgba(0, 0, 0, 0.72)' },
+    { label: '--el-box-shadow-dark', data: '0px 16px 48px 16px rgba(0, 0, 0, 0.72), 0px 12px 32px #000000, 0px 8px 16px -8px #000000' },    
+    ],
+  },
+  {
+    span: 8,
     themeName: 'CALS(core)',
     themeColorData: [
     { label: '--color-primary-10', data: '#f5fafc' },
@@ -582,6 +659,7 @@ const themeColorGroup = [
     ],
   },
   {
+    span: 8,
     themeName: 'CALS(yellow)',
     themeColorData: [
       { label: '--color-primary-10', data: '#fffdf5' },
@@ -835,6 +913,7 @@ const themeColorGroup = [
     ],
   },
   {
+    span: 8,
     themeName: 'CALS(green_2)',
     themeColorData: [
       { label: '--color-primary-10', data: '#f1fce5' },
@@ -1079,7 +1158,7 @@ const themeColorGroup = [
 
 <template>
   <el-row class="ev-screen-row" :gutter="16">
-    <el-col class="ev-screen-col" v-for="themeColorGroupItem in themeColorGroup" :span="24 / themeColorGroup.length">
+    <el-col class="ev-screen-col" v-for="themeColorGroupItem in themeColorGroup" :span="themeColorGroupItem.span">
       <div class="ev-component" :class="{ 'is-folder': AppSetting.componentType == 'folder' }">
         <h4>{{ themeColorGroupItem.themeName }}</h4>
         <el-row>
@@ -1103,6 +1182,7 @@ p {
   justify-content: space-between;
   padding: 5px 0;
   margin: initial;
+  border-bottom: 1px solid #e8e8e8;
 
   span {
     font-size: var(--el-font-size-base);
