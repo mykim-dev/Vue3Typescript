@@ -31,13 +31,13 @@ const handleChange = (val: string[]) => {
   <el-collapse class="set-option" v-model="activeNames" @change="handleChange">
     <el-collapse-item class="set-option-item" title="Common Setting" name="1">
       <el-form label-position="left">
-        <el-form-item label="mode">
-          <div class="ev-switch"><el-switch v-model="AppSetting.appDarkMode" active-text="dark" inactive-text="light" size="small"  @click="AppSetting.changeMode()" /></div>
-        </el-form-item>
         <el-form-item label="Layout">
           <el-radio-group v-model="AppSetting.appLayoutType">
             <el-radio-button :class="['option-layout', layout]" :label="layout" v-for="layout in layoutList" @click="AppSetting.changeLayout(layout)" />
           </el-radio-group>
+        </el-form-item>
+        <el-form-item label="mode">
+          <div class="ev-switch"><el-switch v-model="AppSetting.appDarkMode" active-text="dark" inactive-text="light" size="small"  @click="AppSetting.changeMode()" /></div>
         </el-form-item>
         <el-form-item label="Theme">
           <el-radio-group v-model="AppSetting.appTheme">
@@ -46,13 +46,12 @@ const handleChange = (val: string[]) => {
           </el-radio-group>
         </el-form-item>
         <el-form-item label="Top Banner">
-          <div class="ev-switch"><el-switch v-model="AppSetting.topBanner" active-text="YES" inactive-text="NO"
-              size="small" /></div>
+          <div class="ev-switch"><el-switch v-model="AppSetting.topBanner" active-text="YES" inactive-text="NO" size="small" /></div>
           <img src="" alt="" />
         </el-form-item>
         <el-form-item label="Bottom Banner"  v-if="AppSetting.menuCollapse === false">
           <div class="ev-switch"><el-switch v-model="AppSetting.asideBanner" active-text="YES" inactive-text="NO" size="small" /></div>
-          <!-- <img src="" alt="" /> -->
+          <img src="" alt="" />
         </el-form-item>
         <el-form-item label="Component Type">
           <el-radio-group v-model="AppSetting.componentType">

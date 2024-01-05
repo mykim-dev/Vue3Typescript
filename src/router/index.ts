@@ -122,6 +122,11 @@ const router = createRouter({
       name: 'SampleComponent',
       component: () => import('@/sample/sampleComponent.vue'),
     },
+    {
+      path: '/SampleAttribute',
+      name: 'SampleAttribute',
+      component: () => import('@/sample/sampleAttribute.vue'),
+    },
   ],
 })
 

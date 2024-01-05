@@ -73,6 +73,7 @@ export const useAppStore = defineStore('AppSetting', {
       { name: 'Application Setting', link: '/AppSetting' },
       { name: 'Screen Display', link: '/SampleBlockGrid' },
       { name: 'Screen', link: '/Default' },
+      { name: 'SampleAttribute', link: '/SampleAttribute' },      
       // { name: 'ThemeSetting', link: '/ThemeSetting' },
       // { name: 'AppSetting', link: '/AppSetting' },
       // { name: 'SampleComponent', link: '/SampleComponent' },

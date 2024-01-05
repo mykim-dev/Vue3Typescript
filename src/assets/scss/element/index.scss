@@ -1,7 +1,9 @@
 // @forward 'element-plus/theme-chalk/src/mixins/config.scss' with ($namespace: 'el'
 // );
 
-@forward 'element-plus/theme-chalk/src/common/var.scss' with ($colors: ('primary': ('base': #5796ad,
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': ('base': #5796ad,
     ),
   ),
   $font-family: ('': "'Noto Sans KR', sans-serif",
@@ -21,7 +23,8 @@
   ),
   $text-color: ('primary': #000000,
     'regular': #111111,
-  ));
+  )
+);
 
 // @forward 'element-plus/theme-chalk/src/dark/var.scss' with ($colors: ('primary': ('base': #5796ad,
 //     ),
