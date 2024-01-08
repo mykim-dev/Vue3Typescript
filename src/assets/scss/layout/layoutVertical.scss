@@ -3,7 +3,8 @@
     --evc-aside-height: var(--el-menu-horizontal-height);
     --evc-main-height: calc(100vh - (var(--evc-header-height) + var(--evc-aside-height) + var(--evc-tags-height) + var(--evc-layout-padding) * 3));
 
-    grid-template-rows: var(--evc-header-height) var(--evc-aside-height) calc(var(--evc-tags-height) + var(--evc-layout-padding) * 1) var(--evc-main-height);
+    grid-template-rows: var(--evc-header-height) var(--evc-aside-height) calc(var(--evc-tags-height) + var(--evc-layout-padding) * 2) var(--evc-main-height);
+    padding-left: initial;
 
     .ev-aside {
       grid-column: 1 / span 2;

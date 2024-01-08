@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, defineProps } from 'vue'
 
 const value1 = ref('')
 const defaultTime = new Date(2000, 1, 1, 12, 0, 0)

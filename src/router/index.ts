@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
+import AppHome from '@/views/AppHome.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
+      name: 'AppHome',
+      component: AppHome,
     },
     // {
     //   path: '/',
@@ -123,10 +123,11 @@ const router = createRouter({
       component: () => import('@/sample/sampleComponent.vue'),
     },
     {
-      path: '/SampleAttribute',
-      name: 'SampleAttribute',
-      component: () => import('@/sample/sampleAttribute.vue'),
-    },
+      path: '/StudioHome',
+      name: 'StudioHome',
+      meta: { layout: 'LayoutAdmin' },
+      component: () => import('@/studio/StudioHome.vue'),
+    },    
   ],
 })
 

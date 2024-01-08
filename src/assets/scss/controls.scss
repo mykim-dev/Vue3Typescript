@@ -95,8 +95,11 @@
   width: var(--el-component-size);
 }
 
-.el-divider--horizontal {
-  margin: initial;
+.ev-divider {  
+  .el-divider--horizontal {
+    margin: initial;
+    border-width: 0;
+  }
 }
 
 .el-carousel__container {

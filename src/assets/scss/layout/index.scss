@@ -13,11 +13,11 @@
   background-repeat: var(--evc-layout-background-repeat);
   background-position: var(--evc-layout-background-position);
   background-size: var(--evc-layout-background-size);
-  transition: var(--el-transition-duration-fast);
+  transition: var(--el-transition-duration-fast);  
 
-  &>[class*='ev-'] {
-    // border: 1px solid red;
-  }
+  // &>[class*='ev-'] {
+  //   border: 1px solid red;
+  // }
 
   &[data-screen-expand='true'] {
     --evc-main-height: calc(100vh - calc(var(--evc-layout-padding) + var(--evc-layout-padding)));

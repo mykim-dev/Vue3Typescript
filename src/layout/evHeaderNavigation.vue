@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Rank, Operation } from '@element-plus/icons-vue'
+import { Rank, Operation, Cpu } from '@element-plus/icons-vue'
 import { useAppStore } from '@/stores/appSetting'
 
 import EvBadge from '@/layout/evBadge.vue'
@@ -21,6 +21,14 @@ const AppSetting = useAppStore()
     <div class="ev-header-navigation__icon">
       <el-button @click="AppSetting.toggleBottomPanel">하단패널</el-button>
     </div> -->
+    <div class="ev-header-navigation__icon">
+      <RouterLink :to="'/StudioHome'">
+        <el-button :icon="Cpu" />
+      </RouterLink>
+    </div>
+    <div class="ev-divider">
+      <el-divider direction="vertical" />
+    </div>
     <div class="ev-header-navigation__icon">
       <el-button :icon="Operation" @click="AppSetting.toggleAppEditMode" />
     </div>

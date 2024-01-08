@@ -5,6 +5,7 @@
     --evc-main-height: calc(100vh - calc(var(--evc-header-height) + var(--evc-tags-height) + calc(var(--evc-layout-padding) * 2)));
 
     grid-template-rows: var(--evc-header-height) var(--evc-tags-height) var(--evc-main-height);
+    padding-left: var(--evc-layout-padding);
 
     .ev-aside {
       grid-row: 2 / span 2;

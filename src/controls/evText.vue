@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { defineProps } from 'vue'
+import { ref, defineProps } from 'vue'
 
 const input = ref('')
 const props = defineProps(['attribute'])

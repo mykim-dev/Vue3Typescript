@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, defineProps } from 'vue'
 const checked1 = ref(true)
 const checked2 = ref(false)
 const checked3 = ref(true)

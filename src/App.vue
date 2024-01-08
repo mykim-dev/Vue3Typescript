@@ -1,22 +1,10 @@
 <script lang="ts" setup>
-import { useAppStore } from '@/stores/appSetting'
-import evLayout from '@/layout/evLayout.vue'
-import setAppOption from '@/setting/setAppOption.vue'
-const AppSetting = useAppStore()
-
-AppSetting.changeTheme(AppSetting.appTheme)
+import evLayoutAdmin from '@/layout/evLayoutAdmin.vue'
+import evLayoutDefault from '@/layout/evLayoutDefault.vue'
 </script>
 
 <template>
-  <div class="layout-wrap" v-if="AppSetting.appEditMode">
-    <div>
-      <evLayout />
-    </div>
-    <div>
-      <setAppOption />
-    </div>
-  </div>
-  <evLayout v-else />
+  <evLayoutAdmin v-if="$route.meta.layout === 'LayoutAdmin'" />
+  <evLayoutDefault v-else />
 </template>
-
 <style lang="scss" scoped></style>

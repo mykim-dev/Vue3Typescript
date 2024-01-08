@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, defineProps } from 'vue'
 
 const num = ref(1)
 const handleChange = (value: number) => {

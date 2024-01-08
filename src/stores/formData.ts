@@ -36,6 +36,8 @@ export const useFormStroe = defineStore('formData', {
             { span: 8, isLeft: false, item: { type: 'ev-color-picker', label: 'color-picker', data: 'disabled', attribute: { disabled: true, focus: false } } },
             { span: 8, isLeft: false, item: { type: 'ev-color-picker', label: 'color-picker', data: 'focus', attribute: { disabled: false, focus: true } } },
 
+            { span: 24, isLeft: false, item: { type: 'ev-divider', label: '', data: '', attribute: { disabled: false, focus: false } } },
+
             { span: 8, isLeft: false, item: { type: 'ev-switch', label: 'switch', data: 'Default', attribute: { disabled: false, focus: false } } },
             { span: 8, isLeft: false, item: { type: 'ev-switch', label: 'switch', data: 'disabled', attribute: { disabled: true, focus: false } } },
             { span: 8, isLeft: false, item: { type: 'ev-switch', label: 'switch', data: 'focus', attribute: { disabled: false, focus: true } } },

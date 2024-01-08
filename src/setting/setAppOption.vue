@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, defineProps } from 'vue'
 import { useAppStore } from '@/stores/appSetting'
 const AppSetting = useAppStore()
 
